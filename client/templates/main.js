@@ -2,7 +2,7 @@
 
 if (Meteor.isClient) {
 
-  Template.body.helpers({
+  Template.main.helpers({
     
     children: function() {
       return Children.find({});
@@ -10,7 +10,7 @@ if (Meteor.isClient) {
     
   });
   
-  Template.body.events({
+  Template.main.events({
     
     "submit .new-child": function(event) {
       
