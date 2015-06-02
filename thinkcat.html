@@ -1,0 +1,19 @@
+<head>
+  <title>Think Cat</title>
+</head>
+
+<body>
+   <nav>
+     {{> loginButtons}}
+   </nav>
+ 
+  <h1>Welcome to Think Cat</h1>
+  <h2>Learning</h2>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
