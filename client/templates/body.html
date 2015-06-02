@@ -1,0 +1,19 @@
+<body>
+   <nav>
+     {{> loginButtons}}
+   </nav>
+ 
+  <h1>Welcome to Think Cat</h1>
+  <h2>Learning</h2>
+  {{#each children}}
+    {{> child}}
+  {{/each}}
+  
+  <button>Add Your Child!</button>
+
+  <form class="new-child">
+    <input type="text" placeholder="Child's Name..." name="childName">
+    <input type="text" placeholder="Child's Age..." name="childAge">
+    <input type="submit">
+  </form>
+</body>
