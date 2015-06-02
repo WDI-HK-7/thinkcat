@@ -13,15 +13,9 @@ Template.main.events({
     var name = event.target.childName.value;
     var age = event.target.childAge.value;
 
-    Children.insert({
-
-      name: name,
-      age: age,
-      parent_id: Meteor.userId(),
-      createdAt: new Date()
-
-    });
-
+    
+    Meteor.call('addChild', name, age);
+    
     event.target.childName.value = '';
     event.target.childAge.value = '';
 
