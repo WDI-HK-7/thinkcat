@@ -9,3 +9,4 @@ accounts-ui
 accounts-password
 iron:router
 u2622:persistent-session
+twbs:bootstrap
