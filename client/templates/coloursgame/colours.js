@@ -59,7 +59,6 @@ Template.colours.events({
       console.log("Total wrong: " + Session.get('wrongAnswers'));
       
     }
-    
 
   },
 // -------------------------------------------------------- Listen for the click to Finish Game
@@ -68,7 +67,9 @@ Template.colours.events({
 // -------------------------------------------------------- Take the child object on finish and pass it to the storing score function
     var child = Session.get("child");
     
-    Meteor.call('addColoursScore', child.id);
+    Meteor.call('addColoursScore', child.id, Session.get('rightAnswers'), Session.get('wrongAnswers'));
+    
+    Router.go('/');
     
   }
 
