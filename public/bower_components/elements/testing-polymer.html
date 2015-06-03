@@ -1,0 +1,27 @@
+<dom-module id="testing-polymer">
+  <style>
+    /* CSS rules for your element */
+  </style>
+  <template>
+    <!-- local DOM for your element -->
+
+    <div>{{greeting}}</div> <!-- data bindings in local DOM -->
+  </template>
+</dom-module>
+
+<script>
+  // element registration
+  Polymer({
+    is: "testing-polymer",
+
+    // add properties and methods on the element's prototype
+
+    properties: {
+      // declare properties for the element's public API
+      greeting: {
+        type: String,
+        value: "Hello We Are Testing Polymer!"
+      }
+    }
+  });
+</script>

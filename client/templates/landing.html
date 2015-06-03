@@ -1,6 +1,28 @@
 <template name="landing">
-  <nav>
-    {{> loginButtons}}
+
+  <nav class="navbar navbar-inverse">  
+  <!-- <paper-toolbar id="foo" class="tall"> -->
+    <div class= "col-xs-12">
+      {{> loginButtons}}
+      <div id="title">
+      <h1>Think Cat</h1>
+      <h2>Learning</h2>
+      </div>
+    </div>
+
+    <div class = "col-xs-6 col-xs-offset-3">
+      <img class="img-responsive" id="image1" src="http://dreamatico.com/data_images/sunset/sunset-6.jpg">
+    </div>
+
+  <!-- </paper-toolbar> -->
   </nav>
+
+
+
+
   <h1>Hello World</h1>
+  <paper-checkbox checked></paper-checkbox>
+  
+  <testing-polymer></testing-polymer>
+
 </template>
