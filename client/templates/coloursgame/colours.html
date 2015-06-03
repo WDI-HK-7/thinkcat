@@ -1,0 +1,23 @@
+<template name="colours">
+  
+  <h1>Colours Game!</h1>
+  
+  <div class="container">
+    <div class="row">
+      <div id="red" class="circle col-xs-6"></div>
+      <div id="blue" class="circle col-xs-6"></div>
+    </div>
+
+    <div class="row">
+      <div id="green" class="circle col-xs-6"></div>
+      <div id="yellow" class="circle col-xs-6"></div>
+    </div>
+  </div>
+
+<!--Input what is returned from the getRandomColour handlebar helper function and update it everytime-->
+  <div>Which colour is {{getRandomColour}}?</div>
+  
+<!--  Input the returned value from the updateCorrectAnswers helper-->
+  <div>Number of Right Answers: {{updateCorrectAnswers}}</div>
+  
+</template>
