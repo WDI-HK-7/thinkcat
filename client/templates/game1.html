@@ -1,4 +1,9 @@
 <template name="game1">
-  <h1>Hello Game 1!</h1>
-  {{child.name}}
+  <div class="col-xs-12">
+    <h1>Hello Game 1!</h1>
+  </div>
+  {{question}}
+  {{#each answers}}
+    {{this}}
+  {{/each}}
 </template>
