@@ -1,18 +1,80 @@
 <template name="landing">
-  <nav class="navbar navbar-inverse">
+  <header class="image-bg-fluid-height">
+      <img class="img-responsive img-center" src="/images/smart-owl-logo.svg" alt="">
+      <br>
+      <div class="btns-group col-xs-12">
+        <button class="btn-secondary">    {{> loginButtons}}</button>
+      </div>
 
-    <div class = "col-xs-12">  
-      {{> loginButtons}}
-    </div>
-    <div id="title" class = "col-xs-6 col-xs-offset-3">
-      <h1>Think Cat</h1>
-      <h2>Learning</h2>
-      <img  class="img-responsive" src="/../../resources/images/thinkcatlogo.png">
-    </div>
-  </nav>
-  
-  <div>
-    <p>Think Cat Description Here</p>
+<section id="banner">
+  <div class="overlay">
   </div>
+</section>
+  </header>
+
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="section-heading">Welcome to Smart Owl Learning</h1>
+          <p class="lead section-lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <p class="section-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="image-bg-fixed-height">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="underlined-title">
+            <div class="editContent">
+              <h1>Step-by-Step Learning</h1>
+            </div>
+            <hr>
+          </div>
+                    
+          <div class="services-wrapper">
+            <div class="col-md-4">
+              <div class="icon bg-crete">
+                <span class="fa fa-laptop"></span>
+              </div>
+              <div class="editContent">
+                <h4>Math Game</h4>
+              </div>
+              <div class="editContent">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icon bg-finn">
+                <span class="fa fa-code"></span>
+              </div>
+              <div class="editContent">
+                <h4>Colour Game</h4>
+              </div>
+              <div class="editContent">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icon bg-sunflower">
+                <span class="fa fa-rocket"></span>
+              </div>
+              <div class="editContent">
+                <h4>Drawing Game</h4>
+              </div>
+              <div class="editContent">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </template> 
+
