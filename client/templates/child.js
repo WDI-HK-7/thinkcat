@@ -6,7 +6,7 @@ Template.child.events({
     Session.setPersistent("child", child);
     console.log(child);
 
-    Router.go('/game/1')
+    Router.go('/mathGame')
 
   },
 
