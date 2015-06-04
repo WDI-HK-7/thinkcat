@@ -1,39 +1,48 @@
 <template name="colours">
+  <div id="colours-game">
   
-  <h1>Colours Game!</h1>
-  
-  {{#if counter }}
-  
+    <img id="logo" class="img-responsive" src="/images/smart-owl-icon.svg" alt="">
+
     <div class="container">
-      <div class="row">
-        <div id="red" class="circle col-xs-6"></div>
-        <div id="blue" class="circle col-xs-6"></div>
+    
+    {{#if counter }}
+
+    <h1>Welcome {{child.name}}</h1>
+    
+
+    <!--  Input the returned value from the updateCorrectAnswers helper-->
+      <div>Number of Right Answers: {{updateCorrectAnswers}}</div>
+
+    <!-- Game Panel -->
+      <div id="game-panel" class="panel panel-default">
+        <div class="row center">
+          <div id="red" class="circle col-xs-6"></div>
+          <div id="blue" class="circle col-xs-6"></div>
+        </div>
+
+        <div class="row">
+          <div id="green" class="circle col-xs-6"></div>
+          <div id="yellow" class="circle col-xs-6"></div>
+        </div>
       </div>
 
-      <div class="row">
-        <div id="green" class="circle col-xs-6"></div>
-        <div id="yellow" class="circle col-xs-6"></div>
+    <!-- Question Panel -->
+      <div id="question-panel" class="panel panel-default">
+        <!--Input what is returned from the getRandomColour handlebar helper function and update it everytime-->
+          <div>Which colour is {{getRandomColour}}?</div>
       </div>
+
+      
+    {{else}}
+    
+      <h1>Your Score is {{updateCorrectAnswers}}</h1>
+      <button id="colourGameReturnHome">Return to home</button>
+      <button id="colourGameRestart">Play again</button>
+       
+    {{/if}}
+    
     </div>
-
-  <!--Input what is returned from the getRandomColour handlebar helper function and update it everytime-->
-    <div>Which colour is {{getRandomColour}}?</div>
-    
-
-  <!--  Input the returned value from the updateCorrectAnswers helper-->
-    <div>Number of Right Answers: {{updateCorrectAnswers}}</div>
-
-  <!--  Finish the current game and save the score-->
-    <button class="finish-game">Finish</button>
-    
-  {{else}}
-  
-    <h1>Your Score is {{updateCorrectAnswers}}</h1>
-    <button id="colourGameReturnHome">Return to home</button>
-    <button id="colourGameRestart">Play again</button>
-     
-  {{/if}}
-  
+  </div>
 </template>
 
 

@@ -1,3 +1,32 @@
+/*body {
+	background: url("/images/banner-vector1-01.svg") no-repeat fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 0;
+}*/
+
+#logo {
+	width: 15%;
+	height: 15%;
+	margin-left: 0;
+	margin-top: 0;
+}
+
+#question-panel {
+	text-align: center;
+	padding: 30px; 
+}
+
+#game-panel {
+	height: auto;
+	padding: 50px;
+}
+
+.row-centered {
+	float: center;
+}
 
 #red {
   background-color: red;
