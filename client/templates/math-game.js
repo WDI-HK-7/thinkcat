@@ -74,8 +74,14 @@ Template.mathGame.events({
   },
   'click #mathGameReturnHome': function(event) {
     var child = Session.get("child");
+    step = 0;
     Meteor.call('addMathsScore', child.id, answersArray, correct, wrong);
     Router.go('/');
+  },
+  'click #mathGameRestart': function(event) {
+    var child = Session.get("child");
+    step = 0;
+    Meteor.call('addMathsScore', child.id, answersArray, correct, wrong);
+    _dep.changed();
   }
-})
-
+});
