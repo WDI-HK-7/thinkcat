@@ -1,0 +1,43 @@
+.dashboard-child {
+  position: relative;
+  border: solid 5px black;
+  border-radius: 5px;
+  height: 300px;
+  margin-bottom: 25px;
+  background-color: gray;
+}
+
+.child-info {
+  border: solid 2px red;
+  border-radius: 5px;
+}
+
+.statistics {
+  border: solid 2px red;
+  border-radius: 5px;
+}
+
+.games {
+  position: absolute;
+  bottom: 5px;
+  border: solid 2px red;
+  border-radius: 5px;
+  height: 50px;
+  padding-top: 6px;
+}
+
+
+.child-info {
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.avatar {
+  margin-top: 25px;
+}
+
+.divider {
+  border-bottom: solid 5px black;
+  margin-top: 15px;
+}
+

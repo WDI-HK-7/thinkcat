@@ -5,8 +5,10 @@
 # but you can also edit it by hand.
 
 meteor-platform
-accounts-ui
 accounts-password
 iron:router
 u2622:persistent-session
 twbs:bootstrap
+accounts-ui-unstyled
+accounts-ui
+jquery

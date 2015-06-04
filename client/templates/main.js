@@ -25,3 +25,9 @@ Template.main.events({
 
 });
 
+Template.main.onRendered(function() {
+  $("#add-child-btn").click(function(){
+    $(".new-child").toggle();
+  });
+});
+
