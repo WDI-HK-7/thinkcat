@@ -1,8 +1,13 @@
+#main-header {
+  text-align: center;
+  margin-bottom: 50px;
+  border-bottom: solid 5px red;
+  padding-bottom: 25px;
+}
+
 .dashboard-child {
-  position: relative;
   border: solid 5px black;
   border-radius: 5px;
-  height: 300px;
   margin-bottom: 25px;
   background-color: gray;
 }
@@ -18,8 +23,6 @@
 }
 
 .games {
-  position: absolute;
-  bottom: 5px;
   border: solid 2px red;
   border-radius: 5px;
   height: 50px;
@@ -35,9 +38,3 @@
 .avatar {
   margin-top: 25px;
 }
-
-.divider {
-  border-bottom: solid 5px black;
-  margin-top: 15px;
-}
-

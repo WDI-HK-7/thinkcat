@@ -1,0 +1,94 @@
+<template name="childProfile">
+  <nav>
+    {{> loginButtons}}
+  </nav>
+
+  <div id="main-header" class="col-xs-12">
+    
+    <h1>Welcome to Smart Owl</h1>
+    <h2>Learning</h2>
+
+    <div class="col-xs-4 col-xs-offset-4">
+      <img src="http://i.imgur.com/8jf8Ced.png" class="img-responsive">
+    </div>
+  
+    <div class="col-xs-12">
+      <h3>Parent Dashboard</h3>
+      <p>All of your Children's Information will displayed here in their own personalized child-info section.</p>
+    </div>
+
+  </div>
+
+  <div class="dashboard-child col-xs-8 col-xs-offset-2">
+  
+    <div class="avatar col-xs-4">
+      <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSFasxeJKv7L2cHCPzYR1y4b-j_HT2ctTonQ1kQJ_-tRTgsHeliuw" class="img-circle img-responsive">
+    </div>
+
+    <div class="child-info col-xs-8">
+      <div class="row">
+        <div class="child-name col-xs-6">
+          <span>Child's Name: <strong>{{child.name}}</strong></span>
+        </div>
+        <div class="child-age col-xs-6">
+          <span>Child's Age: <strong>{{child.age}}</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="statistics col-xs-8">
+    
+      <div class="row">
+        <div class="child-games col-xs-6">
+          <div class="child-game">
+            <p>Game 1 Score:</p>
+          </div>  
+          <div class="child-game">
+            <p>Game 2 Score:</p>
+          </div>  
+          <div class="child-game">
+            <p>Game 3 Score:</p>
+          </div>  
+          <div class="child-game">
+            <p>Game 4 Score:</p>
+          </div>  
+        </div>
+        
+        <div class="scores col-xs-6">
+          <div class="child-score">
+            <p>Stats Go Here</p>
+          </div>
+          <div class="child-score">
+            <p>Stats Go Here</p>
+          </div>
+          <div class="child-score">
+            <p>Stats Go Here</p>
+          </div>
+          <div class="child-score">
+            <p>Stats Go Here</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="games col-xs-12">
+    <div class="game-1 col-xs-3">
+      <button class="btn btn-primary game-one col-xs-3">Math Game!</button>
+    </div>
+
+    <div class="colours-game col-xs-3">
+      <button class="btn btn-primary game-two col-xs-3">Colour Game!</button>
+    </div>
+
+    <div class="game-3 col-xs-3">
+      <button class="btn btn-primary game-three col-xs-3">Shape Game!</button>
+    </div> 
+
+    <div class="game-4 col-xs-3">
+      <button class="btn btn-primary game-four col-xs-3">Animal Game!</button>
+    </div>
+    
+  </div>
+
+</template>
+

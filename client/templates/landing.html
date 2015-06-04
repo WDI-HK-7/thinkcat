@@ -1,17 +1,12 @@
 <template name="landing">
   <header class="image-bg-fluid-height">
-      <img class="img-responsive img-center" src="/images/smart-owl-logo.svg" alt="">
-      <br>
-      <div class="btns-group col-xs-12">
-        <a class="btn-secondary">{{> loginButtons}}</a>
+    <img class="img-responsive img-center" src="/images/smart-owl-logo.svg" alt="">
+
+    <section id="banner">
+      <div class="overlay">
       </div>
-
-<section id="banner">
-  <div class="overlay">
-  </div>
-</section>
+    </section>
   </header>
-
 
   <section>
     <div class="container">
@@ -24,6 +19,28 @@
       </div>
     </div>
   </section>
+
+  <div class="btns-group col-xs-12">
+    <a class="btn-secondary">{{> loginButtons}}</a>
+  </div>
+  
+  {{#if signedIn }}
+  <div id="children-avatars">
+    {{#each children}}
+      {{> childAvatar}}
+    {{/each}}
+  </div>
+
+  <div id="add-child" class="col-xs-12">
+    <form class="new-child" style="display: none">
+      <input type="text" placeholder="Child's Name..." name="childName">
+      <input type="text" placeholder="Child's Age..." name="childAge">
+      <input type="submit" class="btn btn-default">
+    </form>
+
+    <button id="add-child-btn" class="btn btn-success">Add Your Child!</button>
+  </div>
+  {{/if}}
 
   <section class="image-bg-fixed-height">
     <div class="container">
@@ -75,6 +92,5 @@
       </div>
     </div>
   </section>
-
 </template> 
 

@@ -5,8 +5,8 @@ var answers = [];
 var question = ""
 var _dep = new Deps.Dependency();
 var nextQuestion = function() {
-  num1 = Math.ceil(Math.random()*10);
-  num2 = Math.ceil(Math.random()*10);
+  var num1 = Math.ceil(Math.random()*10);
+  var num2 = Math.ceil(Math.random()*10);
   question = num1 + " + " + num2;
   answers = [];
   var ans = eval(question);
@@ -76,7 +76,7 @@ Template.mathGame.events({
     var child = Session.get("child");
     step = 0;
     Meteor.call('addMathsScore', child.id, answersArray, correct, wrong);
-    Router.go('/');
+    Router.go('/child');
   },
   'click #mathGameRestart': function(event) {
     var child = Session.get("child");

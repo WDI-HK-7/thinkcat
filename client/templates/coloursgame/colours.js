@@ -119,7 +119,7 @@ Template.colours.events({
      
     Meteor.call('addColoursScore', child.id, numCorrect, numIncorrect, answersArray);
      
-    Router.go('/');
+    Router.go('/child');
      
   },
 
