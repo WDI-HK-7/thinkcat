@@ -115,3 +115,17 @@ section {
   -o-background-size: cover;
   z-index: -1
 }
+
+#add-child {
+  text-align: center;
+}
+
+#add-child-btn {
+  margin-bottom: 25px;
+}
+.avatar:hover {
+  cursor: pointer;
+}
+.avatar {
+  margin: 0 auto;
+}
