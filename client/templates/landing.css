@@ -99,7 +99,7 @@ section {
 #banner {
   background-image: url("/images/banner-vector.png");
   background-size: cover !important;
-  min-height: 230px;
+/*  min-height: 45%;*/
 }
 
 #banner .overlay {
@@ -112,8 +112,5 @@ section {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+  z-index: -1
 }
-
-
-
->>>>>>> CSS Frontend
