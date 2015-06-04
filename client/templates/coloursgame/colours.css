@@ -21,7 +21,6 @@
 
 #game-panel {
 	height: auto;
-	padding: 25px 0;
 }
 
 .row-centered {
@@ -57,4 +56,38 @@
 }
 .circle:hover {
   transform: scale(1.5);
+}
+
+#colours-avatar {
+  width: 8em;
+  height: 6em;
+  border-radius: 100%;
+  margin-top: 1em;
+}
+
+#colour-child-name {
+  vertical-align: text-top;
+  margin-top: 1em;
+}
+
+
+
+.glyphicon-remove {
+  color: red;
+}
+
+.glyphicon-ok {
+  color: forestgreen;
+}
+
+.answersCounterDiv {
+  font-size: 3em;
+}
+
+#colourGameReturnHome {
+  margin: 1em;
+}
+
+#colourGameRestart {
+  margin: 1em;
 }

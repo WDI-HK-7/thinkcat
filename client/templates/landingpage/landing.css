@@ -118,10 +118,11 @@ section {
 
 #add-child {
   text-align: center;
+  margin-top: 1em;
 }
 
 #add-child-btn {
-  margin-bottom: 25px;
+  margin-bottom: 0.2em;
 }
 .avatar:hover {
   cursor: pointer;

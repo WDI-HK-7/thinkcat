@@ -36,5 +36,8 @@
 }
 
 .avatar {
-  margin-top: 25px;
+  margin-top: 2em;
+  height: 10em;
+  width: 10em;
+  border-radius: 100%;
 }
