@@ -21,7 +21,7 @@
 
 #game-panel {
 	height: auto;
-	padding: 50px;
+	padding: 25px 0;
 }
 
 .row-centered {
@@ -48,9 +48,13 @@
   width: 10em;
   height: 10em;
   border-radius: 100%;
-  margin: 2em;
+  margin: 1.5em;
+  display: inline-block;
 }
 
+.colours-row {
+  display: inline-block;
+}
 .circle:hover {
   transform: scale(1.5);
 }
