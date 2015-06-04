@@ -1,10 +1,10 @@
-Session.set('randomColour', coloursArray[Math.floor(Math.random()*coloursArray.length)]);
 
 var coloursArray = [ "blue", "green", "yellow", "red" ];
 var numCorrect = 0;
 var numIncorrect = 0;
 var answersArray = [];
 var _dep = new Deps.Dependency();
+Session.set('randomColour', coloursArray[Math.floor(Math.random()*coloursArray.length)]);
 
 // -------------------------------------------------------- Create Colour Game Question. Update Random Colour in Session
 
