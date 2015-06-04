@@ -1,30 +1,30 @@
-var coloursArray = [ "blue", "green", "yellow", "red" ];
+Session.set('randomColour', coloursArray[Math.floor(Math.random()*coloursArray.length)]);
 
+var coloursArray = [ "blue", "green", "yellow", "red" ];
 var numCorrect = 0;
 var numIncorrect = 0;
 var answersArray = [];
 var _dep = new Deps.Dependency();
 
-// -------------------------------------------- Create Colour Game Question
+// -------------------------------------------------------- Create Colour Game Question. Update Random Colour in Session
+
 var createColourQuestion = function(colours) {
 
     var nextRandomColour = colours[Math.floor(Math.random()*colours.length)];
-    
-// -------------------------------------------- Update Random Colour in current Session
 
     Session.set('randomColour', nextRandomColour);
     
 };
 
-// -------------------------------------------------------- Set initial Session variable values
-Session.set('randomColour', coloursArray[Math.floor(Math.random()*coloursArray.length)]);
-
 // -------------------------------------------------------- Handlebar helper function returns Session randomColour value
+
 Handlebars.registerHelper('getRandomColour',function(){
   
   return Session.get("randomColour");
   
 });
+
+// -------------------------------------------------------- Return the Current Child Name and Id
 
 Template.colours.helpers({
   
@@ -34,7 +34,8 @@ Template.colours.helpers({
 		console.log(child.name);
 	},
   
-// -------------------------------------------------------- update Correct Answers in Session
+// -------------------------------------------------------- Render Updated Correct Answers
+  
   updateCorrectAnswers: function() {
     
      _dep.depend();
@@ -46,12 +47,12 @@ Template.colours.helpers({
 
 Template.colours.events({
 
-// -------------------------------------------------------- Listen for click event on any colour circle
+// -------------------------------------------------------- Listen for Click on any Circle
+  
   "click .circle": function(event) {
     
     var answer = Session.get("randomColour");
 
-// -------------------------------------------------------- Save the id of the clicked circle (contains colour)
     var clickedColour = event.target.id;
     
     if (clickedColour === answer) {
@@ -64,19 +65,15 @@ Template.colours.events({
         
       };
 
-// -------------------------------------------------------- If it's the right answer update the right answers in Session
       answersArray.push(newCorrectAnswer);
-      console.log(answersArray);
-
 
       numCorrect++;
       _dep.changed();
-// -------------------------------------------------------- update the Session random colour and display a new question     
       createColourQuestion(coloursArray);
       
     }
     else {
-// -------------------------------------------------------- If it's wrong, update the wrong answers in Session    
+      
       var newIncorrectAnswer = {
         
         answer: answer,
@@ -86,18 +83,17 @@ Template.colours.events({
       };
       
       answersArray.push(newIncorrectAnswer);
-      console.log(answersArray);
-      
       
       numIncorrect++;
       
     }
 
   },
-// -------------------------------------------------------- Listen for the click to Finish Game
+  
+// -------------------------------------------------------- Listen for Finish Game
+  
   "click .finish-game": function(event) {
     
-// -------------------------------------------------------- Take the child object on finish and pass it to the storing score function
     var child = Session.get("child");
     
     Meteor.call('addColoursScore', child.id, numCorrect, numIncorrect, answersArray);
