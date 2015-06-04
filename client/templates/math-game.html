@@ -1,0 +1,15 @@
+<template name="mathGame">
+  <div class="col-xs-8 col-xs-offset-2 text-center">
+    {{#if counter }}
+      <h1>What is the answer of</h1>
+      <h1>{{question}} = ?</h1>
+      {{#each answers}}
+        <button class="mathGameAns">{{this}}</button>
+      {{/each}}
+    {{else}}
+      <h1>Your Score is {{correctAns}}</h1>
+      <button id="mathGameReturnHome">Return to home</button>
+      <button id="mathGameRestart">Play again</button>
+    {{/if}}
+  </div>
+</template>
