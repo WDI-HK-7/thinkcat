@@ -20,16 +20,6 @@ Template.child.events({
 
   },
 
-  "click .game-two": function(event, template) {
-
-    var child = {id: template.data._id, name: template.data.name};
-    Session.setPersistent("child", child);
-    console.log(child);
-
-    Router.go('/game/2')
-
-  },
-
   "click .game-three": function(event, template) {
 
     var child = {id: template.data._id, name: template.data.name};
