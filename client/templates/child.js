@@ -9,14 +9,14 @@ Template.child.events({
     Router.go('/mathGame')
 
   },
-
-  "click .game-two": function(event, template) {
+  
+  "click .colours-game": function(event, template) {
 
     var child = {id: template.data._id, name: template.data.name};
     Session.setPersistent("child", child);
     console.log(child);
 
-    Router.go('/game/2')
+    Router.go('/colours');
 
   },
 
