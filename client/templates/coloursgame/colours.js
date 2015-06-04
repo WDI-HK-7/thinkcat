@@ -1,5 +1,6 @@
 
 var coloursArray = [ "blue", "green", "yellow", "red" ];
+var step = 0;
 var numCorrect = 0;
 var numIncorrect = 0;
 var answersArray = [];
@@ -41,7 +42,21 @@ Template.colours.helpers({
      _dep.depend();
     return numCorrect;
     
-  }
+  },
+  
+// -------------------------------------------------------- Check Number of Correct Answers
+  
+  counter: function () {
+    
+    _dep.depend();
+    
+    if (step < 10) {
+      return true;
+    } else {
+      return false;
+    }
+    
+  },
   
 });
 
@@ -68,6 +83,7 @@ Template.colours.events({
       answersArray.push(newCorrectAnswer);
 
       numCorrect++;
+      step++;
       _dep.changed();
       createColourQuestion(coloursArray);
       
@@ -85,23 +101,41 @@ Template.colours.events({
       answersArray.push(newIncorrectAnswer);
       
       numIncorrect++;
+      step++;
       
     }
 
   },
   
-// -------------------------------------------------------- Listen for Finish Game
+// -------------------------------------------------------- Listen for Return Home
   
-  "click .finish-game": function(event) {
+  'click #colourGameReturnHome': function(event) {
+     
+    var child = Session.get("child");
+     
+    step = 0;
+    numCorrect = 0;
+    numIncorrect = 0;
+     
+    Meteor.call('addColoursScore', child.id, numCorrect, numIncorrect, answersArray);
+     
+    Router.go('/');
+     
+  },
+
+// -------------------------------------------------------- Listen for Game Restart
+  
+  'click #colourGameRestart': function(event) {
     
     var child = Session.get("child");
     
-    Meteor.call('addColoursScore', child.id, numCorrect, numIncorrect, answersArray);
-    
+    step = 0;
     numCorrect = 0;
     numIncorrect = 0;
     
-    Router.go('/');
+    Meteor.call('addColoursScore', child.id, numCorrect, numIncorrect, answersArray);
+    
+    _dep.changed();
     
   }
 
