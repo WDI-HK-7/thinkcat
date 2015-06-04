@@ -7,7 +7,8 @@
 }
 
 body {
-  font-family: OpenSans-Light;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
   background-color: #fffee0;
 }
 
