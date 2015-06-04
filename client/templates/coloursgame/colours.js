@@ -1,9 +1,22 @@
-// -------------------------------------------------------- Establish a global varibale coloursArray
-coloursArray = [ "blue", "green", "yellow", "red" ];
+var coloursArray = [ "blue", "green", "yellow", "red" ];
+
+var numCorrect = 0;
+var numIncorrect = 0;
+var answersArray = [];
+var _dep = new Deps.Dependency();
+
+// -------------------------------------------- Create Colour Game Question
+var createColourQuestion = function(colours) {
+
+    var nextRandomColour = colours[Math.floor(Math.random()*colours.length)];
+    
+// -------------------------------------------- Update Random Colour in current Session
+
+    Session.set('randomColour', nextRandomColour);
+    
+};
 
 // -------------------------------------------------------- Set initial Session variable values
-Session.set('wrongAnswers', 0);
-Session.set('rightAnswers', 0);
 Session.set('randomColour', coloursArray[Math.floor(Math.random()*coloursArray.length)]);
 
 // -------------------------------------------------------- Handlebar helper function returns Session randomColour value
@@ -18,14 +31,14 @@ Template.colours.helpers({
 	child: function () {
 		var child = Session.get("child");
 		return child;
-		console.log(child.name)
+		console.log(child.name);
 	},
   
 // -------------------------------------------------------- update Correct Answers in Session
   updateCorrectAnswers: function() {
     
-    var correctAnswers = Session.get('rightAnswers');
-    return correctAnswers;
+     _dep.depend();
+    return numCorrect;
     
   }
   
@@ -42,21 +55,41 @@ Template.colours.events({
     var clickedColour = event.target.id;
     
     if (clickedColour === answer) {
+      
+      var newCorrectAnswer = {
+        
+        answer: answer,
+        child_answer: clickedColour,
+        correct: true
+        
+      };
 
 // -------------------------------------------------------- If it's the right answer update the right answers in Session
-      Session.set('rightAnswers', Session.get('rightAnswers') + 1);
-      
-      console.log("Total right: " + Session.get('rightAnswers'));
-      
+      answersArray.push(newCorrectAnswer);
+      console.log(answersArray);
+
+
+      numCorrect++;
+      _dep.changed();
 // -------------------------------------------------------- update the Session random colour and display a new question     
-      Meteor.call('createColourQuestion');
+      createColourQuestion(coloursArray);
       
     }
     else {
 // -------------------------------------------------------- If it's wrong, update the wrong answers in Session    
-      Session.set('wrongAnswers', Session.get('wrongAnswers') + 1);
+      var newIncorrectAnswer = {
+        
+        answer: answer,
+        child_answer: clickedColour,
+        correct: false
+        
+      };
       
-      console.log("Total wrong: " + Session.get('wrongAnswers'));
+      answersArray.push(newIncorrectAnswer);
+      console.log(answersArray);
+      
+      
+      numIncorrect++;
       
     }
 
@@ -67,10 +100,10 @@ Template.colours.events({
 // -------------------------------------------------------- Take the child object on finish and pass it to the storing score function
     var child = Session.get("child");
     
-    Meteor.call('addColoursScore', child.id, Session.get('rightAnswers'), Session.get('wrongAnswers'));
+    Meteor.call('addColoursScore', child.id, numCorrect, numIncorrect, answersArray);
     
-    Session.set('wrongAnswers', 0);
-    Session.set('rightAnswers', 0);
+    numCorrect = 0;
+    numIncorrect = 0;
     
     Router.go('/');
     
