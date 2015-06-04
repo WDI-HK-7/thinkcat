@@ -69,6 +69,9 @@ Template.colours.events({
     
     Meteor.call('addColoursScore', child.id, Session.get('rightAnswers'), Session.get('wrongAnswers'));
     
+    Session.set('wrongAnswers', 0);
+    Session.set('rightAnswers', 0);
+    
     Router.go('/');
     
   }
