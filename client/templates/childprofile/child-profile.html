@@ -10,135 +10,170 @@
 
   </div>
 
-  <div class="dashboard-child col-xs-8 col-xs-offset-2">
-  
-    <div class="avatar-profile col-xs-12 col-sm-4">
-      <img src="http://images.watoday.com.au/2010/12/22/2105997/kids-swing-3-4-420-420x0.jpg" class="img-circle img-responsive">
-    </div>
+  <div class="panel panel-default dashboard-child col-xs-10 col-xs-offset-1">
 
-    <div class="child-info col-xs-12 col-sm-8">
-      <div class="row">
-        <div class="child-name col-xs-6">
-          <span>Child's Name: <strong>{{childInfo.name}}</strong></span>
-        </div>
-        <div class="child-age col-xs-6">
-          <span>Child's Age: <strong>{{childInfo.age}}</strong></span>
-        </div>
+    <div class="panel-body">
+      
+      <div class="avatar-profile col-xs-12 col-sm-4">
+        <img src="http://images.watoday.com.au/2010/12/22/2105997/kids-swing-3-4-420-420x0.jpg" class="img-circle img-responsive">
       </div>
-    </div>
 
-    <div class="statistics col-xs-12 col-sm-8">
-    
-      <div class="row">
-        <div class="child-games col-xs-4">
-          <div class="child-game">
-            <p>Game</p>
+      <div class="child-info col-xs-12 col-sm-8">
+        <div class="row">
+          <div class="child-name col-xs-6">
+            <span>Child's Name: <strong>{{childInfo.name}}</strong></span>
           </div>
-          <div class="child-game">
-            <p>Maths Game:</p>
-          </div>
-          <div class="child-game">
-            <p>Colours Game:</p>
-          </div>  
-          <div class="child-game">
-            <p>Game 3 Score:</p>
-          </div>  
-          <div class="child-game">
-            <p>Shapes Score:</p>
-          </div>  
-        </div>
-        
-        <div class="scores col-xs-4">
-          <div class="child-score">
-            <p>Average Score</p>
-          </div>
-          <div class="child-score">
-            <p>{{mathsGameStats}}</p>
-          </div>
-          <div class="child-score">
-            <p>{{coloursGameStats}}</p>
-          </div>
-          <div class="child-score">
-            <p>Stats Go Here</p>
-          </div>
-          <div class="child-score">
-            <p>{{shapesGameStats}}</p>
-          </div>
-        </div>
 
-        <div class="scores col-xs-4">
-          <div class="child-score">
-            <p>View score history</p>
-          </div>
-          <div class="child-score">
-            <button id="maths-game-chart" class="btn btn-primary">View chart</button>
-          </div>
-          <div class="child-score">
-            <button id="colours-game-chart" class="btn btn-primary">View chart</button>
-          </div>
-          <div class="child-score">
-            <button id="game-chart" class="btn btn-primary">View chart</button>
-          </div>
-          <div class="child-score">
-            <button id="shapes-game-chart" class="btn btn-primary">View chart</button>
+          <div class="child-age col-xs-6">
+            <span>Child's Age: <strong>{{childInfo.age}}</strong></span>
           </div>
         </div>
       </div>
 
+      <div class="statistics col-xs-12">
+      
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Game Name</th>
+              <th>Average Score</th>
+              <th>Score History</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr class="child-games">
+              <td class="game-name">Maths Game:</td>
+              <td class="game-stats">{{mathsGameStats}}</td>
+              <td class="game-history">
+                <button id="maths-game-chart" class="btn btn-primary col-xs-12">View chart</button>
+              </td>
+            </tr>
+            <tr class="child-games">
+              <td class="game-name">Colours Game:</td>
+              <td class="game-stats">{{coloursGameStats}}</td>
+              <td class="game-history">
+                <button id="colours-game-chart" class="btn btn-primary col-xs-12">View chart</button>
+              </td>
+            </tr>
+            <tr class="child-games">
+              <td class="game-name">Other Game:</td>
+              <td class="game-stats">No Stats</td>
+              <td class="game-history">
+                <button id="colours-game-chart" class="btn btn-primary col-xs-12">View chart</button>
+              </td>
+            </tr>
+             <tr class="child-games">
+              <td class="game-name">Other Game:</td>
+              <td class="game-stats">No Stats</td>
+              <td class="game-history">
+                <button id="game-chart" class="btn btn-primary col-xs-12">View chart</button>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+        <!-- <div class="row">
+          <div class="child-games col-xs-4">
+            <div class="child-game">
+              <p><u>Game</u></p>
+            </div>
+            <div class="child-game">
+              <p>Maths Game:</p>
+            </div>
+            <div class="child-game">
+              <p>Colours Game:</p>
+            </div>  
+            <div class="child-game">
+              <p>Game 3 Score:</p>
+            </div>  
+            <div class="child-game">
+              <p>Game 4 Score:</p>
+            </div>  
+          </div>
+          
+          <div class="scores col-xs-4">
+            <div class="child-score">
+              <p><u>Average Score</u></p>
+            </div>
+            <div class="child-score">
+              <p>{{mathsGameStats}}</p>
+            </div>
+            <div class="child-score">
+              <p>{{coloursGameStats}}</p>
+            </div>
+            <div class="child-score">
+              <p>No Stats</p>
+            </div>
+            <div class="child-score">
+              <p>No Stats</p>
+            </div>
+          </div>
+
+
+          <div class="scores col-xs-4">
+            <div class="child-score">
+              <p><u>View score history</u></p>
+            </div>
+            <div class="child-score">
+              <button id="maths-game-chart" class="btn btn-primary col-xs-12">View chart</button>
+            </div>
+            <div class="child-score">
+              <button id="colours-game-chart" class="btn btn-primary col-xs-12">View chart</button>
+            </div>
+            <div class="child-score">
+              <button id="game-chart" class="btn btn-primary col-xs-12">View chart</button>
+            </div>
+            <div class="child-score">
+              <button id="game-chart" class="btn btn-primary col-xs-12">View chart</button>
+            </div>
+          </div>
+        </div> -->
+
+      </div>
+
     </div>
 
   </div>
 
-  <div id="game-stats-container" class="col-xs-8 col-xs-offset-2" style="display: none">
-    <h2>Game Stats Chart</h2>
-    <div id="game-stats-chart" class="col-xs-9" style="min-width: 310px; height: 400px;"></div>
-    <div id="game-avg-comparison" class="col-xs-3" style="height: 400px;"></div>
-  </div>
+  <div id="game-stats-container" class="panel panel-default col-xs-10 col-xs-offset-1" style="display: none">
 
-  <div class="games col-xs-12">
-
-    <div class="maths-game games-img col-xs-3">
-      <img src="images/game-button-03.svg" class="img-responsive img-center">
-      <h3 class="game-title">Maths Game!</h3>
+    <div class="panel-heading">
+      <span id="game-stats-title">Game Statistics Chart</span>
     </div>
 
-    <div class="colours-game games-img col-xs-3">
-      <img src="images/game-button-01.svg" class="img-responsive img-center">
-      <h3 class="game-title">Colours Game!</h3>
-    </div>
+    <div class="panel-body">
 
-    <div class="game-three games-img col-xs-3">
-      <img src="images/game-button-02.svg" class="img-responsive img-center">
-      <h3 class="game-title">Other Game!</h3>
-    </div>
+      <div id="game-stats-chart" class="col-xs-9" style="min-width: 310px; height: 400px;"></div>
+      <div id="game-avg-comparison" class="col-xs-3" style="height: 400px;"></div>
 
-    <div class="game-four games-img col-xs-3">
-      <img src="images/game-button-04.svg" class="img-responsive img-center">
-      <h3 class="game-title">Shapes Game!</h3>
     </div>
 
   </div>
 
+  <div class="panel panel-default games col-xs-10 col-xs-offset-1">
 
-<!-- Can Be Deleted Later -->
-<!--   <div class="games col-xs-12">
-    <div class="game-1 col-xs-3">
-      <button class="btn btn-primary game-one col-xs-3">Math Game!</button>
-    </div>
+    <div class="panel-body">
+      
+      <div class="maths-game games-img col-xs-3">
+        <img src="images/game-button-03.svg" class="img-responsive img-center">
+      </div>
 
-    <div class="colours-game col-xs-3">
-      <button class="btn btn-primary game-two col-xs-3">Colour Game!</button>
-    </div>
+      <div class="colours-game games-img col-xs-3">
+        <img src="images/game-button-01.svg" class="img-responsive img-center">
+      </div>
 
-    <div class="game-3 col-xs-3">
-      <button class="btn btn-primary game-three col-xs-3">Shape Game!</button>
-    </div> 
+      <div class="game-three games-img col-xs-3">
+        <img src="images/game-button-02.svg" class="img-responsive img-center">
+      </div>
 
-    <div class="game-4 col-xs-3">
-      <button class="btn btn-primary game-four col-xs-3">Animal Game!</button>
-    </div>
-    
-  </div> -->
+      <div class="game-four games-img col-xs-3">
+        <img src="images/game-button-04.svg" class="img-responsive img-center">
+      </div>
+
+    </div>    
+
+  </div>
 
 </template>
 

@@ -26,11 +26,16 @@
 .games {
   border: solid 2px #f8b03f;
   text-align: center;
+  background-color: rgba(0,0,0,0.3);
 }
 
 .game-title {
   padding-top: 0;
   margin-top: 0;
+  font-size: 4vw;
+}
+
+#game-stats-title {
   font-size: 4vw;
 }
 
@@ -51,4 +56,7 @@
   border-radius: 100%;
 }
 
+.table, th {
+  text-align: center;
+}
 
