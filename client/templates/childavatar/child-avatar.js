@@ -5,7 +5,7 @@ Template.childAvatar.events({
     Session.setPersistent("child", child);
     console.log(child);
 
-    Router.go('/child')    
+    Router.go('/child');
   }
 
 });

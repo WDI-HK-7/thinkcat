@@ -1,4 +1,12 @@
 var child = Session.get("child");
+var _dep = new Deps.Dependency();
+
+Template.childProfile.onRendered(function () {
+  // Use the Packery jQuery plugin
+  child = Session.get("child");
+  _dep.changed();
+});
+
 
 var buildStatsChart = function(title, data) {
 
@@ -161,15 +169,18 @@ var getScoreAvg = function (database, params) {
 Template.childProfile.helpers({
 
   childInfo: function() {
+    _dep.depend();
     var childInfo = Children.findOne({_id: child.id});
     return childInfo;
   },
 
   mathsGameStats: function() {
+    _dep.depend();
     return getScoreAvg(MathsGame, {child_id: child.id});
   },
 
   coloursGameStats: function() {
+    _dep.depend();
     return getScoreAvg(ColoursGame, {child_id: child.id});
     var sum = 0
     var count = ColoursGame.find({child_id: child.id}).count();
