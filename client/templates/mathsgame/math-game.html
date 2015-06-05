@@ -1,15 +1,29 @@
 <template name="mathGame">
   <div class="col-xs-8 col-xs-offset-2 text-center">
-    {{#if counter }}
-      <h1>What is the answer of</h1>
-      <h1>{{question}} = ?</h1>
-      {{#each answers}}
-        <button class="mathGameAns btn btn-primary btn-lg">{{this}}</button>
-      {{/each}}
-    {{else}}
-      <h1>Your Score is {{correctAns}}</h1>
-      <button id="mathGameReturnHome">Return to home</button>
-      <button id="mathGameRestart">Play again</button>
-    {{/if}}
+  
+<!-- ======================================================= Navbar ======================================================= -->
+     
+    <div class="container-fluid">
+      <img id="logo" class="col-xs-2 img-responsive" src="/images/smart-owl-icon.svg" alt="">
+      <img id="colours-avatar" class="col-xs-offset-6 col-xs-2 img-responsive" src="http://images.watoday.com.au/2010/12/22/2105997/kids-swing-3-4-420-420x0.jpg" alt="">
+      <h4 id="colour-child-name" class="col-xs-2">Hello, {{child.name}} :)<br> You are {{child.age}} years old!</h4>
+    </div>
+
+<!-- ===================================================== Game Panel ===================================================== -->
+   
+    <div class="container">
+      {{#if counter }}
+        <h1>What is the answer of</h1>
+        <h1>{{question}} = ?</h1>
+        {{#each answers}}
+          <button class="mathGameAns btn btn-primary btn-lg">{{this}}</button>
+        {{/each}}
+      {{else}}
+        <h1>Your Score is {{correctAns}}</h1>
+        <button id="mathGameReturnHome">Return to home</button>
+        <button id="mathGameRestart">Play again</button>
+      {{/if}}
+    </div>
+    
   </div>
 </template>
