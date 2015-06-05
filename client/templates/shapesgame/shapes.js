@@ -133,7 +133,7 @@ Template.shapes.events({
      
     var child = Session.get("child");
      
-    Meteor.call('addShapesScore', child.id, numCorrect, numIncorrect, answersArray);
+    Meteor.call('addShapesScore', child.id, child.age, numCorrect, numIncorrect, answersArray);
 
     step = 0;
     numCorrect = 0;
@@ -149,7 +149,7 @@ Template.shapes.events({
     
     var child = Session.get("child");
     
-    Meteor.call('addshapesScore', child.id, numCorrect, numIncorrect, answersArray);
+    Meteor.call('addShapesScore', child.id, child.age, numCorrect, numIncorrect, answersArray);
 
     step = 0;
     numCorrect = 0;
