@@ -124,12 +124,12 @@ Template.colours.events({
      
     var child = Session.get("child");
      
+    Meteor.call('addColoursScore', child.id, numCorrect, numIncorrect, answersArray);
+
     step = 0;
     numCorrect = 0;
     numIncorrect = 0;
-     
-    Meteor.call('addColoursScore', child.id, numCorrect, numIncorrect, answersArray);
-     
+      
     Router.go('/child');
      
   },
@@ -140,11 +140,11 @@ Template.colours.events({
     
     var child = Session.get("child");
     
+    Meteor.call('addColoursScore', child.id, numCorrect, numIncorrect, answersArray);
+
     step = 0;
     numCorrect = 0;
     numIncorrect = 0;
-    
-    Meteor.call('addColoursScore', child.id, numCorrect, numIncorrect, answersArray);
     
     _dep.changed();
     
