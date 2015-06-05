@@ -2,7 +2,7 @@ var child = Session.get("child");
 
 var buildStatsChart = function(title, data) {
 
-  $('#game-stats-container').highcharts({
+  $('#game-stats-chart').highcharts({
       
     chart: {
       type: 'area'
@@ -20,22 +20,23 @@ var buildStatsChart = function(title, data) {
       text: 'recent scores'
     },
     
+    legend: {
+      enabled: false
+    },
+
     xAxis: {
-      allowDecimals: false,
-      labels: {
-        formatter: function () {
-          return this.value; // clean, unformatted number for year
-        }
-      }
+      enabled: false,
+      allowDecimals: false
     },
     
     yAxis: {
+      max: 100,
       title: {
         text: 'score'
       },
       labels: {
         formatter: function () {
-          return this.value / 1000 + '%';
+          return this.value + '%';
         }
       }
     },
@@ -88,7 +89,6 @@ Template.childProfile.helpers({
     mathsGameData.map(function(obj){
       sum += obj.score;
     });
-    console.log(sum + " and " + count);
     return Math.floor(sum/count);
   },
 
@@ -99,8 +99,8 @@ Template.childProfile.helpers({
     coloursGameData.map(function(obj){
       sum += obj.score;
     });
-    console.log(sum + " and " + count);
-    console.log(coloursGameData.fetch());
+    // console.log(sum + " and " + count);
+    // console.log(coloursGameData.fetch());
     return Math.floor(sum/count);
   }
 
@@ -116,7 +116,30 @@ Template.childProfile.events({
       name: "Maths Game",
       data: chartData
     }
-    buildStatsChart('Maths Game', series);
+    $('#game-stats-container').show();
+    if (chartData.length > 1) {
+      buildStatsChart('Maths Game', series);
+    } else {
+      $('#game-stats-chart').html("<h1>You haven't played enough, play more!</h1>");
+    }
+    console.log(series);
+  },
+
+  "click #colours-game-chart": function() {
+    var coloursGameData = ColoursGame.find({child_id: child.id}, {createdaAt: -1});
+    var chartData = coloursGameData.map(function(obj){
+      return obj.score;
+    });
+    var series = {
+      name: "Colours Game",
+      data: chartData
+    }
+    $('#game-stats-container').show();
+    if (chartData.length > 1) {
+      buildStatsChart('Colours Game', series);
+    } else {
+      $('#game-stats-chart').html("<h1>You haven't played enough, play more!</h1>");
+    }
     console.log(series);
   },
 
