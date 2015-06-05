@@ -5,7 +5,8 @@ var buildStatsChart = function(title, data) {
   $('#game-stats-chart').highcharts({
       
     chart: {
-      type: 'area'
+      type: 'spline',
+      backgroundColor: null
     },
     
     title: {
@@ -25,19 +26,22 @@ var buildStatsChart = function(title, data) {
     },
 
     xAxis: {
-      enabled: false,
-      allowDecimals: false
+      labels: {
+        enabled: false
+      },
+      title: {
+        text: 'Time'
+      }
     },
     
     yAxis: {
-      max: 100,
+      max: 105,
+      gridLineWidth: 0,
       title: {
         text: 'score'
       },
       labels: {
-        formatter: function () {
-          return this.value + '%';
-        }
+        enabled: false
       }
     },
     
@@ -46,12 +50,17 @@ var buildStatsChart = function(title, data) {
     },
     
     plotOptions: {
-      area: {
-        // pointStart: 1940,
+      spline: {
+        lineWidth: 8,
+        states: {
+          hover: {
+            lineWidth: 9
+          }
+        },
         marker: {
           enabled: false,
           symbol: 'circle',
-          radius: 2,
+          radius: 3,
           states: {
             hover: {
               enabled: true
@@ -144,7 +153,7 @@ Template.childProfile.events({
   },
 
   "click .maths-game": function(event, template) {
-    Router.go('/mathGame')
+    Router.go('/mathGame');
   },
   
   "click .colours-game": function(event, template) {
@@ -152,11 +161,11 @@ Template.childProfile.events({
   },
 
   "click .game-three": function(event, template) {
-    Router.go('/game/3')
+    Router.go('/game/3');
   },
 
   "click .game-four": function(event, template) {
-    Router.go('/game/4')
+    Router.go('/game/4');
   }
 
 });
