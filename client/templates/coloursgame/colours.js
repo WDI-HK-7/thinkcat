@@ -124,7 +124,7 @@ Template.colours.events({
      
     var child = Session.get("child");
      
-    Meteor.call('addColoursScore', child.id, numCorrect, numIncorrect, answersArray);
+    Meteor.call('addColoursScore', child.id, child.age, numCorrect, numIncorrect, answersArray);
 
     step = 0;
     numCorrect = 0;
@@ -140,7 +140,7 @@ Template.colours.events({
     
     var child = Session.get("child");
     
-    Meteor.call('addColoursScore', child.id, numCorrect, numIncorrect, answersArray);
+    Meteor.call('addColoursScore', child.id, child.age, numCorrect, numIncorrect, answersArray);
 
     step = 0;
     numCorrect = 0;
