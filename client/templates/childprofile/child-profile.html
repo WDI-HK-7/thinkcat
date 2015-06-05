@@ -1,13 +1,36 @@
 <template name="childProfile">
 
-{{> navbar}}
+  {{> navbar}}
 
-  <div id="main-header" class="col-xs-12">  
+  <div id="main-header" class="col-xs-10 col-xs-offset-1">  
     <div class="col-xs-12">
-      <h3>Your Dashboard</h3>
+      <h3><strong><u>{{childInfo.name}}'s Games Page!</u></strong></h3>
       <p>All of your Children's Information will displayed here in their own personalized child-info section.</p>
     </div>
+  </div>
 
+  <div class="container">
+    
+    <div class="games col-xs-12">
+          
+        <div class="maths-game games-img col-xs-3">
+          <img src="images/game-button-03.svg" class="img-responsive img-center">
+        </div>
+
+        <div class="colours-game games-img col-xs-3">
+          <img src="images/game-button-01.svg" class="img-responsive img-center">
+        </div>
+
+        <div class="game-three games-img col-xs-3">
+          <img src="images/game-button-02.svg" class="img-responsive img-center">
+        </div>
+
+        <div class="game-four games-img col-xs-3">
+          <img src="images/game-button-04.svg" class="img-responsive img-center">
+        </div>
+
+    </div>
+  
   </div>
 
   <div class="panel panel-default dashboard-child col-xs-10 col-xs-offset-1">
@@ -18,14 +41,15 @@
         <img src="http://images.watoday.com.au/2010/12/22/2105997/kids-swing-3-4-420-420x0.jpg" class="img-circle img-responsive">
       </div>
 
+
       <div class="child-info col-xs-12 col-sm-8">
         <div class="row">
           <div class="child-name col-xs-6">
-            <span>Child's Name: <strong>{{childInfo.name}}</strong></span>
+            <span>Name: <strong>{{childInfo.name}}</strong></span>
           </div>
 
           <div class="child-age col-xs-6">
-            <span>Child's Age: <strong>{{childInfo.age}}</strong></span>
+            <span>Age: <strong>{{childInfo.age}}</strong></span>
           </div>
         </div>
       </div>
@@ -73,62 +97,6 @@
 
           </tbody>
         </table>
-        <!-- <div class="row">
-          <div class="child-games col-xs-4">
-            <div class="child-game">
-              <p><u>Game</u></p>
-            </div>
-            <div class="child-game">
-              <p>Maths Game:</p>
-            </div>
-            <div class="child-game">
-              <p>Colours Game:</p>
-            </div>  
-            <div class="child-game">
-              <p>Game 3 Score:</p>
-            </div>  
-            <div class="child-game">
-              <p>Game 4 Score:</p>
-            </div>  
-          </div>
-          
-          <div class="scores col-xs-4">
-            <div class="child-score">
-              <p><u>Average Score</u></p>
-            </div>
-            <div class="child-score">
-              <p>{{mathsGameStats}}</p>
-            </div>
-            <div class="child-score">
-              <p>{{coloursGameStats}}</p>
-            </div>
-            <div class="child-score">
-              <p>No Stats</p>
-            </div>
-            <div class="child-score">
-              <p>No Stats</p>
-            </div>
-          </div>
-
-
-          <div class="scores col-xs-4">
-            <div class="child-score">
-              <p><u>View score history</u></p>
-            </div>
-            <div class="child-score">
-              <button id="maths-game-chart" class="btn btn-primary col-xs-12">View chart</button>
-            </div>
-            <div class="child-score">
-              <button id="colours-game-chart" class="btn btn-primary col-xs-12">View chart</button>
-            </div>
-            <div class="child-score">
-              <button id="game-chart" class="btn btn-primary col-xs-12">View chart</button>
-            </div>
-            <div class="child-score">
-              <button id="game-chart" class="btn btn-primary col-xs-12">View chart</button>
-            </div>
-          </div>
-        </div> -->
 
       </div>
 
@@ -138,9 +106,9 @@
 
   <div id="game-stats-container" class="panel panel-default col-xs-10 col-xs-offset-1" style="display: none">
 
-    <div class="panel-heading">
+    <!-- <div class="panel-heading"> -->
       <span id="game-stats-title">Game Statistics Chart</span>
-    </div>
+    <!-- </div> -->
 
     <div class="panel-body">
 
@@ -151,29 +119,6 @@
 
   </div>
 
-  <div class="panel panel-default games col-xs-10 col-xs-offset-1">
-
-    <div class="panel-body">
-      
-      <div class="maths-game games-img col-xs-3">
-        <img src="images/game-button-03.svg" class="img-responsive img-center">
-      </div>
-
-      <div class="colours-game games-img col-xs-3">
-        <img src="images/game-button-01.svg" class="img-responsive img-center">
-      </div>
-
-      <div class="game-three games-img col-xs-3">
-        <img src="images/game-button-02.svg" class="img-responsive img-center">
-      </div>
-
-      <div class="game-four games-img col-xs-3">
-        <img src="images/game-button-04.svg" class="img-responsive img-center">
-      </div>
-
-    </div>    
-
-  </div>
 
 </template>
 

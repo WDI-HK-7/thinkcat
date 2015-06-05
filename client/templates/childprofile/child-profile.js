@@ -226,6 +226,7 @@ Template.childProfile.events({
       $('#game-stats-chart').html("<h1>You haven't played enough, play more!</h1>");
       $('#game-avg-comparison').html('');
     }
+
   },
 
   "click #colours-game-chart": function() {
@@ -247,6 +248,7 @@ Template.childProfile.events({
     } else {
       $('#game-stats-chart').html("<h1>You haven't played enough, play more!</h1>");
     }
+
   },
   
   "click #shapes-game-chart": function() {
