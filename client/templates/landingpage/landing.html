@@ -1,11 +1,11 @@
 <template name="landing">
-  <header class="image-bg-fluid-height">
-    <img class="img-responsive img-center" src="/images/smart-owl-logo.svg" alt="">
+  
+  <nav>
+    {{> loginButtons}}
+  </nav>
 
-    <section id="banner">
-      <div class="overlay">
-      </div>
-    </section>
+  <header class="image-bg-fluid-height">
+    <img class="img-responsive img-center" src="/images/smart-owl-main-logo.svg" alt="">
   </header>
 
   <section class="col-xs-12">
@@ -19,10 +19,6 @@
       </div>
     </div>
   </section>
-
-  <div class="btns-group col-xs-12">
-    <a class="btn-secondary">{{> loginButtons}}</a>
-  </div>
   
   {{#if signedIn }}
   <div id="children-avatars">
@@ -67,7 +63,19 @@
             </div>
             <div class="col-md-4">
               <div class="icon bg-finn">
-                <span class="fa fa-code"></span>
+                <svg width="500" height="100">
+                  <circle id="orange-circle" r="30" cx="50" cy="50" fill="orange" />
+                  
+                  <animate 
+                           xlink:href="#orange-circle"
+                           attributeName="cx"
+                           from="5"
+                           to="100" 
+                           dur="1s"
+                           begin="1s"
+                           fill="freeze" 
+                           id="circ-anim" />
+                </svg>
               </div>
               <div class="editContent">
                 <h4>Colour Game</h4>

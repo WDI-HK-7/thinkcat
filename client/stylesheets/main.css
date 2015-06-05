@@ -1,0 +1,11 @@
+body {
+	background: url("/images/background-image-3-01.svg") no-repeat fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  background-color: #fffee0;
+}
