@@ -1,38 +1,47 @@
 #main-header {
   text-align: center;
   margin-bottom: 50px;
-  border-bottom: solid 5px red;
+  border-bottom: solid 5px #ff6b6b;
   padding-bottom: 25px;
 }
 
 .dashboard-child {
-  border: solid 5px black;
+  border: solid 5px #454f54;
   border-radius: 5px;
   margin-bottom: 25px;
-  background-color: gray;
+  background-color: #4ecdc4;
 }
 
 .child-info {
-  border: solid 2px red;
+  border: solid 2px #f8b03f;
   border-radius: 5px;
 }
 
 .statistics {
-  border: solid 2px red;
+  border: solid 2px #f8b03f;
   border-radius: 5px;
+  margin-bottom: 25px;
 }
 
 .games {
-  border: solid 2px red;
-  border-radius: 5px;
-  height: 50px;
-  padding-top: 6px;
+  border: solid 2px #f8b03f;
+  text-align: center;
 }
 
+.game-title {
+  padding-top: 0;
+  margin-top: 0;
+  font-size: 4vw;
+}
 
 .child-info {
   margin-top: 25px;
   margin-bottom: 15px;
+}
+
+.avatar-profile {
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .avatar {
@@ -41,3 +50,5 @@
   width: 10em;
   border-radius: 100%;
 }
+
+

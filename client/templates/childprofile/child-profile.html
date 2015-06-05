@@ -2,8 +2,7 @@
 
 {{> navbar}}
 
-  <div id="main-header" class="col-xs-12">
-  
+  <div id="main-header" class="col-xs-12">  
     <div class="col-xs-12">
       <h3>Your Dashboard</h3>
       <p>All of your Children's Information will displayed here in their own personalized child-info section.</p>
@@ -13,11 +12,11 @@
 
   <div class="dashboard-child col-xs-8 col-xs-offset-2">
   
-    <div class="avatar col-xs-4">
+    <div class="avatar-profile col-xs-12 col-sm-4">
       <img src="http://images.watoday.com.au/2010/12/22/2105997/kids-swing-3-4-420-420x0.jpg" class="img-circle img-responsive">
     </div>
 
-    <div class="child-info col-xs-8">
+    <div class="child-info col-xs-12 col-sm-8">
       <div class="row">
         <div class="child-name col-xs-6">
           <span>Child's Name: <strong>{{child.name}}</strong></span>
@@ -28,7 +27,7 @@
       </div>
     </div>
 
-    <div class="statistics col-xs-8">
+    <div class="statistics col-xs-12 col-sm-8">
     
       <div class="row">
         <div class="child-games col-xs-6">
@@ -63,7 +62,34 @@
       </div>
     </div>
   </div>
+
   <div class="games col-xs-12">
+
+    <div class="maths-game games-img col-xs-3">
+      <img src="images/game-button-03.svg" class="img-responsive img-center">
+      <h3 class="game-title">Maths Game!</h3>
+    </div>
+
+    <div class="colours-game games-img col-xs-3">
+      <img src="images/game-button-01.svg" class="img-responsive img-center">
+      <h3 class="game-title">Colours Game!</h3>
+    </div>
+
+    <div class="game-three games-img col-xs-3">
+      <img src="images/game-button-02.svg" class="img-responsive img-center">
+      <h3 class="game-title">Other Game!</h3>
+    </div>
+
+    <div class="game-four games-img col-xs-3">
+      <img src="images/game-button-04.svg" class="img-responsive img-center">
+      <h3 class="game-title">Other Game!</h3>
+    </div>
+
+  </div>
+
+
+<!-- Can Be Deleted Later -->
+<!--   <div class="games col-xs-12">
     <div class="game-1 col-xs-3">
       <button class="btn btn-primary game-one col-xs-3">Math Game!</button>
     </div>
@@ -80,7 +106,7 @@
       <button class="btn btn-primary game-four col-xs-3">Animal Game!</button>
     </div>
     
-  </div>
+  </div> -->
 
 </template>
 

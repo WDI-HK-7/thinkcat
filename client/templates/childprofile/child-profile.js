@@ -14,7 +14,7 @@ Template.childProfile.helpers({
 
 Template.childProfile.events({
 
-  "click .game-one": function(event, template) {
+  "click .maths-game": function(event, template) {
     Router.go('/mathGame')
   },
   
