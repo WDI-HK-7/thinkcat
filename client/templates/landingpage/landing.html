@@ -1,54 +1,47 @@
 <template name="landing">
   
-  <nav>
-    {{> loginButtons}}
-  </nav>
+  {{> navbar}}
 
-  <header class="image-bg-fluid-height">
+  <header class="image-fluid-height">
     <img class="img-responsive img-center" src="/images/smart-owl-main-logo.svg" alt="">
   </header>
 
-  <section class="col-xs-12">
+
+  <!-- Child Panel -->
+
+  {{#if signedIn }}
+
+  <div>
+    <button id="add-child-btn" class="col-xs-4 col-xs-offset-4">Add Your Child!</button>
+    <div id="add-child" class="col-xs-6 col-xs-6">
+      <form id="vertical-form" class="new-child" style="display: none">
+        <input type="text" placeholder="Child's Name..." name="childName">
+        <input type="text" placeholder="Child's Age..." name="childAge">
+        <input type="submit" class="submit-btn">
+      </form>
+    </div>
+  </div>
+
+
+  <div id="child-panel" class="col-xs-12 panel panel-default text-center"> 
+
+    <div id="children-avatars">
+      {{#each children}}
+        {{> childAvatar}}
+      {{/each}}
+    </div>
+  </div>
+
+  {{/if}}
+
+  <!-- Introduction -->
+  <section class="welcome-fixed-height col-xs-12">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
           <h1 class="section-heading">Welcome to Smart Owl Learning</h1>
-          <p class="lead section-lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <p class="lead section-lead">Step-by-Step Learning</p>
           <p class="section-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  {{#if signedIn }}
-  <div id="children-avatars">
-    {{#each children}}
-      {{> childAvatar}}
-    {{/each}}
-  </div>
-
-  <div id="add-child" class="col-xs-12">
-    <form class="new-child" style="display: none">
-      <input type="text" placeholder="Child's Name..." name="childName">
-      <input type="text" placeholder="Child's Age..." name="childAge">
-      <input type="submit" class="btn btn-default">
-    </form>
-
-    <button id="add-child-btn" class="btn btn-success">Add Your Child!</button>
-  </div>
-  {{/if}}
-
-  <section class="image-bg-fixed-height col-xs-12">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="underlined-title">
-            <div class="editContent">
-              <h1 col-xs-8 col-xs-offset-2>Step-by-Step Learning</h1>
-            </div>
-            <hr>
-          </div>
-                    
           <div class="services-wrapper">
             <div class="col-md-4">
               <div class="icon bg-crete">
@@ -63,19 +56,6 @@
             </div>
             <div class="col-md-4">
               <div class="icon bg-finn">
-                <svg width="500" height="100">
-                  <circle id="orange-circle" r="30" cx="50" cy="50" fill="orange" />
-                  
-                  <animate 
-                           xlink:href="#orange-circle"
-                           attributeName="cx"
-                           from="5"
-                           to="100" 
-                           dur="1s"
-                           begin="1s"
-                           fill="freeze" 
-                           id="circ-anim" />
-                </svg>
               </div>
               <div class="editContent">
                 <h4>Colour Game</h4>
@@ -100,5 +80,55 @@
       </div>
     </div>
   </section>
+
+  <!-- Game Buttons -->
+  <section class="info-fixed-height col-xs-12">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-xs-12 col-xs-offset-1">
+  
+          <div class="maths-game games-img col-xs-4">
+            <img src="images/game-button-03.svg" class="img-responsive img-center">
+          </div>
+
+          <div class="colours-game games-img col-xs-4">
+            <img src="images/game-button-01.svg" class="img-responsive img-center">
+          </div>
+
+          <div class="game-three games-img col-xs-4">
+            <img src="images/game-button-02.svg" class="img-responsive img-center">
+          </div>
+
+          <div class="game-four games-img col-xs-4">
+            <img src="images/game-button-04.svg" class="img-responsive img-center">
+          </div>
+
+          <div class="game-four games-img col-xs-4">
+            <img src="images/game-button-04.svg" class="img-responsive img-center">
+          </div>
+
+          <div class="game-four games-img col-xs-4">
+            <img src="images/game-button-04.svg" class="img-responsive img-center">
+          </div>  
+
+        </div>
+      </div>
+    </div>
+  </section>
 </template> 
+
+<!--         <svg width="500" height="100">
+          <circle id="orange-circle" r="30" cx="50" cy="50" fill="orange" />
+          
+          <animate 
+                   xlink:href="#orange-circle"
+                   attributeName="cx"
+                   from="5"
+                   to="100" 
+                   dur="1s"
+                   begin="1s"
+                   fill="freeze" 
+                   id="circ-anim" />
+        </svg> -->
 
