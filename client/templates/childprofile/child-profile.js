@@ -26,6 +26,8 @@ var buildStatsChart = function(title, data) {
     },
 
     xAxis: {
+      lineColor: 'black',
+      tickColor: 'black',
       labels: {
         enabled: false
       },
@@ -46,7 +48,9 @@ var buildStatsChart = function(title, data) {
     },
     
     tooltip: {
-      pointFormat: child.name + ' scored <b>{point.y}%</b><br/>at {point.x}'
+      formatter: function () {
+        return '<b>' + child.name + '</b>' + ' scored <b>' + this.point.y + '%</b><br/>at ' + this.point.time;
+      }
     },
     
     plotOptions: {
@@ -74,7 +78,77 @@ var buildStatsChart = function(title, data) {
   });
 }
 
+var buildAvgCompareChart = function(title, data) {
 
+  $('#game-avg-comparison').highcharts({
+      
+    chart: {
+      type: 'column',
+      backgroundColor: null
+    },
+    
+    title: {
+      text: title
+    },
+    
+    credits: {
+      enabled: false
+    },
+    
+    subtitle: {
+      text: 'your averge vs. other kids at your age'
+    },
+    
+    legend: {
+      align: 'right',
+      enabled: true
+    },
+
+    xAxis: {
+      lineColor: 'black',
+      tickColor: 'black',
+      labels: {
+        enabled: false
+      }
+    },
+    
+    yAxis: {
+      max: 105,
+      gridLineWidth: 0,
+      title: {
+        text: 'score'
+      },
+      labels: {
+        enabled: false
+      }
+    },
+    
+    tooltip: {
+      formatter: function () {
+        return "<b>" + this.series.name + "'s</b> average score <b> " + this.point.y + "%";
+      }
+    },
+    
+    // plotOptions: {
+    //   column: {
+    //     pointPadding: 0.2,
+    //     borderWidth: 0
+    //   }
+    // },
+    
+    series: data
+  });
+}
+
+var getScoreAvg = function (database, params) {
+  var sum = 0;
+  var count = database.find(params).count();
+  var gameData = database.find(params);
+  gameData.map(function(obj){
+    sum += obj.score;
+  });
+  return Math.floor(sum/count);
+};
 
 /*
  * Call the function to built the chart when the template is rendered
@@ -92,64 +166,65 @@ Template.childProfile.helpers({
   },
 
   mathsGameStats: function() {
-    var sum = 0;
-    var count = MathsGame.find({child_id: child.id}).count();
-    var mathsGameData = MathsGame.find({child_id: child.id});
-    mathsGameData.map(function(obj){
-      sum += obj.score;
-    });
-    return Math.floor(sum/count);
+    return getScoreAvg(MathsGame, {child_id: child.id});
   },
 
   coloursGameStats: function() {
-    var sum = 0
-    var count = ColoursGame.find({child_id: child.id}).count();
-    var coloursGameData = ColoursGame.find({child_id: child.id});
-    coloursGameData.map(function(obj){
-      sum += obj.score;
-    });
-    // console.log(sum + " and " + count);
-    // console.log(coloursGameData.fetch());
-    return Math.floor(sum/count);
+    return getScoreAvg(ColoursGame, {child_id: child.id});
   }
 
 });
 
+var getGameData = function(database, params) {
+  var gameData = database.find(params, {createdaAt: -1});
+  var chartData = gameData.map(function(obj){
+    return {time: obj.createdAt, y: obj.score};
+  });
+  return chartData;
+}
+
 Template.childProfile.events({
   "click #maths-game-chart": function() {
-    var mathsGameData = MathsGame.find({child_id: child.id}, {createdaAt: -1});
-    var chartData = mathsGameData.map(function(obj){
-      return obj.score;
-    });
-    var series = {
+    var chartData = getGameData(MathsGame, {child_id: child.id});
+    var gameScoreSeries = {
       name: "Maths Game",
       data: chartData
     }
+    var childAvg = getScoreAvg(MathsGame, {child_id: child.id});
+    var ageAvg = getScoreAvg(MathsGame, {child_age: child.age});
+    var avgSeries = [
+      {name: child.name, data: [childAvg]},
+      {name: child.age + "yr olds", data: [ageAvg]}
+    ];
     $('#game-stats-container').show();
     if (chartData.length > 1) {
-      buildStatsChart('Maths Game', series);
+      buildStatsChart('Maths Game', gameScoreSeries);
+      buildAvgCompareChart('Maths Game', avgSeries);
     } else {
       $('#game-stats-chart').html("<h1>You haven't played enough, play more!</h1>");
+      $('#game-avg-comparison').html('');
     }
-    console.log(series);
   },
 
   "click #colours-game-chart": function() {
-    var coloursGameData = ColoursGame.find({child_id: child.id}, {createdaAt: -1});
-    var chartData = coloursGameData.map(function(obj){
-      return obj.score;
-    });
-    var series = {
+    var chartData = getGameData(ColoursGame, {child_id: child.id});
+    var gameScoreSeries = {
       name: "Colours Game",
       data: chartData
     }
+    var childAvg = getScoreAvg(ColoursGame, {child_id: child.id});
+    var ageAvg = getScoreAvg(ColoursGame, {child_age: child.age});
+    var avgSeries = [
+      {name: child.name, data: [childAvg]},
+      {name: child.age + "yr olds", data: [ageAvg]}
+    ];
     $('#game-stats-container').show();
     if (chartData.length > 1) {
-      buildStatsChart('Colours Game', series);
+      buildStatsChart('Colours Game', gameScoreSeries);
+      buildAvgCompareChart('Colours Game', avgSeries);
     } else {
       $('#game-stats-chart').html("<h1>You haven't played enough, play more!</h1>");
     }
-    console.log(series);
   },
 
   "click .maths-game": function(event, template) {
