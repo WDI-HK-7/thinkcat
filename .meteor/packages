@@ -10,7 +10,6 @@ iron:router
 u2622:persistent-session
 twbs:bootstrap
 accounts-ui-unstyled
-accounts-ui
 jquery
 underscore
 maazalik:highcharts
