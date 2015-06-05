@@ -11,3 +11,7 @@ Meteor.publish('mathsGame', function() {
 Meteor.publish('coloursGame', function() {
   return ColoursGame.find({});
 });
+
+Meteor.publish('shapesGame', function() {
+  return ShapesGame.find({});
+});
