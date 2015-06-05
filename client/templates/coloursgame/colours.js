@@ -88,12 +88,17 @@ Template.colours.events({
         correct: true
         
       };
-
+      
+      var rightSound = new Audio('/sounds/Correct-answer.mp3');
+      console.log(rightSound);
+      rightSound.play();
+      
       answersArray.push(newCorrectAnswer);
 
       numCorrect++;
       step++;
       _dep.changed();
+      
       createColourQuestion(coloursArray);
       
     }
@@ -106,6 +111,10 @@ Template.colours.events({
         correct: false
         
       };
+      
+      var wrongSound = new Audio('/sounds/Whip_bonk.wav');
+      console.log(wrongSound);
+      wrongSound.play();
       
       answersArray.push(newIncorrectAnswer);
       
