@@ -1,37 +1,54 @@
 #main-header {
   text-align: center;
   margin-bottom: 50px;
-  border-bottom: solid 5px #ff6b6b;
+  margin-top: 25px;
   padding-bottom: 25px;
+  background-color: rgba(255,254,224,0.7);
+  border-radius: 20px;
+  font-size: 2.5vw;
 }
 
 .dashboard-child {
-  border: solid 5px #454f54;
-  border-radius: 5px;
+  border-radius: 20px;
   margin-bottom: 25px;
-  background-color: #4ecdc4;
+  background-color: rgba(255,254,224,0.7);
+  font-size: 2vw;
 }
 
 .child-info {
   border: solid 2px #f8b03f;
-  border-radius: 5px;
+  border-radius: 20px;
+  font-size: 2.5vw;
 }
 
 .statistics {
   border: solid 2px #f8b03f;
-  border-radius: 5px;
+  border-radius: 20px;
   margin-bottom: 25px;
 }
 
 .games {
-  border: solid 2px #f8b03f;
-  text-align: center;
+/*  border: solid 5px #454f54;
+*/  border-radius: 20px;
+  background-color: rgba(255,254,224,0);
+  margin-bottom: 50px;
+  width: auto;
 }
 
 .game-title {
   padding-top: 0;
   margin-top: 0;
   font-size: 4vw;
+}
+
+
+#game-stats-title {
+  font-size: 4vw;
+}
+
+#game-stats-container {
+  background-color: rgba(255,254,224,0.7);
+  border-radius: 20px;
 }
 
 .child-info {
@@ -51,4 +68,15 @@
   border-radius: 100%;
 }
 
+.table, th {
+  text-align: center;
+  font-weight: bold;
+}
 
+.panel-body {
+  text-align: center;
+}
+
+.panel {
+  border: none;
+}
