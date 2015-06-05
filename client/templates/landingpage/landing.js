@@ -31,3 +31,9 @@ Template.landing.events({
   }
 
 });
+
+Template.landing.onRendered(function() {
+ $(document).ready(function(){
+    $("#navbar-logo").hide();
+  });
+});
