@@ -44,6 +44,15 @@ Template.colours.helpers({
     
   },
   
+// -------------------------------------------------------- Render Updated Wrong Answers
+
+  updateIncorrectAnswers: function() {
+
+     _dep.depend();
+    return numIncorrect;
+
+  },
+
 // -------------------------------------------------------- Check Number of Correct Answers
   
   counter: function () {
@@ -102,6 +111,8 @@ Template.colours.events({
       
       numIncorrect++;
       step++;
+      _dep.changed();
+
       
     }
 
