@@ -171,6 +171,28 @@ Template.childProfile.helpers({
 
   coloursGameStats: function() {
     return getScoreAvg(ColoursGame, {child_id: child.id});
+    var sum = 0
+    var count = ColoursGame.find({child_id: child.id}).count();
+    var coloursGameData = ColoursGame.find({child_id: child.id});
+    coloursGameData.map(function(obj){
+      sum += obj.score;
+    });
+    // console.log(sum + " and " + count);
+    // console.log(coloursGameData.fetch());
+    return Math.floor(sum/count);
+  },
+  
+  shapesGameStats: function() {
+    var sum = 0
+    var count = ShapesGame.find({child_id: child.id}).count();
+    var shapesGameData = ShapesGame.find({child_id: child.id});
+    shapesGameData.map(function(obj){
+      sum += obj.score;
+    });
+    console.log(sum + " and " + count);
+    console.log(child.id);
+    console.log(shapesGameData.fetch());
+    return Math.floor(sum/count);
   }
 
 });
@@ -226,6 +248,24 @@ Template.childProfile.events({
       $('#game-stats-chart').html("<h1>You haven't played enough, play more!</h1>");
     }
   },
+  
+  "click #shapes-game-chart": function() {
+    var shapesGameData = ShapesGame.find({child_id: child.id}, {createdaAt: -1});
+    var chartData = shapesGameData.map(function(obj){
+      return obj.score;
+    });
+    var series = {
+      name: "Shapes Game",
+      data: chartData
+    }
+    $('#game-stats-container').show();
+    if (chartData.length > 1) {
+      buildStatsChart('Shapes Game', series);
+    } else {
+      $('#game-stats-chart').html("<h1>You haven't played enough, play more!</h1>");
+    }
+    console.log(series);
+  },
 
   "click .maths-game": function(event, template) {
     Router.go('/mathGame');
@@ -240,7 +280,7 @@ Template.childProfile.events({
   },
 
   "click .game-four": function(event, template) {
-    Router.go('/game/4');
+    Router.go('/shapes')
   }
 
 });
