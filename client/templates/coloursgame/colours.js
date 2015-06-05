@@ -148,7 +148,7 @@ Template.colours.events({
   'click #colourGameRestart': function(event) {
     
     var child = Session.get("child");
-    
+
     Meteor.call('addColoursScore', child.id, child.age, numCorrect, numIncorrect, answersArray);
 
     step = 0;

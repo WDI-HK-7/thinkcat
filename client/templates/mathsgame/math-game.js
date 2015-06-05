@@ -47,7 +47,6 @@ Template.mathGame.helpers({
 Template.mathGame.events({
   'click .mathGameAns': function(event) {
     var ans = event.target.innerHTML;
-    console.log(eval(question));
     if (eval(question) == ans) {
       correct += 1;
       var questionHash = { 
@@ -75,12 +74,14 @@ Template.mathGame.events({
   'click #mathGameReturnHome': function(event) {
     var child = Session.get("child");
     step = 0;
+
     Meteor.call('addMathsScore', child.id, child.age, answersArray, correct, wrong);
     Router.go('/child');
   },
   'click #mathGameRestart': function(event) {
     var child = Session.get("child");
     step = 0;
+
     Meteor.call('addMathsScore', child.id, child.age, answersArray, correct, wrong);
     _dep.changed();
   }
