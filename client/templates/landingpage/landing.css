@@ -1,9 +1,6 @@
-#navbar-landing-logo {
-  display: none;
-}
-
-#title {
-  text-align: center;
+#landing-logo {
+  width: 225px;
+  height: auto;
 }
 
 .image-fluid-height {
@@ -15,7 +12,7 @@
 }
 
 .welcome-fixed-height {
-  background-color: #f2f270;
+  background-color: rgba(255,254,224,0.7);
   height: 450px;
 }
 
@@ -127,3 +124,173 @@ input {
  background-color: rgba(255,254,224,0.7);
  font-size: 2vw;
 }*/
+
+
+/*  CONTENT BLOCK 1-4
+/*----------------------------------------------------*/
+
+.content-1-4 {
+  padding: 0px;
+  position: relative;
+}
+
+.content-1-4 .image-container {
+  position: relative;
+  height: 100%;
+  padding: 0px;
+  top: 0px;
+}
+
+#intro {
+ border-radius: 20px;
+ margin-bottom: 25px;
+ background-color: rgba(255,254,224,0.7);
+}
+
+.content-1-4 .image-container .background-image-holder {
+  background: #000 url('../images/600x800.gif') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+}
+
+.content-1-4 h1 {
+  margin-bottom: 20px;
+}
+
+.content-1-4 p.lead {
+  margin-bottom: 15px;
+}
+
+
+
+/*  CONTENT BLOCK 1-4 MEDIA QUERIES
+/*----------------------------------------------------*/
+
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+
+  .content-1-4 .image-container {
+    display: none;
+  }
+
+}
+
+/*  CONTENT BLOCK 3-5
+/*----------------------------------------------------*/
+
+.content-3-5 .aqua-feature-box {
+    background: #4ecdc4;
+    padding: 35px 30px;
+    text-align: center;
+/*    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -o-border-radius: 20px;
+    -ms-border-radius: 20px;*/
+}
+
+.content-3-5 .coral-feature-box {
+    background: #ff6b6b;
+    padding: 35px 30px;
+    text-align: center;
+/*    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -o-border-radius: 20px;
+    -ms-border-radius: 20px;*/
+}
+
+.content-3-5 .grey-feature-box {
+    background: #7a94a3;
+    padding: 35px 30px;
+    text-align: center;
+/*    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -o-border-radius: 20px;
+    -ms-border-radius: 20px;*/
+}
+
+.content-3-5 .yellow-feature-box {
+    background: #f2f270;
+    padding: 30px 25px;
+    text-align: center;
+/*    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -o-border-radius: 20px;
+    -ms-border-radius: 20px;*/
+}
+
+.content-3-5 .feature-box:hover {
+    background-color: #31152B;
+}
+
+.content-3-5 .feature-box .icon {
+  height: 150px;
+  width: 150px;
+  max-width: 100%;
+  background-color: #ffffff;
+  border-radius: 50%;
+  -o-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  margin: 0 auto 25px;
+}
+
+.content-3-5 .feature-box .icon span {
+  line-height: 150px;
+  color: #723147;
+  font-size: 55px;
+}
+
+.content-3-5 .feature-box p {
+    line-height: 25px;
+    color: #ffffff;
+    opacity: 0.5;
+}
+
+.content-3-5 .feature-box h3 {
+    padding: 15px 0px 0px;
+    color: #ffffff;
+}
+
+.content-3-5 .feature-box, .content-3-5 .feature-box:hover, .content-3-5 .feature-icon, .content-3-5 .feature-box:hover .feature-icon {
+    transition: all 0.4s ease-in 0s;
+    -moz-transition: all 0.4s ease-in 0s;
+    -webkit-transition: all 0.4s ease-in 0s;
+    -o-transition: all 0.4s ease-in 0s;
+    -ms-transition: all 0.4s ease-in 0s;
+}
+
+
+/*  CONTENT BLOCK 3-5 MEDIA QUERIES
+/*----------------------------------------------------*/
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  
+  
+  
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  
+  
+  
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  
+  
+  
+}
