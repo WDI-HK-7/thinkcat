@@ -15,12 +15,16 @@ Template.landing.events({
 
     var name = event.target.childName.value;
     var age = event.target.childAge.value;
-
-
-    Meteor.call('addChild', name, age);
-
-    event.target.childName.value = '';
-    event.target.childAge.value = '';
+    if (name == false || age == false) {
+      $('#add-child-error').html("Please enter name and age");
+    } else {
+      Meteor.call('addChild', name, age);
+      $('#add-child-error').html("");
+      event.target.childName.value = '';
+      event.target.childAge.value = '';
+      $(".new-child").toggle();
+      $("#add-child-btn").toggle();
+    }
 
     return false;
 
@@ -28,6 +32,7 @@ Template.landing.events({
 
   "click #add-child-btn": function(event){
     $(".new-child").toggle();
+    $("#add-child-btn").toggle();
   }
 
 });
