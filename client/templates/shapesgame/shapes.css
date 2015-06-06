@@ -1,6 +1,14 @@
-#question-panel {
+#shapes-counter-panel {
 	text-align: center;
-	padding: 30px; 
+	padding: 1em;
+  height: 100%;
+  background-color: rgba(255,254,224,0.7);
+}
+
+#shapes-question-panel {
+	text-align: center;
+	padding: 1em;
+  background-color: rgba(255,254,224,0.7);
 }
 
 #shapes-game-panel {
@@ -21,21 +29,22 @@
  image-orientation: 90deg; 
 }
 
-.colours-row {
+.shapes-row {
   display: inline-block;
 }
+
 .shape:hover {
   transform: scale(1.5);
 }
 
-#colours-avatar {
+#shapes-avatar {
   width: 8em;
   height: 6em;
   border-radius: 100%;
   margin-top: 1em;
 }
 
-#colour-child-name {
+#shape-child-name {
   vertical-align: text-top;
   margin-top: 1em;
 }
@@ -52,11 +61,11 @@
   font-size: 3em;
 }
 
-#colourGameReturnHome {
+#shapeGameReturnHome {
   margin: 1em;
 }
 
-#colourGameRestart {
+#shapeGameRestart {
   margin: 1em;
 }
 
