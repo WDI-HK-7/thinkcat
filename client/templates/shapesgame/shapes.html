@@ -3,44 +3,44 @@
   
 <!--========================================================= Navbar =========================================================-->
      
-      <div class="container-fluid">
-        <img id="logo" class="col-xs-2 img-responsive" src="/images/smart-owl-icon.svg" alt="">
-      </div>
+  {{> navbar}}
 
-      <div class="container">
+  <div class="container">
     
-   {{#if counter}}
+  {{#if counter}}
    
 <!--====================================================== Answers Panel ======================================================-->
 
-      <div class="answersCounterDiv col-xs-12 col-md-3 ">
-        <span class="glyphicon glyphicon-ok"></span> Right: {{updateCorrectAnswers}}
-        <br> 
-        <span class="glyphicon glyphicon-remove"></span> Wrong: {{updateIncorrectAnswers}}
+      <div id="colour-counter-panel" class="col-md-12 col-lg-8 col-lg-offset-2 panel panel-default text-justify">
+        <div class="answers-counter-shapes">
+          <span class="glyphicon glyphicon-ok"></span> 
+          Right: {{updateCorrectAnswers}}
+        </div>
+        <div class="answers-counter-shapes">
+          <span class="glyphicon glyphicon-remove"></span> 
+          Wrong: {{updateIncorrectAnswers}}
+        </div>
       </div>
 
 <!--======================================================= Game Panel =======================================================-->
-     
-      <div id="game-panel" class="col-xs-12 col-sm-6 panel panel-default text-center">
+      
+       <div id="shapes-game-panel" class="col-md-12 col-lg-8 col-lg-offset-2 panel panel-default text-center">
         <div class="row">
-          <div class="col-xs-12">
-            <div class="shapes-row">
-              <div id="triangle" class="shape"></div>
-              <div id="circle" class="shape"></div>
-            </div>
-          </div>
-          <div class="col-xs-12">
-            <div class="shapes-row">
-              <div id="square" class="shape"></div>
-              <div id="rectangle" class="shape"></div>
-            </div>
-          </div>
+          <img id="triangle" class="shape" src="/images/shapes-triangle.svg">
+          <img id="rectangle" class="shape" src="/images/shapes-rectangle.svg">
+          <img id="square" class="shape" src="/images/shapes-square.svg">
         </div>
+        <div class="row">
+          <img id="star" class="shape" src="/images/shapes-star.svg">
+          <img id="hexagon" class="shape" src="/images/shapes-polygon.svg">
+          <img id="circle" class="shape" src="/images/shapes-circle.svg">
+        </div>
+        
       </div>
 
   <!--==================================================== Question Panel ====================================================-->
      
-      <div id="question-panel" class="col-xs-12 col-sm-6 col-sm-offset-3 panel panel-default">
+      <div id="colour-question-panel" class="col-md-12 col-lg-8 col-lg-offset-2 panel panel-default">
         <h3>Which shape is a {{getRandomShape}}?</h3>
       </div> 
 

@@ -40,7 +40,12 @@ Template.mathGame.helpers({
     }
   },
   correctAns: function () {
+    _dep.depend();
     return correct;
+  },
+  incorrectAns: function () {
+    _dep.depend();
+    return wrong;
   }
 });
 
@@ -53,10 +58,12 @@ Template.mathGame.events({
         question: question,
         correct: true,
         answer: eval(question),
-        child_answer: ans
+        child_answer: wrong
       }
       answersArray.push(questionHash);
       step += 1;
+      var rightSound = new Audio('/sounds/Correct-answer.mp3');
+      rightSound.play();
       nextQuestion();
     } else {
       wrong += 1;
@@ -68,6 +75,8 @@ Template.mathGame.events({
       }
       answersArray.push(questionHash);
       step += 1;
+      var wrongSound = new Audio('/sounds/Whip_bonk.wav');
+      wrongSound.play();
       nextQuestion();
     }
   },
@@ -76,6 +85,9 @@ Template.mathGame.events({
     step = 0;
 
     Meteor.call('addMathsScore', child.id, child.age, correct, wrong, answersArray);
+    correct = 0;
+    wrong = 0;
+    
     Router.go('/child');
   },
   'click #mathGameRestart': function(event) {
@@ -83,6 +95,9 @@ Template.mathGame.events({
     step = 0;
 
     Meteor.call('addMathsScore', child.id, child.age, correct, wrong, answersArray);
+    correct = 0;
+    wrong = 0;
+    
     _dep.changed();
   }
 });

@@ -1,5 +1,5 @@
 
-var shapesArray = [ "triangle", "circle", "square", "rectangle" ];
+var shapesArray = [ "triangle", "circle", "square", "rectangle", "star", "hexagon", "circle" ];
 var step = 0;
 var numCorrect = 0;
 var numIncorrect = 0;

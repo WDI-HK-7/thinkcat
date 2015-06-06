@@ -1,45 +1,30 @@
-#question-panel {
+#colour-counter-panel {
 	text-align: center;
-	padding: 30px; 
+	padding: 1em;
+  height: 100%;
+  background-color: rgba(255,254,224,0.7);
 }
 
-#game-panel {
+#colour-question-panel {
+	text-align: center;
+	padding: 1em;
+  background-color: rgba(255,254,224,0.7);
+}
+
+#colour-game-panel {
 	height: auto;
+  background-color: rgba(255,254,224,0.7);
 }
 
 .row-centered {
 	float: center;
 }
 
-#red {
-  background-color: red;
-}
-
-#blue {
-  background-color: dodgerblue;
-}
-
-#green {
-  background-color: forestgreen;
-}
-
-#yellow {
-  background-color: yellow;
-}
-
-.circle {
-  width: 10em;
-  height: 10em;
-  border-radius: 100%;
-  margin: 1.5em;
-  display: inline-block;
-}
-
 .colours-row {
   display: inline-block;
 }
-.circle:hover {
-  transform: scale(1.5);
+.pencil:hover {
+  transform: scale(1.1);
 }
 
 #colours-avatar {
@@ -54,8 +39,6 @@
   margin-top: 1em;
 }
 
-
-
 .glyphicon-remove {
   color: red;
 }
@@ -64,8 +47,11 @@
   color: forestgreen;
 }
 
-.answersCounterDiv {
-  font-size: 3em;
+.answers-counter-colours {
+  font-size: 2em;
+  display: inline-block;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 #colourGameReturnHome {
@@ -74,4 +60,10 @@
 
 #colourGameRestart {
   margin: 1em;
+}
+
+@media only screen and (max-width : 450px) {
+  .answers-counter-colours {
+    font-size: 1.5em;
+  }
 }
