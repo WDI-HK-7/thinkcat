@@ -8,9 +8,9 @@ Template.childProfile.onRendered(function () {
 });
 
 
-var buildStatsChart = function(title, data) {
+var buildStatsChart = function(title, data, htmlId) {
 
-  $('#game-stats-chart').highcharts({
+  $(htmlId).highcharts({
       
     chart: {
       type: 'spline',
@@ -86,9 +86,9 @@ var buildStatsChart = function(title, data) {
   });
 }
 
-var buildAvgCompareChart = function(title, data) {
+var buildAvgCompareChart = function(title, data, htmlId) {
 
-  $('#game-avg-comparison').highcharts({
+  $(htmlId).highcharts({
       
     chart: {
       type: 'column',
@@ -213,13 +213,15 @@ Template.childProfile.events({
       {name: child.name, data: [childAvg]},
       {name: child.age + "yr olds", data: [ageAvg]}
     ];
-    $('#game-stats-container').show();
+
     if (chartData.length > 1) {
-      buildStatsChart('Maths Game', gameScoreSeries);
-      buildAvgCompareChart('Maths Game', avgSeries);
+      buildStatsChart('Maths Game', gameScoreSeries, '#game-stats-chart');
+      buildAvgCompareChart('Maths Game', avgSeries, '#game-avg-comparison');
+      buildStatsChart('Maths Game', gameScoreSeries, '#game-stats-chart2');
+      buildAvgCompareChart('Maths Game', avgSeries, '#game-avg-comparison2');
     } else {
-      $('#game-stats-chart').html("<h1>You haven't played enough, play more!</h1>");
-      $('#game-avg-comparison').html('');
+      $('.game-stats-chart').html("<h1>You haven't played enough, play more!</h1>");
+      $('.game-avg-comparison').html('');
     }
 
   },
@@ -236,13 +238,15 @@ Template.childProfile.events({
       {name: child.name, data: [childAvg]},
       {name: child.age + "yr olds", data: [ageAvg]}
     ];
-    $('#game-stats-container').show();
+
     if (chartData.length > 1) {
-      buildStatsChart('Colours Game', gameScoreSeries);
-      buildAvgCompareChart('Colours Game', avgSeries);
+      buildStatsChart('Colours Game', gameScoreSeries, '#game-stats-chart');
+      buildAvgCompareChart('Colours Game', avgSeries, '#game-avg-comparison');
+      buildStatsChart('Colours Game', gameScoreSeries, '#game-stats-chart2');
+      buildAvgCompareChart('Colours Game', avgSeries, '#game-avg-comparison2');
     } else {
-      $('#game-stats-chart').html("<h1>You haven't played enough, play more!</h1>");
-      $('#game-avg-comparison').html('');
+      $('.game-stats-chart').html("<h1>You haven't played enough, play more!</h1>");
+      $('.game-avg-comparison').html('');
     }
 
   },
@@ -259,13 +263,15 @@ Template.childProfile.events({
       {name: child.name, data: [childAvg]},
       {name: child.age + "yr olds", data: [ageAvg]}
     ];
-    $('#game-stats-container').show();
+
     if (chartData.length > 1) {
-      buildStatsChart('Shapes Game', gameScoreSeries);
-      buildAvgCompareChart('Shapes Game', avgSeries);
+      buildStatsChart('Shapes Game', gameScoreSeries, '#game-stats-chart');
+      buildAvgCompareChart('Shapes Game', avgSeries, '#game-avg-comparison');
+      buildStatsChart('Shapes Game', gameScoreSeries, '#game-stats-chart2');
+      buildAvgCompareChart('Shapes Game', avgSeries, '#game-avg-comparison2');
     } else {
-      $('#game-stats-chart').html("<h1>You haven't played enough, play more!</h1>");
-      $('#game-avg-comparison').html('');
+      $('.game-stats-chart').html("<h1>You haven't played enough, play more!</h1>");
+      $('.game-avg-comparison').html('');
     }
   },
 
