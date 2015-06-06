@@ -134,7 +134,7 @@ input {
   position: relative;
 }
 
-.content-1-4 .image-container {
+.content-1-4 {
   position: relative;
   height: 100%;
   padding: 0px;
@@ -142,12 +142,11 @@ input {
 }
 
 #intro {
- border-radius: 20px;
  margin-bottom: 25px;
  background-color: rgba(255,254,224,0.7);
 }
 
-.content-1-4 .image-container .background-image-holder {
+.content-1-4 .background-image-holder {
   background: #000 url('../images/600x800.gif') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -164,65 +163,35 @@ input {
   margin-bottom: 15px;
 }
 
-
-
-/*  CONTENT BLOCK 1-4 MEDIA QUERIES
-/*----------------------------------------------------*/
-
-/* Extra small devices (phones, less than 768px) */
-@media (max-width: 767px) {
-
-  .content-1-4 .image-container {
-    display: none;
-  }
-
-}
-
 /*  CONTENT BLOCK 3-5
 /*----------------------------------------------------*/
 
-.content-3-5 .aqua-feature-box {
+.aqua-feature-box {
     background: #4ecdc4;
     padding: 35px 30px;
     text-align: center;
-/*    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -o-border-radius: 20px;
-    -ms-border-radius: 20px;*/
+    height: 280px;
 }
 
-.content-3-5 .coral-feature-box {
+.coral-feature-box {
     background: #ff6b6b;
     padding: 35px 30px;
     text-align: center;
-/*    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -o-border-radius: 20px;
-    -ms-border-radius: 20px;*/
+    height: 280px;
 }
 
-.content-3-5 .grey-feature-box {
+.grey-feature-box {
     background: #7a94a3;
     padding: 35px 30px;
     text-align: center;
-/*    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -o-border-radius: 20px;
-    -ms-border-radius: 20px;*/
+    height: 280px;
 }
 
-.content-3-5 .yellow-feature-box {
+.yellow-feature-box {
     background: #f2f270;
     padding: 30px 25px;
     text-align: center;
-/*    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -o-border-radius: 20px;
-    -ms-border-radius: 20px;*/
+    height: 280px;
 }
 
 .content-3-5 .feature-box:hover {
@@ -270,21 +239,87 @@ input {
     -ms-transition: all 0.4s ease-in 0s;
 }
 
+.landing-page-image-icon {
+  display: none;
+}
 
 /*  CONTENT BLOCK 3-5 MEDIA QUERIES
 /*----------------------------------------------------*/
 
 /* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
+@media only screen and (max-width : 990px) {
   
+  .landing-page-image-icon {
+    display: none;
+  }
   
+  .aqua-feature-box {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    height: auto;
+  }
+  
+  .coral-feature-box {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    height: auto;
+  }
+  
+  .grey-feature-box {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    height: auto;
+  }
+  
+  .yellow-feature-box {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    height: auto;
+  }
   
 }
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
+@media only screen and (min-width : 768px) {
   
+  .aqua-feature-box {
+    border-radius: 20px;
+    -o-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+  }
   
+  .coral-feature-box {
+    border-radius: 20px;
+    -o-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+  }
+  
+  .grey-feature-box {
+    border-radius: 20px;
+    -o-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+  }
+  
+  .yellow-feature-box {
+    border-radius: 20px;
+    -o-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+  }
+  
+  .content-3-5 {
+    border-radius: 20px;
+    -o-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+  }
+  
+  #intro {
+     border-radius: 20px;
+  }
   
 }
 
@@ -294,3 +329,4 @@ input {
   
   
 }
+
