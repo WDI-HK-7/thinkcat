@@ -1,8 +1,14 @@
+.navbar {
+  max-height: 50px;
+  z-index: 999999;
+}
+
 #navbar-logo {
 	width: 70px;
 	height: 70px;
 	margin-left: 0;
 	margin-top: 0;
+  cursor: pointer;
 }
 
 #login-buttons {
@@ -15,6 +21,7 @@
   color: #ffffff;
   text-decoration: none;
   font-weight: 600;
+  background-color: #fffee0;
 }
 
 .login-close-text {
@@ -30,9 +37,10 @@
   float: right;
   margin-top: -41px;
   margin-right: -17px;
+  cursor: pointer;
 }
 
-.login-close-text :hover {
+.login-close-text:hover {
 	background-color: #fffee0;
   color: #454f54;
 }
@@ -71,12 +79,13 @@
 #login-name-link {
 	color: #454f54;	
  	text-align: center;
- 	margin-right:50px;
+  cursor: pointer;
 }
 
 #login-dropdown-list {
 	color: #454f54;
 	margin-top:1em;
+  min-width: 180px;
 }
 
 #login-buttons-password {
@@ -90,6 +99,7 @@
   color: #fffee0;
   font-weight: 600;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 #login-buttons-open-change-password,
@@ -104,6 +114,7 @@
   color: #fffee0;
   font-weight: 600;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .message.info-message {
@@ -124,6 +135,7 @@
   text-decoration: none;
   font-weight: 600;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .navbar-default {
@@ -136,4 +148,8 @@
   #login-buttons {
     text-align: center;
   }
+}
+
+#login-sign-in-link, #signup-link, #forgot-password-link, #back-to-login-link, #login-buttons-forgot-password {
+  cursor: pointer;
 }
