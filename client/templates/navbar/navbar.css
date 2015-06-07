@@ -56,6 +56,12 @@
   color: #454f54; 
 }
 
+.error-message {
+  font-weight: 600;
+  color: #f8b03f;
+  margin-top: 8px;
+}
+
 #forgot-password-link {
   color: #fffee0;
   text-align: center;

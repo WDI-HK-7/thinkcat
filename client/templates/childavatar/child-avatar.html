@@ -1,12 +1,22 @@
 <template name="childAvatar">
-	<div class="col-md-3 col-xs-12">
+  <div class="col-md-3 col-xs-12">
     <div class="{{featureBox}}">
+      <!-- Child Picture -->
       <div class="icon">
-        <img src="http://images.watoday.com.au/2010/12/22/2105997/kids-swing-3-4-420-420x0.jpg" class="avatar img-responsive center-block">
+        <img src="http://images.watoday.com.au/2010/12/22/2105997/kids-swing-3-4-420-420x0.jpg" class="avatar img-rounded img-responsive center-block">
       </div> 
+      <!-- Child Name and Age -->
       <div class="editContent">
-        <h5>{{name}}, {{age}}yrs old</h5>
+        <h4>Name: {{name}}</h4><h6>Age: {{age}}yrs old</h6>
       </div>
+      <!-- Play and Dashboard Icons -->
+      <div class="child-icon">
+        <img src="/images/icons/icons-reports.svg" class="avatar img-responsive dash-button-child">
+        <img src="/images/icons/icons-play-button.svg" class="play-button img-responsive play-button-child">
+      </div> 
     </div>
   </div>
 </template>
+
+
+
