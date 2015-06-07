@@ -5,7 +5,7 @@ body {
   width: 100%;
   padding: 0;
   margin-bottom: 0;
-  font-family: 'Open Sans', sans-serif;
+/*  font-family: 'Open Sans', sans-serif;*/
   font-weight: 300;
   background-color: #fffee0;
 }
@@ -45,4 +45,32 @@ body {
   background-color: #fffee0;
   color: #454f54;
   border: 2px solid #454f54;
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+  font-family: Tahoma, Helvetica, Arial, Sans-Serif;
+  font-size: 14px;
+  font-weight: 600; 
+}
+
+h6 {
+  font-family: Tahoma, Helvetica, Arial, Sans-Serif;
+  font-size: 13px;
+  font-weight: 400; 
 }
