@@ -99,7 +99,7 @@ Template.mathGame.events({
     correct = 0;
     wrong = 0;
     
-    Router.go('/child');
+    Router.go('/games');
   },
   'click #mathGameRestart': function(event) {
     var child = Session.get("child");
