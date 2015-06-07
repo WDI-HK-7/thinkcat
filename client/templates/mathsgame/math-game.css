@@ -1,3 +1,21 @@
+/* ---------------------------- Button colours ---------------------------- */
+
+.aqua {
+    background: #4ecdc4;
+}
+
+.coral {
+    background: #ff6b6b;
+}
+
+.grey {
+    background: #7a94a3;
+}
+
+.yellow {
+    background: #f2f270;
+}
+
 #maths-question {
   font-size: 8em;
   font-family: serif;
@@ -6,9 +24,6 @@
 .mathGameAns {
   margin-left: 1em;
   margin-right: 1em;
-  background-color: #4ecdc4;
-  border-radius: 100%;
-  border: 2px solid #454f54
 }
 
 .mathGameAns:hover {

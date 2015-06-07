@@ -1,3 +1,5 @@
+var colours = ['aqua','coral','grey','yellow'];
+var counter = 0;
 var step = 0;
 var correct = 0;
 var wrong = 0;
@@ -46,7 +48,16 @@ Template.mathGame.helpers({
   incorrectAns: function () {
     _dep.depend();
     return wrong;
-  }
+  },
+	buttonColour: function() {
+		var colour = colours[counter];
+		if (counter == colours.length - 1) {
+			counter = 0;
+		} else {
+			counter += 1;
+		}
+		return colour;
+	}
 });
 
 Template.mathGame.events({
