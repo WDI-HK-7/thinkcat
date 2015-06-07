@@ -62,14 +62,6 @@
   padding-right: 1em;
 }
 
-#colourGameReturnHome {
-  margin: 1em;
-}
-
-#colourGameRestart {
-  margin: 1em;
-}
-
 @media only screen and (max-width : 450px) {
   .answers-counter-colours {
     font-size: 1.5em;

@@ -40,3 +40,9 @@ body {
   text-transform: uppercase;
   cursor: pointer;
 }
+
+.btn-success:hover, .btn-primary:hover {
+  background-color: #fffee0;
+  color: #454f54;
+  border: 2px solid #454f54;
+}

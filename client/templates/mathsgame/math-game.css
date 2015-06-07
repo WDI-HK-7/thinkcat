@@ -94,14 +94,6 @@
   padding-right: 1em;
 }
 
-#mathsGameReturnHome {
-  margin: 1em;
-}
-
-#mathsGameRestart {
-  margin: 1em;
-}
-
 @media only screen and (max-width : 450px) {
   .answers-counter-maths {
     font-size: 1.5em;
