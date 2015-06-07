@@ -166,7 +166,7 @@ input {
 /*----------------------------------------------------*/
 
 .cream-feature-box {
-    background: #fdfbe1;
+    background-color: rgba(255,254,224,0.7);
     padding: 35px 30px;
     text-align: center;
     height: 300px;

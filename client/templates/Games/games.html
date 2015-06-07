@@ -1,47 +1,72 @@
 <template name="games">
+
   {{> navbar}}
 
-  <div class="container">
-    <div class="row text-center">
-      
-      <h1 id="games-console-title">GAMES CONSOLE</h1>
-
-      <div class="games">
+  <!-- ================= Games Page ================== -->
+  <div class="content-3-5">
+    <div class="container">
+      <div class="row text-center">
         
-        <div class="col-xs-6 col-sm-4 col-md-3 yellow-feature-box">
-          <div class="maths-game games-img icon">
-            <img src="images/icons/icons-math-game.svg" class="img-responsive img-center">
+        <h1 id="games-console-title">GAMES CONSOLE</h1>
+
+        <div class="games">
+          
+          <!-- ============= Maths Game =============== -->
+
+          <div class="col-xs-6 col-sm-4 col-md-3 game-box">
+            <div class="cream-feature-box">
+              <div class="maths-game games-img icon">
+                <img src="images/icons/icons-math-game.svg" class="img-responsive img-center">
+              </div>
+              <div class="editContent">
+                <h4>MATHS QUIZ</h4>
+              </div>
+            </div>
           </div>
-          <div class="editContent">
-            <h4>MATHS QUIZ</h4>
+
+          <!-- ============= Colours Game ============= -->
+
+          <div class="col-xs-6 col-sm-4 col-md-3 game-box">
+            <div class="cream-feature-box">
+              <div class="colours-game games-img icon">
+                <img src="images/icons/icons-colours-game.svg" class="img-responsive img-center">
+              </div>
+              <div class="editContent">
+                <h4>COLOURS</h4>
+              </div>
+            </div>
           </div>
-        </div>    
-        <div class="col-xs-6 col-sm-4 col-md-3 coral-feature-box">
-          <div class="colours-game games-img icon">
-            <img src="images/icons/icons-colours-game.svg" class="img-responsive img-center">
+
+          <!-- ============= Shapes Game ============= -->
+
+          <div class="col-xs-6 col-sm-4 col-md-3 game-box">
+            <div class="cream-feature-box">
+              <div class="shapes-game games-img">
+                <img src="images/icons/icons-shapes-game.svg" class="img-responsive img-center">
+              </div>
+              <div class="editContent">
+                <h4>SHAPES</h4>
+              </div>
+            </div>
           </div>
-          <div class="editContent">
-            <h4>COLOURS</h4>
+
+          <!-- ============= Memory Game ============= -->
+
+          <div class="col-xs-6 col-sm-4 col-md-3 game-box">
+            <div class="cream-feature-box">
+              <div class="game-four games-img">
+                <img src="images/icons/icons-memory-game.svg" class="img-responsive img-center">
+              </div>
+              <div class="editContent">
+                <h4>MEMORY</h4>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-md-3 aqua-feature-box">
-          <div class="shapes-game games-img">
-            <img src="images/icons/icons-shapes-game.svg" class="img-responsive img-center">
-          </div>
-          <div class="editContent">
-            <h4>SHAPES</h4>
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-md-3 grey-feature-box">
-          <div class="game-four games-img">
-            <img src="images/icons/icons-memory-game.svg" class="img-responsive img-center">
-          </div>
-          <div class="editContent">
-            <h4>MEMORY</h4>
-          </div>
+          
+          <!-- ========== End of Games Page ========== -->
+
         </div>
       </div>
     </div>
-  
   </div>
 </template>
