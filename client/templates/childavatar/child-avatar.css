@@ -1,22 +1,5 @@
-#dash-button-child {
-  max-width: 100%;
-/*-webkit-filter: drop-shadow( -5px -5px 5px #000 );
-  filter: drop-shadow( -5px -5px 5px #000 ); */
+.dash-button-child, 
+.play-button-child {
+  display: inline-block;
+  width: 45%;
 }
-
-#play-button-child {
-  max-width: 100%;
-/*  -webkit-filter: drop-shadow( -5px -5px 5px #000 );
-  filter: drop-shadow( -5px -5px 5px #000 );*/ 
-}
-
-/*#play-button-child:hover { 
-  color: #a03c21 
-}
-
-hr {
-  border-top: 5px solid #fffee0;
-  width: 15em;
-}
-*/
-
