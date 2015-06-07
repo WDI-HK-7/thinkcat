@@ -4,13 +4,13 @@
 }
 
 #navbar-logo {
-	width: 250px;
-	margin-top: 5px;
+  width: 250px;
+  margin-top: 5px;
   cursor: pointer;
 }
 
 #login-buttons {
-	padding: 2em;
+  padding: 2em;
   margin-top: 0.5em;
   border-radius: 24px; 
   border: 2px solid #454f54;
@@ -23,7 +23,7 @@
 }
 
 .login-close-text {
-	background-color: #454f54;
+  background-color: #454f54;
   border-radius: 24px;
   border: 2px solid #454f54;
   padding: 2px 10px; 
@@ -39,18 +39,18 @@
 }
 
 .login-close-text:hover {
-	background-color: #fffee0;
+  background-color: #fffee0;
   color: #454f54;
 }
 
 .additional-link-container {
-	background-color: #454f54;
+  background-color: #454f54;
   border-radius: 24px;
   border: 2px solid #454f54;
   margin-top: 2em;
   padding: 2px 10px; 
   font-size: 12px;
-	text-align: center;
+  text-align: center;
   color: #fffee0;
   text-decoration: none;
   font-weight: 600;
@@ -58,36 +58,36 @@
 }
 
 .login-link-text {
-	color: #454f54;	
+  color: #454f54; 
 }
 
 #forgot-password-link {
-	color: #fffee0;
- 	text-align: center;
- 	margin: 15px
+  color: #fffee0;
+  text-align: center;
+  margin: 15px
 }
 
 #signup-link, 
 #back-to-login-link {
-	color: #fffee0;	
- 	text-align: center;
- 	margin: 15px;
+  color: #fffee0; 
+  text-align: center;
+  margin: 15px;
 }
 
 #login-name-link {
-	color: #454f54;	
- 	text-align: center;
+  color: #454f54; 
+  text-align: center;
   cursor: pointer;
 }
 
 #login-dropdown-list {
-	color: #454f54;
-	margin-top:1em;
+  color: #454f54;
+  margin-top:1em;
   min-width: 180px;
 }
 
 #login-buttons-password {
-	background-color: #f8b03f;
+  background-color: #f8b03f;
   border-radius: 24px;
   border: 2px solid #f8b03f;
   margin-top: 1.5em;
@@ -102,7 +102,7 @@
 
 #login-buttons-open-change-password,
 #login-buttons-do-change-password {
-	background-color: #f8b03f;
+  background-color: #f8b03f;
   border-radius: 24px;
   border: 2px solid #f8b03f;
   margin-top: 1.5em;
@@ -116,19 +116,19 @@
 }
 
 .message.info-message {
-  text-transform: uppercase;	
+  text-transform: uppercase;  
   color: #f8b03f;
 
 }
 
 #login-buttons-logout {
-	background-color: #454f54;
+  background-color: #454f54;
   border-radius: 24px;
   border: 2px solid #454f54;
   margin-top: 2em;
   padding: 2px 10px; 
   font-size: 12px;
-	text-align: center;
+  text-align: center;
   color: #fffee0;
   text-decoration: none;
   font-weight: 600;
@@ -137,8 +137,8 @@
 }
 
 .navbar-default {
-	background-color: transparent;
-	border: none;
+  background-color: transparent;
+  border: none;
 }
 
 /* Small Devices, Tablets */
