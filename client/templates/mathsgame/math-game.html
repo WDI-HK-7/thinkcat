@@ -1,29 +1,58 @@
 <template name="mathGame">
-  <div class="col-xs-8 col-xs-offset-2 text-center">
-  
-<!-- ======================================================= Navbar ======================================================= -->
      
-    <div class="container-fluid">
-      <img id="logo" class="col-xs-2 img-responsive" src="/images/smart-owl-icon.svg" alt="">
-      <img id="colours-avatar" class="col-xs-offset-6 col-xs-2 img-responsive" src="http://images.watoday.com.au/2010/12/22/2105997/kids-swing-3-4-420-420x0.jpg" alt="">
-      <h4 id="colour-child-name" class="col-xs-2">Hello, {{child.name}} :)<br> You are {{child.age}} years old!</h4>
-    </div>
+  {{> navbar}}
 
-<!-- ===================================================== Game Panel ===================================================== -->
+<!--====================================================== Answers Panel ======================================================-->
+ 
+  <div class="container">
    
-    <div class="container">
-      {{#if counter }}
-        <h1>What is the answer of</h1>
-        <h1>{{question}} = ?</h1>
+    {{#if counter }}
+
+      <div id="maths-counter-panel" class="col-md-12 col-lg-8 col-lg-offset-2 panel panel-default text-justify">
+       
+        <div class="answers-counter-maths">
+          <span class="glyphicon glyphicon-ok"></span> 
+          Right: {{correctAns}}
+        </div>
+        
+        <div class="answers-counter-maths">
+          <span class="glyphicon glyphicon-remove"></span> 
+          Wrong: {{incorrectAns}}
+        </div>
+        
+      </div>
+  
+<!-- ===================================================== Game Panel ===================================================== -->
+     
+      <div id="maths-game-panel" class="col-md-12 col-lg-8 col-lg-offset-2 panel panel-default text-center">
+       
+        <h1 id="maths-question">{{question}} = ?</h1>
+        
+      </div>
+      
+<!--==================================================== Question Panel ====================================================-->
+     
+      <div id="maths-question-panel" class="col-md-12 col-lg-8 col-lg-offset-2 panel panel-default">
+       
         {{#each answers}}
-          <button class="mathGameAns btn btn-primary btn-lg">{{this}}</button>
+          <button class="mathGameAns btn btn-lg">{{this}}</button>
         {{/each}}
-      {{else}}
-        <h1>Your Score is {{correctAns}}</h1>
-        <button id="mathGameReturnHome">Return to home</button>
-        <button id="mathGameRestart">Play again</button>
-      {{/if}}
-    </div>
-    
-  </div>
+        
+      </div>
+      
+      
+    {{else}}
+     
+<!--================================================== Finish Game Message ==================================================-->
+
+      <h1 class="col-xs-12 text-center">Well Done {{child.name}}! Your Score was {{correctAns}}.</h1>
+      
+      <div class="col-xs-12 text-center">
+        <button class="btn btn-lg btn-success" id="mathGameReturnHome">Home</button>
+        <button class="btn btn-lg btn-primary" id="mathGameRestart">Play again!</button>
+      </div>
+      
+    {{/if}}
+  
+  </div>  
 </template>

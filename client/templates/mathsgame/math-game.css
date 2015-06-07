@@ -1,0 +1,88 @@
+#maths-question {
+  font-size: 8em;
+  font-family: serif;
+}
+
+.mathGameAns {
+  margin-left: 1em;
+  margin-right: 1em;
+  background-color: #4ecdc4;
+  border-radius: 100%;
+  border: 2px solid #454f54
+}
+
+.mathGameAns:hover {
+ transform: scale(1.1);
+}
+
+#maths-counter-panel {
+	text-align: center;
+	padding: 1em;
+  height: 100%;
+  background-color: rgba(255,254,224,0.7);
+}
+
+#maths-question-panel {
+	text-align: center;
+	padding: 1em;
+  background-color: rgba(255,254,224,0.7);
+}
+
+#maths-game-panel {
+	height: auto;
+  background-color: rgba(255,254,224,0.7);
+  padding: 3em 0 4em 0;
+}
+
+.row-centered {
+	float: center;
+}
+
+.maths-row {
+  display: inline-block;
+}
+
+#maths-avatar {
+  width: 8em;
+  height: 6em;
+  border-radius: 100%;
+  margin-top: 1em;
+}
+
+#maths-child-name {
+  vertical-align: text-top;
+  margin-top: 1em;
+}
+
+.glyphicon-remove {
+  color: red;
+}
+
+.glyphicon-ok {
+  color: forestgreen;
+}
+
+.answers-counter-maths {
+  font-size: 2em;
+  display: inline-block;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+#mathsGameReturnHome {
+  margin: 1em;
+}
+
+#mathsGameRestart {
+  margin: 1em;
+}
+
+@media only screen and (max-width : 450px) {
+  .answers-counter-maths {
+    font-size: 1.5em;
+  }
+  .mathGameAns {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+}

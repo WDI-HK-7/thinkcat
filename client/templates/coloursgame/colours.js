@@ -1,5 +1,5 @@
 
-var coloursArray = [ "blue", "green", "yellow", "red" ];
+var coloursArray = [ "blue", "green", "yellow", "red", "purple" ];
 var step = 0;
 var numCorrect = 0;
 var numIncorrect = 0;
@@ -73,7 +73,7 @@ Template.colours.events({
 
 // -------------------------------------------------------- Listen for Click on any Circle
   
-  "click .circle": function(event) {
+  "click .pencil": function(event) {
     
     var answer = Session.get("randomColour");
 
