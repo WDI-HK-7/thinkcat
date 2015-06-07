@@ -8,6 +8,27 @@
 
   {{#if counter}}
 
+<!--==================================================== Question Panel ====================================================-->
+
+    <div id="colour-question-panel" class="col-md-12 col-lg-8 col-lg-offset-2 panel panel-default">
+     
+      <h3>Which colour is {{getRandomColour}}?</h3>
+      
+    </div> 
+
+
+<!--======================================================= Game Panel =======================================================-->
+
+    <div id="colour-game-panel" class="col-md-12 col-lg-8 col-lg-offset-2 panel panel-default text-center">
+     
+      <img id="green" class="pencil" src="/images/colour-pencil-01.svg">
+      <img id="yellow" class="pencil" src="/images/colour-pencil-03.svg">
+      <img id="red" class="pencil" src="/images/colour-pencil-04.svg">
+      <img id="blue" class="pencil" src="/images/colour-pencil-05.svg">
+      <img id="purple" class="pencil" src="/images/colour-pencil-06.svg">
+      
+    </div>
+
 <!--====================================================== Answers Panel ======================================================-->
 
     <div id="colour-counter-panel" class="col-md-12 col-lg-8 col-lg-offset-2 panel panel-default text-justify">
@@ -23,26 +44,6 @@
       </div>
       
     </div>
-
-<!--======================================================= Game Panel =======================================================-->
-
-    <div id="colour-game-panel" class="col-md-12 col-lg-8 col-lg-offset-2 panel panel-default text-center">
-     
-      <img id="green" class="pencil" src="/images/colour-pencil-01.svg">
-      <img id="yellow" class="pencil" src="/images/colour-pencil-03.svg">
-      <img id="red" class="pencil" src="/images/colour-pencil-04.svg">
-      <img id="blue" class="pencil" src="/images/colour-pencil-05.svg">
-      <img id="purple" class="pencil" src="/images/colour-pencil-06.svg">
-      
-    </div>
-
-<!--==================================================== Question Panel ====================================================-->
-
-    <div id="colour-question-panel" class="col-md-12 col-lg-8 col-lg-offset-2 panel panel-default">
-     
-      <h3>Which colour is {{getRandomColour}}?</h3>
-      
-    </div> 
 
   {{else}}
 

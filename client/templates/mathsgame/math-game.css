@@ -19,34 +19,44 @@
 #maths-question {
   font-size: 8em;
   font-family: serif;
+  text-shadow: 0px 2px 3px #555;
 }
 
 .mathGameAns {
   margin-left: 1em;
   margin-right: 1em;
+  text-shadow: 0px 2px 3px #555;
 }
 
 .mathGameAns:hover {
  transform: scale(1.1);
 }
 
+/* ----------------------------- Game Panels ----------------------------- */
+
 #maths-counter-panel {
 	text-align: center;
 	padding: 1em;
   height: 100%;
   background-color: rgba(255,254,224,0.7);
+  border: none;
+  box-shadow: none;
 }
 
 #maths-question-panel {
 	text-align: center;
 	padding: 1em;
   background-color: rgba(255,254,224,0.7);
+  border: none;
+  box-shadow: none;
 }
 
 #maths-game-panel {
 	height: auto;
   background-color: rgba(255,254,224,0.7);
   padding: 3em 0 4em 0;
+  border: none;
+  box-shadow: none;
 }
 
 .row-centered {

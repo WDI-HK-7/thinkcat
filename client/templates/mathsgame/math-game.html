@@ -2,11 +2,31 @@
      
   {{> navbar}}
 
-<!--====================================================== Answers Panel ======================================================-->
  
   <div class="container">
    
     {{#if counter }}
+    
+  
+<!-- ===================================================== Game Panel ===================================================== -->
+     
+      <div id="maths-game-panel" class="col-md-12 col-lg-8 col-lg-offset-2 panel panel-default text-center">
+       
+        <h1 id="maths-question">{{question}} = ?</h1>
+        
+      </div>
+    
+<!--==================================================== Question Panel ====================================================-->
+     
+      <div id="maths-question-panel" class="col-md-12 col-lg-8 col-lg-offset-2 panel panel-default">
+       
+        {{#each answers}}
+          <button class="{{buttonColour}} mathGameAns btn btn-lg">{{this}}</button>
+        {{/each}}
+        
+      </div>
+      
+<!--====================================================== Answers Panel ======================================================-->
 
       <div id="maths-counter-panel" class="col-md-12 col-lg-8 col-lg-offset-2 panel panel-default text-justify">
        
@@ -21,25 +41,6 @@
         </div>
         
       </div>
-  
-<!-- ===================================================== Game Panel ===================================================== -->
-     
-      <div id="maths-game-panel" class="col-md-12 col-lg-8 col-lg-offset-2 panel panel-default text-center">
-       
-        <h1 id="maths-question">{{question}} = ?</h1>
-        
-      </div>
-      
-<!--==================================================== Question Panel ====================================================-->
-     
-      <div id="maths-question-panel" class="col-md-12 col-lg-8 col-lg-offset-2 panel panel-default">
-       
-        {{#each answers}}
-          <button class="{{buttonColour}} mathGameAns btn btn-lg">{{this}}</button>
-        {{/each}}
-        
-      </div>
-      
       
     {{else}}
      
