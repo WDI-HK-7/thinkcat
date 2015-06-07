@@ -1,5 +1,6 @@
 var child = Session.get("child");
 var _dep = new Deps.Dependency();
+var gameVariable;
 
 Template.childProfile.onRendered(function () {
   // Use the Packery jQuery plugin
@@ -201,7 +202,13 @@ var getGameData = function(database, params) {
 }
 
 Template.childProfile.events({
+
+  "click #play-button-dash": function () {
+    Router.go('/' + gameVariable);
+  },
+
   "click #maths-game-chart": function() {
+    gameVariable = "mathGame"
     var chartData = getGameData(MathsGame, {child_id: child.id});
     var gameScoreSeries = {
       name: "Maths Game",
@@ -227,6 +234,7 @@ Template.childProfile.events({
   },
 
   "click #colours-game-chart": function() {
+    gameVariable = "colours"
     var chartData = getGameData(ColoursGame, {child_id: child.id});
     var gameScoreSeries = {
       name: "Colours Game",
@@ -252,6 +260,7 @@ Template.childProfile.events({
   },
   
   "click #shapes-game-chart": function() {
+    gameVariable = "shapes"
     var chartData = getGameData(ShapesGame, {child_id: child.id});
     var gameScoreSeries = {
       name: "Shapes Game",

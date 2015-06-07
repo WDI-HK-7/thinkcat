@@ -20,7 +20,6 @@
 }
 
 .child-chart-selection {
-  border: solid 1px #f8b03f;
   border-radius: 20px;
   height: 100%;
 }
@@ -31,7 +30,6 @@
   margin-top: 50px;
   margin-bottom: 50px;
   text-align: center;
-  border-bottom: solid 1px red;
 }
 
 #game-stats-container {
@@ -45,6 +43,7 @@
 
 .game-history {
   margin: 25px auto;
+
 }
 
 
@@ -53,13 +52,11 @@
 }
 
 .avatar-profile {
-  margin-top: 25px;
-  margin-bottom: 25px;
-  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .statistics {
-  border: solid 1px #f8b03f;
   border-radius: 20px;
   margin-bottom: 25px;
   margin-top: 50px;
@@ -94,12 +91,11 @@
   .dashboard-child {
     border-radius: 20px;
     background-color: rgba(255,254,224,0.7);
-    height: 500px;
+    height: 650px;
     border: solid 1px orange;
   }
 
   .child-chart-selection {
-    border: solid 1px #f8b03f;
     border-radius: 20px;
     height: 400px;
   }
@@ -131,12 +127,11 @@
   .dashboard-child {
     border-radius: 20px;
     background-color: rgba(255,254,224,0.7);
-    height: 475px;
+    height: 620px;
     border: solid 1px orange;
   }
 
   .child-chart-selection {
-    border: solid 1px #f8b03f;
     border-radius: 20px;
     height: 400px;
   }
@@ -168,18 +163,17 @@
   .dashboard-child {
     border-radius: 20px;
     background-color: rgba(255,254,224,0.7);
-    height: 400px;
+    height: 550px;
     border: solid 1px orange;
   }
 
   .child-chart-selection {
-    border: solid 1px #f8b03f;
     border-radius: 20px;
     height: 400px;
   }
 
   #game-stats-chart, #game-avg-comparison {
-    margin-top: -120px;
+    margin-top: -110px;
   }
 
   .statistics-charts-ipad, .child-chart-selection-ipad {
@@ -206,12 +200,11 @@
   .dashboard-child {
     border-radius: 20px;
     background-color: rgba(255,254,224,0.7);
-    height: 400px;
+    height: 550px;
     border: solid 1px orange;
   }
 
   .child-chart-selection {
-    border: solid 1px #f8b03f;
     border-radius: 20px;
     height: 400px;
   }
@@ -243,12 +236,11 @@
   .dashboard-child {
     border-radius: 20px;
     background-color: rgba(255,254,224,0.7);
-    height: 400px;
+    height: 580px;
     border: solid 1px orange;
   }
 
   .child-chart-selection {
-    border: solid 1px #f8b03f;
     border-radius: 20px;
     height: 400px;
   }
@@ -281,16 +273,71 @@
 
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .child-chart-selection {
+  .child-chart-selection, .child-chart-selection-iphone, .statistics-charts {
     display: none;
   }
 
-  .statistics-charts {
-    display: none;
-  }
 
   .statistics-charts-ipad, .child-chart-selection-ipad {
     display: block;
   }
 
+  .child-chart-selection-ipad {
+    margin-top: -150px;
+    margin-left: 220px;
+  }
+
 }
+
+  /* THIS CODE IS FOR IPHONE DESIGN */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+
+  .main-content {
+    height: 85%;
+    position:relative;
+  }
+
+  .statistics-charts, .statistics-charts-ipad {
+    border-radius: 20px;
+    border: solid 1px #f8b03f;
+    background-color: rgba(255,254,224,0.7);
+    height: 950px;
+  }
+
+  .dashboard-child {
+    border-radius: 20px;
+    background-color: rgba(255,254,224,0.7);
+    height: 400px;
+    border: solid 1px orange;
+  }
+
+  .child-chart-selection {
+    border-radius: 20px;
+    height: 400px;
+  }
+
+  .chart {
+    height: 400px;
+    width: 90%;
+  }
+
+  #game-stats-chart{
+    margin-top: -150px;
+    display: block;
+  }
+
+  #game-avg-comparison {
+    margin-top: 25px;
+  }
+
+  .avatar-profile {
+    margin-top: 15px;
+  }
+
+  .statistics-charts-ipad, .child-chart-selection-ipad, .child-chart-selection {
+    display: none;
+  }
+
+}
+
