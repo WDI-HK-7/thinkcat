@@ -7,7 +7,6 @@
 
 .statistics-charts, .statistics-charts-ipad {
   border-radius: 20px;
-  border: solid 1px #f8b03f;
   background-color: rgba(255,254,224,0.7);
   height: 100%;
 }
@@ -16,7 +15,6 @@
   border-radius: 20px;
   background-color: rgba(255,254,224,0.7);
   height: 100%;
-  border: solid 1px orange;
 }
 
 .child-chart-selection {
@@ -42,10 +40,11 @@
 }
 
 .game-history {
-  margin: 25px auto;
+  margin: 5px auto;
+  max-height: 150px;
+  min-height: 100px;
 
 }
-
 
 .child-profile-page {
   height: 100vh;
@@ -73,6 +72,11 @@
   font-weight: bold;
 }
 
+#play-button-dash {
+  max-width: 100px;
+}
+
+/* CODE BELOW is for managing different Screen Widths */
 
 @media (min-width: 2080px) {
 
@@ -83,28 +87,27 @@
 
   .statistics-charts, .statistics-charts-ipad {
     border-radius: 20px;
-    border: solid 1px #f8b03f;
     background-color: rgba(255,254,224,0.7);
-    height: 600px;
+    height: 650px;
   }
 
   .dashboard-child {
     border-radius: 20px;
     background-color: rgba(255,254,224,0.7);
     height: 650px;
-    border: solid 1px orange;
+
   }
 
   .child-chart-selection {
     border-radius: 20px;
-    height: 400px;
+    height: 650px;
   }
 
   #game-stats-chart, #game-avg-comparison {
     margin-top: -120px;
   }
 
-  .statistics-charts-ipad, .child-chart-selection-ipad {
+  .statistics-charts-ipad, .child-chart-selection-ipad, .child-chart-selection-iphone {
     display: none;
   }
 
@@ -119,28 +122,26 @@
 
   .statistics-charts, .statistics-charts-ipad {
     border-radius: 20px;
-    border: solid 1px #f8b03f;
     background-color: rgba(255,254,224,0.7);
-    height: 550px;
+    height: 620px;
   }
 
   .dashboard-child {
     border-radius: 20px;
     background-color: rgba(255,254,224,0.7);
     height: 620px;
-    border: solid 1px orange;
   }
 
   .child-chart-selection {
     border-radius: 20px;
-    height: 400px;
+    height: 620px;
   }
 
   #game-stats-chart, #game-avg-comparison {
     margin-top: -120px;
   }
 
-  .statistics-charts-ipad, .child-chart-selection-ipad {
+  .statistics-charts-ipad, .child-chart-selection-ipad, .child-chart-selection-iphone {
     display: none;
   }
 
@@ -155,7 +156,6 @@
 
   .statistics-charts, .statistics-charts-ipad  {
     border-radius: 20px;
-    border: solid 1px #f8b03f;
     background-color: rgba(255,254,224,0.7);
     height: 550px;
   }
@@ -164,24 +164,22 @@
     border-radius: 20px;
     background-color: rgba(255,254,224,0.7);
     height: 550px;
-    border: solid 1px orange;
   }
 
   .child-chart-selection {
     border-radius: 20px;
-    height: 400px;
+    height: 550px;
   }
 
   #game-stats-chart, #game-avg-comparison {
     margin-top: -110px;
   }
 
-  .statistics-charts-ipad, .child-chart-selection-ipad {
+  .statistics-charts-ipad, .child-chart-selection-ipad, .child-chart-selection-iphone {
     display: none;
   }
 
 }
-
 
 @media ( max-width: 992px) {
 
@@ -192,7 +190,6 @@
 
   .statistics-charts, .statistics-charts-ipad {
     border-radius: 20px;
-    border: solid 1px #f8b03f;
     background-color: rgba(255,254,224,0.7);
     height: 550px;
   }
@@ -201,19 +198,18 @@
     border-radius: 20px;
     background-color: rgba(255,254,224,0.7);
     height: 550px;
-    border: solid 1px orange;
   }
 
   .child-chart-selection {
     border-radius: 20px;
-    height: 400px;
+    height: 550px;
   }
 
   #game-stats-chart, #game-avg-comparison {
     margin-top: -125px;
   }
 
-  .statistics-charts-ipad, .child-chart-selection-ipad {
+  .statistics-charts-ipad, .child-chart-selection-ipad, .child-chart-selection-iphone {
     display: none;
   }
 
@@ -228,21 +224,19 @@
 
   .statistics-charts, .statistics-charts-ipad {
     border-radius: 20px;
-    border: solid 1px #f8b03f;
     background-color: rgba(255,254,224,0.7);
-    height: 950px;
+    height: 550px;
   }
 
   .dashboard-child {
     border-radius: 20px;
     background-color: rgba(255,254,224,0.7);
-    height: 580px;
-    border: solid 1px orange;
+    height: 550px;
   }
 
   .child-chart-selection {
     border-radius: 20px;
-    height: 400px;
+    height: 550px;
   }
 
   .chart {
@@ -263,7 +257,7 @@
     margin-top: 15px;
   }
 
-  .statistics-charts-ipad, .child-chart-selection-ipad {
+  .statistics-charts-ipad, .child-chart-selection-ipad, .child-chart-selection-iphone {
     display: none;
   }
 
@@ -271,8 +265,8 @@
 
 /* THIS CODE IS FOR IPAD DESIGN */
 
-
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
   .child-chart-selection, .child-chart-selection-iphone, .statistics-charts {
     display: none;
   }
@@ -283,7 +277,6 @@
   }
 
   .child-chart-selection-ipad {
-    margin-top: -150px;
     margin-left: 220px;
   }
 
@@ -300,7 +293,6 @@
 
   .statistics-charts, .statistics-charts-ipad {
     border-radius: 20px;
-    border: solid 1px #f8b03f;
     background-color: rgba(255,254,224,0.7);
     height: 950px;
   }
@@ -308,8 +300,7 @@
   .dashboard-child {
     border-radius: 20px;
     background-color: rgba(255,254,224,0.7);
-    height: 400px;
-    border: solid 1px orange;
+    height: 450px;
   }
 
   .child-chart-selection {
@@ -339,5 +330,8 @@
     display: none;
   }
 
-}
+  .child-chart-selection-iphone {
+    display: block;
+  }
 
+}
