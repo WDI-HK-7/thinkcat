@@ -1,16 +1,14 @@
 <template name="childProfile">
-
-
 <div class="child-profile-page">
   {{> navbar}}
     
   <div class="main-content">
 
-    <div class="dashboard-child col-xs-12 col-sm-4">
+    <div class="dashboard-child col-xs-12 col-sm-3">
       
       <!-- Child Profile Picture Here -->
-      <div class="avatar-profile col-xs-6 col-xs-offset-3 col-sm-8">
-        <img src="http://images.watoday.com.au/2010/12/22/2105997/kids-swing-3-4-420-420x0.jpg" class="img-circle img-responsive">
+      <div class="avatar-profile col-xs-6 col-xs-offset-3 col-sm-8 col-sm-offset-2">
+        <img src="http://images.watoday.com.au/2010/12/22/2105997/kids-swing-3-4-420-420x0.jpg" class="img-circle img-responsive img-center">
       </div>
 
       <!-- Child Name + Age -->
@@ -57,13 +55,38 @@
       </div>
 
       <!-- Game Play Button TBD how it works -->
-      <div class="play-button">
-        
+      <div class="play-button-icon col-xs-4 col-xs-offset-4 col-sm-10 col-sm-offset-1">
+        <img id="play-button-dash" class="img-responsive img-center" src="/images/icons/icons-play-button.svg">
       </div>
 
     </div>
 
-    <div class="statistics-charts col-xs-12 col-sm-6">
+    <!-- Buttons For Charts View For IPHONE -->
+    <div class="child-chart-selection-iphone col-xs-12 col-sm-2">
+
+      <div class="history-container">
+        
+        <div class="game-history">
+          <img id="maths-game-chart" class="game-history img-responsive col-xs-6 col-sm-12" src="/images/icons/icons-math-game.svg">
+        </div>
+
+        <div class="game-history">
+          <img id="colours-game-chart" class="game-history img-responsive col-xs-6 col-sm-12" src="/images/icons/icons-colours-game.svg">
+        </div>
+        
+        <div class="game-history">
+          <img id="shapes-game-chart" class="game-history img-responsive col-xs-6 col-sm-12" src="/images/icons/icons-shapes-game.svg">
+        </div>
+        
+        <div class="game-history">
+          <img id="" class="game-history img-responsive col-xs-6 col-sm-12" src="/images/icons/icons-memory-game.svg">
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="statistics-charts col-xs-12 col-sm-7">
 
       <div class="statistics-title">
         <span>Game Statistics!</span>
@@ -81,7 +104,7 @@
     </div>
 
     <!-- statistics-charts for IPAD EDITION LANDSCAPE -->
-    <div class="statistics-charts-ipad col-xs-12 col-sm-8">
+    <div class="statistics-charts-ipad col-xs-12 col-sm-9">
       <div class="statistics-title">
         <span>Game Statistics!</span>
       </div>
@@ -95,6 +118,8 @@
         
       </div>  
     </div>
+      
+    </div>
 
     <!-- Buttons For Charts View -->
     <div class="child-chart-selection col-xs-12 col-sm-2">
@@ -102,19 +127,19 @@
       <div class="history-container">
         
         <div class="game-history">
-          <button id="maths-game-chart" class="game-history btn btn-primary col-xs-12">Maths Game Stats</button>
+          <img id="maths-game-chart" class="game-history img-responsive col-xs-6 col-sm-12" src="/images/icons/icons-math-game.svg">
         </div>
 
         <div class="game-history">
-          <button id="colours-game-chart" class="game-history btn btn-primary col-xs-12">Colours Game Stats</button>
+          <img id="colours-game-chart" class="game-history img-responsive col-xs-6 col-sm-12" src="/images/icons/icons-colours-game.svg">
         </div>
         
         <div class="game-history">
-          <button id="shapes-game-chart" class="game-history btn btn-primary col-xs-12">Shapes Game Stats</button>
+          <img id="shapes-game-chart" class="game-history img-responsive col-xs-6 col-sm-12" src="/images/icons/icons-shapes-game.svg">
         </div>
         
         <div class="game-history">
-          <button id="game-chart" class="game-history btn btn-primary col-xs-12">Other Game Stats</button>
+          <img id="" class="game-history img-responsive col-xs-6 col-sm-12" src="/images/icons/icons-memory-game.svg">
         </div>
 
       </div>
@@ -126,29 +151,25 @@
       <div class="history-container">
         
         <div class="game-history">
-          <button id="maths-game-chart" class="game-history btn btn-primary col-xs-3">Maths Game Stats</button>
+          <img id="maths-game-chart" class="game-history img-responsive col-sm-2" src="/images/icons/icons-math-game.svg">
         </div>
 
         <div class="game-history">
-          <button id="colours-game-chart" class="game-history btn btn-primary col-xs-3">Colours Game Stats</button>
+          <img id="colours-game-chart" class="game-history img-responsive col-sm-2" src="/images/icons/icons-colours-game.svg">
         </div>
         
         <div class="game-history">
-          <button id="shapes-game-chart" class="game-history btn btn-primary col-xs-3">Shapes Game Stats</button>
+          <img id="shapes-game-chart" class="game-history img-responsive col-sm-2" src="/images/icons/icons-shapes-game.svg">
         </div>
         
         <div class="game-history">
-          <button id="game-chart" class="game-history btn btn-primary col-xs-3">Other Game Stats</button>
+          <img id="" class="game-history img-responsive col-sm-2" src="/images/icons/icons-memory-game.svg">
         </div>
 
       </div>
     </div>
 
   </div>
-
-
-</div>
-    
 
 </template>
 
