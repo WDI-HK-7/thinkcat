@@ -1,19 +1,27 @@
+/* --------------------------------- Game Panels --------------------------------- */
+
 #colour-counter-panel {
 	text-align: center;
 	padding: 1em;
   height: 100%;
   background-color: rgba(255,254,224,0.7);
+  border: none;
+  box-shadow: none;
 }
 
 #colour-question-panel {
 	text-align: center;
 	padding: 1em;
   background-color: rgba(255,254,224,0.7);
+  border: none;
+  box-shadow: none;
 }
 
 #colour-game-panel {
 	height: auto;
   background-color: rgba(255,254,224,0.7);
+  border: none;
+  box-shadow: none;
 }
 
 .row-centered {
@@ -52,14 +60,6 @@
   display: inline-block;
   padding-left: 1em;
   padding-right: 1em;
-}
-
-#colourGameReturnHome {
-  margin: 1em;
-}
-
-#colourGameRestart {
-  margin: 1em;
 }
 
 @media only screen and (max-width : 450px) {

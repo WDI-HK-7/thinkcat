@@ -139,7 +139,7 @@ Template.shapes.events({
     numCorrect = 0;
     numIncorrect = 0;
       
-    Router.go('/child');
+    Router.go('/games');
      
   },
 
