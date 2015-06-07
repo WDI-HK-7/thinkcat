@@ -1,8 +1,3 @@
-.navbar {
-  max-height: 50px;
-  z-index: 999999;
-}
-
 #navbar-logo {
   width: 250px;
   margin-top: 5px;
@@ -145,6 +140,14 @@
 @media only screen and (max-width : 768px) {
   #login-buttons {
     text-align: center;
+  }
+}
+
+/* Anything Above Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  .navbar {
+    max-height: 50px;
+    z-index: 999999;
   }
 }
 
