@@ -1,7 +1,7 @@
 Template.landing.helpers({
 
   children: function() {
-    return Children.find({parent_id: Meteor.userId()});
+    return Children.find({parent_id: Meteor.userId()}, {sort: {createdAt: 1}});
   },
   signedIn: function() {
     return Meteor.user();
