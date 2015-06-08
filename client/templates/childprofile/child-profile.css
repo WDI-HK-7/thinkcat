@@ -1,47 +1,58 @@
-/* Main Content Div Styles */
+/* -------------------Main Content Styles------------------- */
 
 .main-content {
   height: 85%;
   position:relative;
 }
 
-.statistics-charts, .statistics-charts-ipad {
-  border-radius: 20px;
-  background-color: rgba(255,254,224,0.7);
-  height: 100%;
-}
-
 .dashboard-child {
-  border-radius: 20px;
+  /*border-radius: 20px;*/
   background-color: rgba(255,254,224,0.7);
-  height: 100%;
+  border: 2px;
 }
 
-.child-chart-selection {
-  border-radius: 20px;
-  height: 100%;
+@media (min-width: 769px) {
+  .dashboard-child {
+    height: 90vh;
+  }
 }
 
-/* Other Styles */
+/* -----------------Game Chart Panel Styles----------------- */
 
-.child-info {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  text-align: center;
+.statistics-charts, .statistics-charts-ipad {
+  background-color: rgba(255,254,224,0.7);
 }
 
 #game-stats-container {
   background-color: rgba(255,254,224,0.7);
-  border-radius: 20px;
 }
 
 #game-stats-chart, #game-avg-comparison {
-  top: 20%;
+  
 }
 
-.game-history {
+@media (min-width: 769px) {
+  .statistics-charts {
+    height: 90vh;
+  }
+}
+
+/* -------------------Button-Icon Styles------------------- */
+
+.game-button-icon {
   margin: 5px auto;
-  max-height: 150px;
+  max-height: 20vh;
+}
+
+.col-sm-2 {
+  padding-right: none !important;
+}
+
+/* -------------------Child Panel Styles------------------- */
+
+#child-hr {
+  border-top: 2px solid #f8b03f;
+  width: 11em;
 }
 
 .child-profile-page {
@@ -53,12 +64,6 @@
   margin-bottom: 15px;
 }
 
-.statistics {
-  border-radius: 20px;
-  margin-bottom: 25px;
-  margin-top: 50px;
-}
-
 .statistics-title {
   text-align: center;
   margin-top: 50px;
@@ -68,268 +73,13 @@
 .table, th {
   text-align: center;
   font-weight: bold;
+  border-bottom: none !important;
 }
+
+.table th, .table td { 
+  border-top: none !important; 
+ }
 
 #play-button-dash {
   max-width: 100px;
-}
-
-/* CODE BELOW is for managing different Screen Widths */
-
-@media (min-width: 2080px) {
-
-  .main-content {
-    height: 85%;
-    position:relative;
-  }
-
-  .statistics-charts, .statistics-charts-ipad {
-    border-radius: 20px;
-    background-color: rgba(255,254,224,0.7);
-    height: 650px;
-  }
-
-  .dashboard-child {
-    border-radius: 20px;
-    background-color: rgba(255,254,224,0.7);
-    height: 650px;
-
-  }
-
-  .child-chart-selection {
-    border-radius: 20px;
-    height: 650px;
-  }
-
-  #game-stats-chart, #game-avg-comparison {
-    margin-top: -120px;
-  }
-
-  .statistics-charts-ipad, .child-chart-selection-ipad, .child-chart-selection-iphone {
-    display: none;
-  }
-
-}
-
-@media (max-width: 2079px) {
-
-  .main-content {
-    height: 85%;
-    position:relative;
-  }
-
-  .statistics-charts, .statistics-charts-ipad {
-    border-radius: 20px;
-    background-color: rgba(255,254,224,0.7);
-    height: 620px;
-  }
-
-  .dashboard-child {
-    border-radius: 20px;
-    background-color: rgba(255,254,224,0.7);
-    height: 620px;
-  }
-
-  .child-chart-selection {
-    border-radius: 20px;
-    height: 620px;
-  }
-
-  #game-stats-chart, #game-avg-comparison {
-    margin-top: -120px;
-  }
-
-  .statistics-charts-ipad, .child-chart-selection-ipad, .child-chart-selection-iphone {
-    display: none;
-  }
-
-}
-
-@media (max-width: 1479px) {
-
-  .main-content {
-    height: 85%;
-    position:relative;
-  }
-
-  .statistics-charts, .statistics-charts-ipad  {
-    border-radius: 20px;
-    background-color: rgba(255,254,224,0.7);
-    height: 550px;
-  }
-
-  .dashboard-child {
-    border-radius: 20px;
-    background-color: rgba(255,254,224,0.7);
-    height: 550px;
-  }
-
-  .child-chart-selection {
-    border-radius: 20px;
-    height: 550px;
-  }
-
-  #game-stats-chart, #game-avg-comparison {
-    margin-top: -110px;
-  }
-
-  .statistics-charts-ipad, .child-chart-selection-ipad, .child-chart-selection-iphone {
-    display: none;
-  }
-
-}
-
-@media ( max-width: 992px) {
-
-  .main-content {
-    height: 85%;
-    position:relative;
-  }
-
-  .statistics-charts, .statistics-charts-ipad {
-    border-radius: 20px;
-    background-color: rgba(255,254,224,0.7);
-    height: 550px;
-  }
-
-  .dashboard-child {
-    border-radius: 20px;
-    background-color: rgba(255,254,224,0.7);
-    height: 550px;
-  }
-
-  .child-chart-selection {
-    border-radius: 20px;
-    height: 550px;
-  }
-
-  #game-stats-chart, #game-avg-comparison {
-    margin-top: -125px;
-  }
-
-  .statistics-charts-ipad, .child-chart-selection-ipad, .child-chart-selection-iphone {
-    display: none;
-  }
-
-}
-
-@media (max-width: 769px) {
-  
-  .main-content {
-    height: 85%;
-    position:relative;
-  }
-
-  .statistics-charts, .statistics-charts-ipad {
-    border-radius: 20px;
-    background-color: rgba(255,254,224,0.7);
-    height: 550px;
-  }
-
-  .dashboard-child {
-    border-radius: 20px;
-    background-color: rgba(255,254,224,0.7);
-    height: 550px;
-  }
-
-  .child-chart-selection {
-    border-radius: 20px;
-    height: 550px;
-  }
-
-  .chart {
-    height: 400px;
-    width: 90%;
-  }
-
-  #game-stats-chart{
-    margin-top: -150px;
-    display: block;
-  }
-
-  #game-avg-comparison {
-    margin-top: 25px;
-  }
-
-  .avatar-profile {
-    margin-top: 15px;
-  }
-
-  .statistics-charts-ipad, .child-chart-selection-ipad, .child-chart-selection-iphone {
-    display: none;
-  }
-
-}
-
-/* THIS CODE IS FOR IPAD DESIGN */
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-
-  .child-chart-selection, .child-chart-selection-iphone, .statistics-charts {
-    display: none;
-  }
-
-
-  .statistics-charts-ipad, .child-chart-selection-ipad {
-    display: block;
-  }
-
-  .child-chart-selection-ipad {
-    margin-left: 220px;
-  }
-
-}
-
-  /* THIS CODE IS FOR IPHONE DESIGN */
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
-
-  .main-content {
-    height: 85%;
-    position:relative;
-  }
-
-  .statistics-charts, .statistics-charts-ipad {
-    border-radius: 20px;
-    background-color: rgba(255,254,224,0.7);
-    height: 950px;
-  }
-
-  .dashboard-child {
-    border-radius: 20px;
-    background-color: rgba(255,254,224,0.7);
-    height: 450px;
-  }
-
-  .child-chart-selection {
-    border-radius: 20px;
-    height: 400px;
-  }
-
-  .chart {
-    height: 400px;
-    width: 90%;
-  }
-
-  #game-stats-chart{
-    margin-top: -150px;
-    display: block;
-  }
-
-  #game-avg-comparison {
-    margin-top: 25px;
-  }
-
-  .avatar-profile {
-    margin-top: 15px;
-  }
-
-  .statistics-charts-ipad, .child-chart-selection-ipad, .child-chart-selection {
-    display: none;
-  }
-
-  .child-chart-selection-iphone {
-    display: block;
-  }
-
 }
