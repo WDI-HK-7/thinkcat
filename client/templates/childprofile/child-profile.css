@@ -11,12 +11,6 @@
   border: 2px;
 }
 
-@media (min-width: 769px) {
-  .dashboard-child {
-    height: 90vh;
-  }
-}
-
 /* -----------------Game Chart Panel Styles----------------- */
 
 .statistics-charts, .statistics-charts-ipad {
@@ -25,16 +19,6 @@
 
 #game-stats-container {
   background-color: rgba(255,254,224,0.7);
-}
-
-#game-stats-chart, #game-avg-comparison {
-  
-}
-
-@media (min-width: 769px) {
-  .statistics-charts {
-    height: 90vh;
-  }
 }
 
 /* -------------------Button-Icon Styles------------------- */
@@ -82,4 +66,35 @@
 
 #play-button-dash {
   max-width: 100px;
+}
+
+/* -------------------Mobile Styles (Less than 769px)------------------- */
+
+@media (min-width: 769px) {
+  .dashboard-child {
+    height: 90vh;
+  }
+  .statistics-charts {
+    height: 90vh;
+  }
+  .child-chart-selection{
+    height: 90vh;
+  }
+}
+
+/* -------------------iPad Styles (More than 769px and Less than 990px)------------------- */
+
+@media screen and (min-width: 770px) and (max-width: 1024px) {
+  .dashboard-child {
+    height: 80vh;
+    margin-top: 10vh;
+  }
+  .statistics-charts {
+    height: 80vh;
+    margin-top: 10vh;
+  }
+  .child-chart-selection{
+    height: 80vh;
+    margin-top: 10vh;
+  }
 }
