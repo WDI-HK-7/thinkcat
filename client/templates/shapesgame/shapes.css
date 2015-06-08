@@ -17,6 +17,14 @@
   box-shadow: none;
 }
 
+#shapes-question-panel > h1 {
+  text-transform: uppercase;
+}
+
+#shapes-question-panel > span {
+  font-size: 1.8em;
+}
+
 #shapes-game-panel {
 	height: auto;
   background-color: rgba(255,254,224,0.7);
@@ -92,4 +100,30 @@
   .shape {
     width: 100px;
   }
+}
+
+/* Media Query for iPad + iPad Mini */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+  #shapes-game-panel {
+    height: 50vh;
+  }
+
+}
+
+
+/* Media Query for iPhone 6 */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+
+  #shapes-game-panel {
+    height: 50vh;
+  }
+
+  #shapes-question {
+    margin-top: 10vh;
+    font-size: 6.5em;
+  }
+
 }

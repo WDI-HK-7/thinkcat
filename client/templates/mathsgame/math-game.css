@@ -103,3 +103,66 @@
     margin-right: 0.5em;
   }
 }
+
+/* Media Query for iPad + iPad Mini */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+  #maths-game-panel {
+    height: 60vh;
+  }
+
+  #maths-question {
+    margin-top: 15vh;
+  }
+}
+
+/* Media Query for iPhone 6 Plus */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
+
+  #maths-game-panel {
+    height: 50vh;
+  }
+
+  #maths-question {
+    margin-top: 20vh;
+    font-size: 7.5em;
+  }
+
+}
+
+/* Media Query for iPhone 6 */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+
+  #maths-game-panel {
+    height: 50vh;
+  }
+
+  #maths-question {
+    margin-top: 10vh;
+    font-size: 6.5em;
+  }
+
+}
+
+/* Media Query for iPhone 5 */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+
+  #maths-game-panel {
+    height: 55vh;
+  }
+
+  #maths-question {
+    margin-top: 10vh;
+    font-size: 5em;
+  }
+
+  .mathGameAns {
+    max-width: 50px;
+    margin: 0 auto;
+  }
+
+}
