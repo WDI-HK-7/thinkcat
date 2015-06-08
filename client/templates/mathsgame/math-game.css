@@ -117,17 +117,22 @@
   }
 }
 
-/* Media Query for iPhone 6 Plus */
+/* Media Query for iPhone 5 */
 
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
 
   #maths-game-panel {
-    height: 50vh;
+    height: 45vh;
   }
 
   #maths-question {
-    margin-top: 20vh;
-    font-size: 7.5em;
+    margin-top: 10vh;
+    font-size: 5em;
+  }
+
+  .mathGameAns {
+    max-width: 50px;
+    margin: 0 auto;
   }
 
 }
@@ -147,22 +152,17 @@
 
 }
 
-/* Media Query for iPhone 5 */
+/* Media Query for iPhone 6 Plus */
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
 
   #maths-game-panel {
-    height: 55vh;
+    height: 60vh;
   }
 
   #maths-question {
-    margin-top: 10vh;
-    font-size: 5em;
-  }
-
-  .mathGameAns {
-    max-width: 50px;
-    margin: 0 auto;
+    margin-top: 15vh;
+    font-size: 7.5em;
   }
 
 }

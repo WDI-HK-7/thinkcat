@@ -81,19 +81,6 @@
   }
 }
 
-/* Media Query for iPhone 5 */
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
-  
-  .animal {
-    max-width: 45px;
-    margin-top: 0;
-  }
-
-  #animals-game-panel {
-    height: 42vh;
-  }
-}
 
 /* Media Query for iPhone 2g-4s */
 
@@ -113,5 +100,57 @@
   padding-bottom: 0;
   margin-bottom: 0;
   margin-top: 0;
+  }
 }
+
+/* Media Query for iPhone 5 */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  
+  .animal {
+    max-width: 45px;
+    margin-top: 0;
+  }
+
+  #animals-game-panel {
+    height: 40vh;
+  }
+}
+
+/* Media Query for iPhone 6 */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+
+  #animals-game-panel {
+    height: 50vh;
+  }
+
+  #animals-game-panel > .row {
+    margin-top: 15vh;
+  }
+
+  #animals-question {
+    margin-top: 10vh;
+    font-size: 6.5em;
+  }
+
+  .animal {
+    min-height: 5vh;
+  }
+
+}
+
+/* Media Query for iPhone 6 Plus */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
+
+  #animals-game-panel {
+    height: 60vh;
+  }
+
+  #animals-question {
+    margin-top: 15vh;
+    font-size: 7.5em;
+  }
+
 }
