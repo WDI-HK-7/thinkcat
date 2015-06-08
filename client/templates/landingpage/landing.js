@@ -33,6 +33,27 @@ Template.landing.events({
   "click #add-child-btn": function(event){
     $(".new-child").toggle();
     $("#add-child-btn").toggle();
+  },
+
+  "change .profileImageInput": function(event, template) {
+    FS.Utility.eachFile(event, function(file) {
+      Images.insert(file, function (err, fileObj) {
+        if (err){
+          console.log(err);
+          // handle error
+        } else {
+          // handle success depending what you need to do
+          var child = Session.get("childProImg");
+          // console.log(child.id);
+          var imagesURL = {
+            profileImage: "/cfs/files/images/" + fileObj._id
+          };
+          console.log(fileObj._id);
+          Meteor.call('updateChildProImg', child.id, imagesURL);
+          console.log('image uploaded');
+        }
+      });
+    });
   }
 
 });

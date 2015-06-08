@@ -252,7 +252,7 @@ input {
 /*----------------------------------------------------*/
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 990px) {
+@media only screen and (max-width: 990px) {
   
   .landing-page-image-icon {
     display: none;
@@ -271,7 +271,7 @@ input {
 }
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width : 768px) {
+@media only screen and (min-width: 768px) {
   
   .cream-feature-box,
   .aqua-feature-box,
@@ -298,7 +298,7 @@ input {
 }
 
 /* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
+@media only screen and (min-width: 1200px) {
   
   
   

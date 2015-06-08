@@ -3,3 +3,30 @@
   display: inline-block;
   width: 45%;
 }
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 501px) and (max-width: 768px) {
+  .avatar {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .avatar {
+    object-fit: cover;
+    height: 150px;
+    width: 100%;
+  }
+}
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (min-width: 990px) {
+  .avatar {
+    object-fit: cover;
+    height: 100px;
+    width: 100%;
+  }
+}

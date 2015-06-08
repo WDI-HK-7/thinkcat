@@ -19,3 +19,7 @@ Meteor.publish('shapesGame', function() {
 Meteor.publish('animalsGame', function() {
   return AnimalsGame.find({});
 });
+
+Meteor.publish('images', function() { 
+  return Images.find({}); 
+});
