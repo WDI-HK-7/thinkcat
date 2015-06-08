@@ -64,6 +64,7 @@ Template.landing.events({
           console.log(fileObj._id);
           Meteor.call('updateChildProImg', child.id, imagesURL);
           console.log('image uploaded');
+          Meteor._reload.reload();
         }
       });
     });
