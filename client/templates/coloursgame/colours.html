@@ -11,8 +11,9 @@
 <!--===================================================== Question Panel =====================================================-->
 
     <div id="colour-question-panel" class="col-md-12 col-lg-8 col-lg-offset-2 panel panel-default">
-     
-      <h3>Which colouring pencil is {{getRandomColour}}?</h3>
+      
+      <span>Click on the colour pencil</span>
+      <h1>{{getRandomColour}}</h1>
       
     </div> 
 
@@ -35,12 +36,12 @@
      
       <div class="answers-counter-colours">
         <span class="glyphicon glyphicon-ok"></span> 
-        Right: {{updateCorrectAnswers}}
+        {{updateCorrectAnswers}} - Correct
       </div>
       
       <div class="answers-counter-colours">
         <span class="glyphicon glyphicon-remove"></span> 
-        Wrong: {{updateIncorrectAnswers}}
+        {{updateIncorrectAnswers}} - Incorrect
       </div>
       
     </div>

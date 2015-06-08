@@ -11,7 +11,7 @@ Template.games.events({
     Router.go('/shapes');
   },
 
-  "click .game-four": function(event, template) {
-    Router.go('/game4')
+  "click .animals-game": function(event, template) {
+    Router.go('/animals')
   }
 });

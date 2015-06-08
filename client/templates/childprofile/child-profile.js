@@ -190,6 +190,11 @@ Template.childProfile.helpers({
   shapesGameStats: function() {
     _dep.depend();
     return getScoreAvg(ShapesGame, {child_id: child.id});
+  },
+
+  animalsGameStats: function() {
+    _dep.depend();
+    return getScoreAvg(AnimalsGame, {child_id: child.id});
   }
 
 });
@@ -209,7 +214,7 @@ Template.childProfile.events({
   },
 
   "click #maths-game-chart": function() {
-    gameVariable = "mathGame"
+    gameVariable = "mathGame";
     var chartData = getGameData(MathsGame, {child_id: child.id});
     var gameScoreSeries = {
       name: "Maths Game",
@@ -237,7 +242,7 @@ Template.childProfile.events({
   },
 
   "click #colours-game-chart": function() {
-    gameVariable = "colours"
+    gameVariable = "colours";
     var chartData = getGameData(ColoursGame, {child_id: child.id});
     var gameScoreSeries = {
       name: "Colours Game",
@@ -265,7 +270,7 @@ Template.childProfile.events({
   },
   
   "click #shapes-game-chart": function() {
-    gameVariable = "shapes"
+    gameVariable = "shapes";
     var chartData = getGameData(ShapesGame, {child_id: child.id});
     var gameScoreSeries = {
       name: "Shapes Game",
@@ -290,6 +295,35 @@ Template.childProfile.events({
       $('#game-avg-comparison2').html('');
     }
   },
+
+  "click #animals-game-chart": function() {
+    gameVariable = "animals";
+    var chartData = getGameData(AnimalsGame, {child_id: child.id});
+    var gameScoreSeries = {
+      name: "Animals Game",
+      data: chartData
+    }
+    var childAvg = getScoreAvg(AnimalsGame, {child_id: child.id});
+    var ageAvg = getScoreAvg(AnimalsGame, {child_age: child.age});
+    var avgSeries = [
+      {name: child.name, data: [childAvg]},
+      {name: child.age + "yr olds", data: [ageAvg]}
+    ];
+
+    if (chartData.length > 1) {
+      buildStatsChart('Animals Game', gameScoreSeries, '#game-stats-chart');
+      buildAvgCompareChart('Animals Game', avgSeries, '#game-avg-comparison');
+      buildStatsChart('Animals Game', gameScoreSeries, '#game-stats-chart2');
+      buildAvgCompareChart('Animals Game', avgSeries, '#game-avg-comparison2');
+    } else {
+      $('#game-stats-chart').html("<h1>You haven't played enough, play more!</h1>");
+      $('#game-stats-chart2').html("<h1>You haven't played enough, play more!</h1>");
+      $('#game-avg-comparison').html('');
+      $('#game-avg-comparison2').html('');
+    }
+  },
+
+// Are these click events below needed or can we delete these? **************************************************
 
   "click .maths-game": function(event, template) {
     Router.go('/mathGame');

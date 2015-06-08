@@ -17,8 +17,16 @@
   box-shadow: none;
 }
 
+#colour-question-panel > h1 {
+  text-transform: uppercase;
+}
+
+#colour-question-panel > span {
+  font-size: 1.8em;
+}
+
 #colour-game-panel {
-	height: auto;
+	height: 55vh;
   background-color: rgba(255,254,224,0.7);
   border: none;
   box-shadow: none;
@@ -31,6 +39,11 @@
 .colours-row {
   display: inline-block;
 }
+
+.pencil {
+  margin-top: 90px;
+}
+
 .pencil:hover {
   transform: scale(1.1);
 }
@@ -67,3 +80,33 @@
     font-size: 1.5em;
   }
 }
+
+
+/* Media Query for iPhone 5 */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  
+  .pencil {
+    max-width: 45px;
+    margin-top: 0;
+  }
+
+  #colour-game-panel {
+    height: 42vh;
+  }
+}
+
+/* Media Query for iPhone 2g-4s */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  
+  .pencil {
+    max-width: 45px;
+    margin-top: 0;
+  }
+
+  #colour-game-panel {
+    height: 50vh;
+  }
+}
+

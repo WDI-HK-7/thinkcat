@@ -121,8 +121,7 @@ Template.shapes.events({
       numIncorrect++;
       step++;
       _dep.changed();
-
-      
+    
     }
 
   },
