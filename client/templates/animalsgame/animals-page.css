@@ -1,63 +1,48 @@
 /* --------------------------------- Game Panels --------------------------------- */
 
-#colour-counter-panel {
-	text-align: center;
-	padding: 1em;
+#animals-counter-panel {
+  text-align: center;
+  padding: 1em;
   height: 100%;
   background-color: rgba(255,254,224,0.7);
   border: none;
   box-shadow: none;
 }
 
-#colour-question-panel {
-	text-align: center;
-	padding: 1em;
+#animals-question-panel {
+  text-align: center;
+  padding: 1em;
   background-color: rgba(255,254,224,0.7);
   border: none;
   box-shadow: none;
 }
 
-#colour-question-panel > h1 {
+#animals-question-panel > h1 {
   text-transform: uppercase;
 }
 
-#colour-question-panel > span {
+#animals-question-panel > span {
   font-size: 1.8em;
 }
 
-#colour-game-panel {
-	height: 55vh;
+#animals-game-panel {
+  height: 55vh;
   background-color: rgba(255,254,224,0.7);
   border: none;
   box-shadow: none;
 }
 
+.animal {
+  margin-top: 60px;
+}
+
 .row-centered {
-	float: center;
+  float: center;
 }
 
-.colours-row {
-  display: inline-block;
-}
 
-.pencil {
-  margin-top: 90px;
-}
-
-.pencil:hover {
-  transform: scale(1.1);
-}
-
-#colours-avatar {
-  width: 8em;
-  height: 6em;
-  border-radius: 100%;
-  margin-top: 1em;
-}
-
-#colour-child-name {
-  vertical-align: text-top;
-  margin-top: 1em;
+.animal:hover {
+  transform: scale(1.5);
 }
 
 .glyphicon-remove {
@@ -68,30 +53,44 @@
   color: forestgreen;
 }
 
-.answers-counter-colours {
+.answersCounterDiv {
+  font-size: 3em;
+}
+
+.answers-counter-animals {
   font-size: 2em;
   display: inline-block;
   padding-left: 1em;
   padding-right: 1em;
 }
 
-@media only screen and (max-width : 450px) {
-  .answers-counter-colours {
-    font-size: 1.5em;
-  }
+.animal {
+  display: inline-block;
+  width: 150px;
 }
 
+/* Screen Specific CSS */
+
+@media only screen and (max-width : 450px) {
+  .answers-counter-animals {
+    font-size: 1.5em;
+  }
+  
+  .animal {
+    width: 100px;
+  }
+}
 
 /* Media Query for iPhone 5 */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
   
-  .pencil {
+  .animal {
     max-width: 45px;
     margin-top: 0;
   }
 
-  #colour-game-panel {
+  #animals-game-panel {
     height: 42vh;
   }
 }
@@ -100,13 +99,19 @@
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
   
-  .pencil {
-    max-width: 45px;
-    margin-top: 0;
+  .animal {
+    max-width: 60px;
+    margin-top: 50px;
   }
 
-  #colour-game-panel {
+  #animals-game-panel {
     height: 50vh;
   }
-}
 
+  #animals-question-panel {
+  font-size: 1em;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+}
