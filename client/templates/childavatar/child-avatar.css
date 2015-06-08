@@ -23,7 +23,7 @@
 
 /* Large Devices, Wide Screens */
 
-@media only screen and (min-width: 990px) {
+@media only screen and (min-width: 769px) {
   .avatar {
     object-fit: cover;
     height: 100px;
