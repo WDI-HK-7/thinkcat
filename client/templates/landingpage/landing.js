@@ -36,8 +36,21 @@ Template.landing.events({
   },
 
   "change .profileImageInput": function(event, template) {
-    FS.Utility.eachFile(event, function(file) {
-      Images.insert(file, function (err, fileObj) {
+    var data, file;
+    file = event.target.files[0];
+    if (file == null) {
+      console.log("could not find file in upload");
+      return;
+    }
+    data = processImage(file, 300, 300, function(data){
+      var img;
+      var child = Session.get("childProImg");
+      img = new FS.File(data);
+      img.metadata = {
+        date: new Date(),
+        child_id: child.id
+      };
+      Images.insert(img, function (err, fileObj) {
         if (err){
           console.log(err);
           // handle error
