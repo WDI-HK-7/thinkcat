@@ -13,3 +13,6 @@ accounts-ui-unstyled
 jquery
 underscore
 maazalik:highcharts
+cfs:standard-packages
+cfs:gridfs
+ccorcos:clientside-image-manipulation
