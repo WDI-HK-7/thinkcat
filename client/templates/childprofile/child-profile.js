@@ -1,6 +1,8 @@
 var child = Session.get("child");
 var _dep = new Deps.Dependency();
 var gameVariable;
+var chartCounter = 0;
+var chartTimer;
 
 Template.childProfile.onRendered(function () {
   // Use the Packery jQuery plugin
@@ -175,6 +177,14 @@ var getScoreAvg = function (database, params) {
 //     builtArea();
 // }
 
+Template.childProfile.onRendered(function() {
+  chartTimer = Meteor.setInterval(function(){
+    if (chartCounter > 6) {
+      Meteor.clearInterval(chartTimer);
+    }
+    chartCounter += 1;
+  },1000)
+});
 
 Template.childProfile.helpers({
 
@@ -186,21 +196,37 @@ Template.childProfile.helpers({
 
   mathsGameStats: function() {
     _dep.depend();
+    if (chartCounter>6) {
+      $('#maths-game-chart').trigger('click');
+    }
+    console.log(chartCounter);
     return getScoreAvg(MathsGame, {child_id: child.id});
   },
 
   coloursGameStats: function() {
     _dep.depend();
+    if (chartCounter>6) {
+      $('#colours-game-chart').trigger('click');
+    }
+    console.log(chartCounter);
     return getScoreAvg(ColoursGame, {child_id: child.id});
   },
   
   shapesGameStats: function() {
     _dep.depend();
+    if (chartCounter>6) {
+      $('#shapes-game-chart').trigger('click');
+    }
+    console.log(chartCounter);
     return getScoreAvg(ShapesGame, {child_id: child.id});
   },
 
   animalsGameStats: function() {
     _dep.depend();
+    if (chartCounter>6) {
+      $('#animals-game-chart').trigger('click');
+    }
+    console.log(chartCounter);
     return getScoreAvg(AnimalsGame, {child_id: child.id});
   },
 
