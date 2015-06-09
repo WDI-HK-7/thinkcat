@@ -107,7 +107,7 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
   
   .animal {
-    max-width: 45px;
+    max-width: 20vw;
     margin-top: 0;
   }
 
@@ -120,12 +120,12 @@
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
 
+ .animal {
+  max-width: 20vw;
+ }
+
   #animals-game-panel {
     height: 40vh;
-  }
-
-  #animals-game-panel > .row {
-    margin-top: 15vh;
   }
 
   #animals-question {
@@ -143,6 +143,10 @@
 
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
 
+  .animal {
+    max-width: 22vw;
+  }
+  
   #animals-game-panel {
     height: 40vh;
   }

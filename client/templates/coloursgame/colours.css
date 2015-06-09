@@ -109,7 +109,36 @@
   }
 
   #colour-game-panel {
+    height: 50vh;
+    margin-top: -5vh;
+  }
+
+}
+
+/* Media Query for iPhone 6 */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+
+  .pencil {
+    margin-top: 5vh;
+  }
+
+  #colour-game-panel {
     height: 45vh;
+  }
+
+}
+
+/* Media Query for iPhone 6 Plus */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
+
+  .pencil {
+    margin-top: 15vh;
+  }
+
+  #colour-game-panel {
+    height: 55vh;
   }
 
 }

@@ -104,18 +104,6 @@
   }
 }
 
-/* Media Query for iPad + iPad Mini */
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-
-  #maths-game-panel {
-    height: 60vh;
-  }
-
-  #maths-question {
-    margin-top: 15vh;
-  }
-}
 
 /* Media Query for iPhone 5 */
 
@@ -147,7 +135,7 @@
 
   #maths-question {
     margin-top: 10vh;
-    font-size: 6.5em;
+    font-size: 5em;
   }
 
 }
@@ -162,7 +150,20 @@
 
   #maths-question {
     margin-top: 15vh;
-    font-size: 7.5em;
+    font-size: 5.5em;
   }
 
+}
+
+/* Media Query for iPad + iPad Mini */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+  #maths-game-panel {
+    height: 60vh;
+  }
+
+  #maths-question {
+    margin-top: 15vh;
+  }
 }

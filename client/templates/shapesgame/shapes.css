@@ -112,7 +112,7 @@
   }
 
   #shapes-game-panel {
-    height: 25vh;
+    height: 30vh;
   }
 }
 
@@ -125,7 +125,7 @@
   }
 
   #shapes-game-panel {
-    height: 30vh;
+    height: 35vh;
   }
 
 }
@@ -140,7 +140,7 @@
   } 
 
   #shapes-game-panel {
-    height: 40vh;
+    height: 35vh;
   }
 
   #shapes-game-panel > #shapes-row-1 {
