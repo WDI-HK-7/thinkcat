@@ -142,6 +142,19 @@
   border: none;
 }
 
+.navbar-default .navbar-toggle {
+  background-color: #454f54 !important;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #f8b03f;
+}
+
+#current-path-title {
+  margin-right: 2%;
+  color: #454f54;
+}
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px) {
   #login-buttons {
