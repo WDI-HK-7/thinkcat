@@ -1,4 +1,3 @@
- 
 var child = Session.get("child");
 var _dep = new Deps.Dependency();
 var gameVariable;
@@ -203,8 +202,18 @@ Template.childProfile.helpers({
   animalsGameStats: function() {
     _dep.depend();
     return getScoreAvg(AnimalsGame, {child_id: child.id});
+  },
+
+  profileImg: function(template) {
+    _dep.depend();
+    var childInfo = Children.findOne({_id: child.id});
+    return childInfo.profileImage || "/cfs/files/images/r9xEsebEzcRRrd5PT"
   }
 
+});
+
+UI.registerHelper('root_url', function(){
+  return __meteor_runtime_config__.ROOT_URL;
 });
 
 var getGameData = function(database, params) {

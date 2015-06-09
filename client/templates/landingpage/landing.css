@@ -112,10 +112,6 @@ input {
   cursor: pointer;
 }
 
-.avatar {
-  margin: 0 auto;
-}
-
 #child-panel {
   text-align: center;
   padding: 30px; 
