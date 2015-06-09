@@ -39,6 +39,10 @@ Template.childAvatar.helpers({
 	},
 
   profileImg: function(template) {
-    return this.profileImage || "http://images.watoday.com.au/2010/12/22/2105997/kids-swing-3-4-420-420x0.jpg"
+    return this.profileImage || "/cfs/files/images/r9xEsebEzcRRrd5PT"
   }
+});
+
+UI.registerHelper('root_url', function(){
+  return __meteor_runtime_config__.ROOT_URL;
 });
