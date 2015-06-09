@@ -20,7 +20,8 @@ Template.navbar.helpers({
     console.log(currentRoute[1]);
     
     if (currentRoute[1] == '') {
-      return "HOME";
+      $('#path-title').html("HOME");
+      console.log("hello world")
     }
     else if (currentRoute[1] == "child") {
       return "HOME / " + child.name.toUpperCase();
