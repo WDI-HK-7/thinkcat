@@ -15,6 +15,7 @@
 
 .statistics-charts, .statistics-charts-ipad {
   background-color: rgba(255,254,224,0.7);
+  padding-top: 80px;
 }
 
 #game-stats-container {
@@ -54,14 +55,18 @@
   font-size: 4vw;
 }
 
-.table, th {
+th {
   text-align: center;
   font-weight: bold;
-  border-bottom: none !important;
+  border-bottom: 2px solid #f8b03f !important;
+  border-top: 2px solid #f8b03f !important;; 
 }
 
 .table th, .table td { 
-  border-top: none !important; 
+  font-family: 'Allerta', sans-serif;
+  border-top: none !important;
+  text-align: center;
+  font-weight: bold;
  }
 
 #play-button-dash {

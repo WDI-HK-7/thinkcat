@@ -13,10 +13,14 @@ Template.childProfile.onRendered(function () {
 var buildStatsChart = function(title, data, htmlId) {
 
   $(htmlId).highcharts({
-      
+    colors: ["#f8b03f", "#454f54"],
+
     chart: {
       type: 'spline',
-      backgroundColor: null
+      backgroundColor: null, 
+      style: {
+        fontFamily: "'Allerta', sans-serif"
+      }
     },
     
     title: {
@@ -28,7 +32,7 @@ var buildStatsChart = function(title, data, htmlId) {
     },
     
     subtitle: {
-      text: 'recent scores'
+      text: 'Recent Scores'
     },
     
     legend: {
@@ -91,10 +95,15 @@ var buildStatsChart = function(title, data, htmlId) {
 var buildAvgCompareChart = function(title, data, htmlId) {
 
   $(htmlId).highcharts({
+
+  colors: ["#f8b03f", "#454f54"],
       
     chart: {
       type: 'column',
-      backgroundColor: null
+      backgroundColor: null,
+      style: {
+        fontFamily: "'Allerta', sans-serif"
+      }
     },
     
     title: {
@@ -106,7 +115,7 @@ var buildAvgCompareChart = function(title, data, htmlId) {
     },
     
     subtitle: {
-      text: 'your average vs. other kids at your age'
+      text: 'Your child average vs. Other kids at your age'
     },
     
     legend: {
@@ -139,12 +148,11 @@ var buildAvgCompareChart = function(title, data, htmlId) {
       }
     },
     
-    // plotOptions: {
-    //   column: {
-    //     pointPadding: 0.2,
-    //     borderWidth: 0
-    //   }
-    // },
+    plotOptions: {
+      series: {
+        borderColor: "none"
+      }
+    },
     
     series: data
   });
@@ -233,8 +241,8 @@ Template.childProfile.events({
       buildStatsChart('Maths Game', gameScoreSeries, '#game-stats-chart2');
       buildAvgCompareChart('Maths Game', avgSeries, '#game-avg-comparison2');
     } else {
-      $('#game-stats-chart').html("<h1>You haven't played enough, play more!</h1>");
-      $('#game-stats-chart2').html("<h1>You haven't played enough, play more!</h1>");
+      $('#game-stats-chart').html("<h3>You haven't played enough, play more!</h3>");
+      $('#game-stats-chart2').html("<h3>You haven't played enough, play more!</h3>");
       $('#game-avg-comparison').html('');
       $('#game-avg-comparison2').html('');
     }
@@ -261,8 +269,8 @@ Template.childProfile.events({
       buildStatsChart('Colours Game', gameScoreSeries, '#game-stats-chart2');
       buildAvgCompareChart('Colours Game', avgSeries, '#game-avg-comparison2');
     } else {
-      $('#game-stats-chart').html("<h1>You haven't played enough, play more!</h1>");
-      $('#game-stats-chart2').html("<h1>You haven't played enough, play more!</h1>");
+      $('#game-stats-chart').html("<h3>You haven't played enough, play more!</h3>");
+      $('#game-stats-chart2').html("<h3>You haven't played enough, play more!</h3>");
       $('#game-avg-comparison').html('');
       $('#game-avg-comparison2').html('');
     }
@@ -289,8 +297,8 @@ Template.childProfile.events({
       buildStatsChart('Shapes Game', gameScoreSeries, '#game-stats-chart2');
       buildAvgCompareChart('Shapes Game', avgSeries, '#game-avg-comparison2');
     } else {
-      $('#game-stats-chart').html("<h1>You haven't played enough, play more!</h1>");
-      $('#game-stats-chart2').html("<h1>You haven't played enough, play more!</h1>");
+      $('#game-stats-chart').html("<h3>You haven't played enough, play more!</h3>");
+      $('#game-stats-chart2').html("<h3>You haven't played enough, play more!</h3>");
       $('#game-avg-comparison').html('');
       $('#game-avg-comparison2').html('');
     }
@@ -316,8 +324,8 @@ Template.childProfile.events({
       buildStatsChart('Animals Game', gameScoreSeries, '#game-stats-chart2');
       buildAvgCompareChart('Animals Game', avgSeries, '#game-avg-comparison2');
     } else {
-      $('#game-stats-chart').html("<h1>You haven't played enough, play more!</h1>");
-      $('#game-stats-chart2').html("<h1>You haven't played enough, play more!</h1>");
+      $('#game-stats-chart').html("<h3>You haven't played enough, play more!</h3>");
+      $('#game-stats-chart2').html("<h3>You haven't played enough, play more!</h3>");
       $('#game-avg-comparison').html('');
       $('#game-avg-comparison2').html('');
     }
