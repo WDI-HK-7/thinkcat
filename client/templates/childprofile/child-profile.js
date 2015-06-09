@@ -233,8 +233,8 @@ Template.childProfile.events({
       buildStatsChart('Maths Game', gameScoreSeries, '#game-stats-chart2');
       buildAvgCompareChart('Maths Game', avgSeries, '#game-avg-comparison2');
     } else {
-      $('#game-stats-chart').html("<h1>You haven't played enough, play more!</h1>");
-      $('#game-stats-chart2').html("<h1>You haven't played enough, play more!</h1>");
+      $('#game-stats-chart').html("<h3>You haven't played enough, play more!</h3>");
+      $('#game-stats-chart2').html("<h3>You haven't played enough, play more!</h3>");
       $('#game-avg-comparison').html('');
       $('#game-avg-comparison2').html('');
     }
@@ -261,8 +261,8 @@ Template.childProfile.events({
       buildStatsChart('Colours Game', gameScoreSeries, '#game-stats-chart2');
       buildAvgCompareChart('Colours Game', avgSeries, '#game-avg-comparison2');
     } else {
-      $('#game-stats-chart').html("<h1>You haven't played enough, play more!</h1>");
-      $('#game-stats-chart2').html("<h1>You haven't played enough, play more!</h1>");
+      $('#game-stats-chart').html("<h3>You haven't played enough, play more!</h3>");
+      $('#game-stats-chart2').html("<h3>You haven't played enough, play more!</h3>");
       $('#game-avg-comparison').html('');
       $('#game-avg-comparison2').html('');
     }
@@ -289,8 +289,8 @@ Template.childProfile.events({
       buildStatsChart('Shapes Game', gameScoreSeries, '#game-stats-chart2');
       buildAvgCompareChart('Shapes Game', avgSeries, '#game-avg-comparison2');
     } else {
-      $('#game-stats-chart').html("<h1>You haven't played enough, play more!</h1>");
-      $('#game-stats-chart2').html("<h1>You haven't played enough, play more!</h1>");
+      $('#game-stats-chart').html("<h3>You haven't played enough, play more!</h3>");
+      $('#game-stats-chart2').html("<h3>You haven't played enough, play more!</h3>");
       $('#game-avg-comparison').html('');
       $('#game-avg-comparison2').html('');
     }
@@ -316,8 +316,8 @@ Template.childProfile.events({
       buildStatsChart('Animals Game', gameScoreSeries, '#game-stats-chart2');
       buildAvgCompareChart('Animals Game', avgSeries, '#game-avg-comparison2');
     } else {
-      $('#game-stats-chart').html("<h1>You haven't played enough, play more!</h1>");
-      $('#game-stats-chart2').html("<h1>You haven't played enough, play more!</h1>");
+      $('#game-stats-chart').html("<h3>You haven't played enough, play more!</h3>");
+      $('#game-stats-chart2').html("<h3>You haven't played enough, play more!</h3>");
       $('#game-avg-comparison').html('');
       $('#game-avg-comparison2').html('');
     }

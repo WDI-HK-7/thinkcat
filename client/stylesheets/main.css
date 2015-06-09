@@ -48,7 +48,8 @@ body {
 }
 
 h1 {
-
+  font-family: 'Allerta', sans-serif;
+  font-size: 40px;
 }
 
 h2 {
@@ -56,21 +57,17 @@ h2 {
 }
 
 h3 {
-
+  font-family: 'Allerta', sans-serif;
 }
 
 h4 {
-
+  font-family: 'Allerta', sans-serif;
 }
 
 h5 {
-  font-family: Tahoma, Helvetica, Arial, Sans-Serif;
   font-size: 14px;
-  font-weight: 600; 
 }
 
 h6 {
-  font-family: Tahoma, Helvetica, Arial, Sans-Serif;
   font-size: 13px;
-  font-weight: 400; 
 }
