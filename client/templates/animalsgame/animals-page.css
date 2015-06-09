@@ -32,8 +32,8 @@
   box-shadow: none;
 }
 
-.animal {
-  margin-top: 60px;
+#animal-row-1 {
+  margin-top: 10vh;
 }
 
 .row-centered {
@@ -71,7 +71,7 @@
 
 /* Screen Specific CSS */
 
-@media only screen and (max-width : 450px) {
+/*@media only screen and (max-width : 450px) {
   .answers-counter-animals {
     font-size: 1.5em;
   }
@@ -80,27 +80,26 @@
     width: 100px;
   }
 }
+*/
 
 
 /* Media Query for iPhone 2g-4s */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
   
-  .animal {
-    max-width: 60px;
-    margin-top: 50px;
-  }
-
   #animals-game-panel {
-    height: 50vh;
+    height: 20vh;
+    margin-top: -5vh;
   }
 
-  #animals-question-panel {
-  font-size: 1em;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  margin-top: 0;
+  #animals-counter-panel {
+    height: 10vh;
   }
+
+  .answers-counter-animals {
+    font-size: 1em;
+  }
+
 }
 
 /* Media Query for iPhone 5 */
@@ -108,12 +107,12 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
   
   .animal {
-    max-width: 45px;
+    max-width: 20vw;
     margin-top: 0;
   }
 
   #animals-game-panel {
-    height: 40vh;
+    height: 30vh;
   }
 }
 
@@ -121,12 +120,12 @@
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
 
-  #animals-game-panel {
-    height: 50vh;
-  }
+ .animal {
+  max-width: 20vw;
+ }
 
-  #animals-game-panel > .row {
-    margin-top: 15vh;
+  #animals-game-panel {
+    height: 40vh;
   }
 
   #animals-question {
@@ -134,8 +133,8 @@
     font-size: 6.5em;
   }
 
-  .animal {
-    min-height: 5vh;
+  .answers-counter-animals {
+    font-size: 1.3em;
   }
 
 }
@@ -144,13 +143,17 @@
 
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
 
+  .animal {
+    max-width: 22vw;
+  }
+  
   #animals-game-panel {
-    height: 60vh;
+    height: 40vh;
   }
 
   #animals-question {
-    margin-top: 15vh;
     font-size: 7.5em;
   }
 
 }
+

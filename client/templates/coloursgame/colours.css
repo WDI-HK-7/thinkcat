@@ -41,7 +41,7 @@
 }
 
 .pencil {
-  margin-top: 90px;
+  margin-top: 15vh;
 }
 
 .pencil:hover {
@@ -75,6 +75,8 @@
   padding-right: 1em;
 }
 
+
+
 @media only screen and (max-width : 450px) {
   .answers-counter-colours {
     font-size: 1.5em;
@@ -82,23 +84,10 @@
 }
 
 
-/* Media Query for iPhone 5 */
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
-  
-  .pencil {
-    max-width: 45px;
-    margin-top: 0;
-  }
-
-  #colour-game-panel {
-    height: 42vh;
-  }
-}
 
 /* Media Query for iPhone 2g-4s */
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   
   .pencil {
     max-width: 45px;
@@ -110,3 +99,54 @@
   }
 }
 
+/* Media Query for iPhone 5 */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  
+  .pencil {
+    max-width: 45px;
+    margin-top: 0;
+  }
+
+  #colour-game-panel {
+    height: 50vh;
+    margin-top: -5vh;
+  }
+
+}
+
+/* Media Query for iPhone 6 */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+
+  .pencil {
+    margin-top: 5vh;
+  }
+
+  #colour-game-panel {
+    height: 45vh;
+  }
+
+}
+
+/* Media Query for iPhone 6 Plus */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
+
+  .pencil {
+    margin-top: 15vh;
+  }
+
+  #colour-game-panel {
+    height: 55vh;
+  }
+
+}
+
+/* Media Query for Retina Displays */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  .pencil {
+    margin-top: none;
+  }
+}

@@ -102,12 +102,30 @@
   }
 }
 
-/* Media Query for iPad + iPad Mini */
+/* Media Query for iPhone 2g-4s */
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  
+  .shape {
+    max-width: 15vw;
+    margin-top: 0;
+  }
 
   #shapes-game-panel {
-    height: 50vh;
+    height: 30vh;
+  }
+}
+
+/* Media Query for iPhone 5 */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  
+  .shape {
+    max-width: 25vw;
+  }
+
+  #shapes-game-panel {
+    height: 35vh;
   }
 
 }
@@ -117,13 +135,45 @@
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
 
+  .shape {
+    max-width: 30vw;
+  } 
+
   #shapes-game-panel {
-    height: 50vh;
+    height: 35vh;
+  }
+
+  #shapes-game-panel > #shapes-row-1 {
+    margin-top: 10vh;
   }
 
   #shapes-question {
     margin-top: 10vh;
     font-size: 6.5em;
+  }
+
+}
+
+/* Media Query for iPhone 6 Plus */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
+
+  .shape {
+    max-width: 40vw;
+  }
+
+  #shapes-game-panel {
+    height: 40vh;
+  }
+
+}
+
+/* Media Query for iPad + iPad Mini */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+  #shapes-game-panel {
+    height: 50vh;
   }
 
 }
