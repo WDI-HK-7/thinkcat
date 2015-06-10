@@ -143,10 +143,57 @@
 
 }
 
+/* Media Query for iPhone 6 Plus */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
+
+  .pencil {
+    margin-top: 15vh;
+  }
+
+  #colour-game-panel {
+    height: 55vh;
+  }
+
+}
+
+/* Media Query for iPhone 6 Plus Landscape */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) {
+
+  .pencil {
+    margin-top: 1vh;
+    max-height: 50vh;
+  }
+
+  #colour-game-panel {
+    height: 50vh;
+    margin-top: -10vh;
+  }
+
+
+}
+
 /* Media Query for Retina Displays */
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
   .pencil {
     margin-top: none;
   }
 }
+
+
+/* Media Query for iPad Landscape */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+
+  .pencil {
+    margin-top: -5vh;
+  }
+
+  #colour-game-panel {
+    height: 40vh;
+  }
+
+}
+

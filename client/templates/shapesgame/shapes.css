@@ -154,6 +154,33 @@
 
 }
 
+/* Media Query for iPhone 6 Landscape */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+
+  .shape {
+    max-width: 12vw;
+  } 
+
+  #shapes-question-panel {
+    height: 30vh;
+  }
+
+  #shapes-game-panel {
+    height: 35vh;
+  }
+
+  #shapes-game-panel > #shapes-row-1 {
+    margin-top: -5vh;
+  }
+
+  #shapes-question {
+    margin-top: 10vh;
+    font-size: 4em;
+  }
+
+}
+
 /* Media Query for iPhone 6 Plus */
 
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
@@ -164,6 +191,24 @@
 
   #shapes-game-panel {
     height: 40vh;
+  }
+
+}
+
+/* Media Query for iPhone 6 Plus Landscape */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) {
+
+  .shape {
+    max-width: 12vw;
+  }
+
+  #shapes-row-1 {
+    margin-top: -5vh;
+  }
+
+  #shapes-game-panel {
+    height: 42vh;
   }
 
 }
