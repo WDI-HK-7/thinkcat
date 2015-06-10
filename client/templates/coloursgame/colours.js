@@ -71,6 +71,19 @@ Template.colours.helpers({
   
 });
 
+//-------------------------------- Function to save the answers at end of game
+
+var saveGameResults = function() {
+  var child = Session.get("child");
+     
+  Meteor.call('addColoursScore', child.id, child.age, numCorrect, numIncorrect, answersArray);
+
+  step = 0;
+  numCorrect = 0;
+  numIncorrect = 0;
+  answersArray = [];
+}
+
 Template.colours.events({
 
 // -------------------------------------------------------- Listen for Click on any Circle
@@ -127,34 +140,38 @@ Template.colours.events({
   
 // -------------------------------------------------------- Listen for Return Home
   
-  'click #colourGameReturnHome': function(event) {
+  'click #backToDash': function(event) {
      
-    var child = Session.get("child");
-     
-    Meteor.call('addColoursScore', child.id, child.age, numCorrect, numIncorrect, answersArray);
-
-    step = 0;
-    numCorrect = 0;
-    numIncorrect = 0;
+    saveGameResults();
       
-    Router.go('/games');
+    Router.go('/child');
      
   },
 
-// -------------------------------------------------------- Listen for Game Restart
+// -------------------------------------------------------- go to other games
   
-  'click #colourGameRestart': function(event) {
+  'click .maths-game': function(event) {
+    saveGameResults();
     
-    var child = Session.get("child");
+    Router.go('/mathGame');
+  },
 
-    Meteor.call('addColoursScore', child.id, child.age, numCorrect, numIncorrect, answersArray);
+  "click .colours-game": function(event, template) {
+    saveGameResults();
 
-    step = 0;
-    numCorrect = 0;
-    numIncorrect = 0;
-    
     _dep.changed();
-    
+  },
+
+  "click .shapes-game": function(event, template) {
+    saveGameResults();
+
+    Router.go('/shapes');
+  },
+
+  "click .animals-game": function(event, template) {
+    saveGameResults();
+
+    Router.go('/animals');
   }
 
 });
