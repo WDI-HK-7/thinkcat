@@ -23,13 +23,18 @@
 }
 
 .mathGameAns {
-  margin-left: 1em;
-  margin-right: 1em;
+  margin: 0.1em;
   text-shadow: 0px 2px 3px #555;
+  padding: 0.5em 0.5em;
+  font-size: 3em;
+  border-radius: 100%;
 }
 
 .mathGameAns:hover {
- transform: scale(1.1);
+/* transform: scale(1.1);*/
+  fill: #f8b03f;
+  -webkit-filter: drop-shadow( 0px 0px 10px #000 );
+  filter: drop-shadow( 0px 0px 10px #000 ); 
 }
 
 /* ----------------------------- Game Panels ----------------------------- */

@@ -5,6 +5,8 @@ var numCorrect = 0;
 var numIncorrect = 0;
 var answersArray = [];
 var _dep = new Deps.Dependency();
+var rightSound = new Audio('/sounds/Correct-answer.mp3');
+var wrongSound = new Audio('/sounds/Whip_bonk.wav');
 Session.set('randomShape', shapesArray[Math.floor(Math.random()*shapesArray.length)]);
 
 // -------------------------------------------------------- Create Shape Game Question. Update Random Shape in Session
@@ -89,8 +91,6 @@ Template.shapes.events({
         
       };
       
-      var rightSound = new Audio('/sounds/Correct-answer.mp3');
-      console.log(rightSound);
       rightSound.play();
       
       answersArray.push(newCorrectAnswer);
@@ -112,8 +112,6 @@ Template.shapes.events({
         
       };
       
-      var wrongSound = new Audio('/sounds/Whip_bonk.wav');
-      console.log(wrongSound);
       wrongSound.play();
       
       answersArray.push(newIncorrectAnswer);

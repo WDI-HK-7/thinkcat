@@ -4,6 +4,8 @@ var numCorrect = 0;
 var numIncorrect = 0;
 var answersArray = [];
 var _dep = new Deps.Dependency();
+var wrongSound = new Audio('/sounds/Whip_bonk.wav');
+var rightSound = new Audio('/sounds/Correct-answer.mp3');
 
 Session.set('randomAnimal', animalsArray[Math.floor(Math.random()*animalsArray.length)]);
 
@@ -90,7 +92,6 @@ Template.animals.events({
         correct: true
       };
 
-      var rightSound = new Audio('/sounds/Correct-answer.mp3');
       rightSound.play();
 
       answersArray.push(newCorrectAnswer);
@@ -109,7 +110,6 @@ Template.animals.events({
         correct: false
       };
 
-      var wrongSound = new Audio('/sounds/Whip_bonk.wav');
       wrongSound.play();
 
       answersArray.push(newIncorrectAnswer);

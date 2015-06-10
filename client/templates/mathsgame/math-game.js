@@ -17,6 +17,8 @@ var nextQuestion = function() {
   _dep.changed();
 };
 var answersArray = [];
+var rightSound = new Audio('/sounds/Correct-answer.mp3');
+var wrongSound = new Audio('/sounds/Whip_bonk.wav');
 
 nextQuestion();
 
@@ -73,7 +75,6 @@ Template.mathGame.events({
       }
       answersArray.push(questionHash);
       step += 1;
-      var rightSound = new Audio('/sounds/Correct-answer.mp3');
       rightSound.play();
       nextQuestion();
     } else {
@@ -86,7 +87,6 @@ Template.mathGame.events({
       }
       answersArray.push(questionHash);
       step += 1;
-      var wrongSound = new Audio('/sounds/Whip_bonk.wav');
       wrongSound.play();
       nextQuestion();
     }
