@@ -28,6 +28,7 @@
   padding: 0.5em 0.5em;
   font-size: 3em;
   border-radius: 100%;
+  min-width: 2.5em;
 }
 
 .mathGameAns:hover {
