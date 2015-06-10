@@ -74,7 +74,7 @@ section {
   text-decoration: none;
   font-weight: 600;
   text-transform: uppercase; 
-  transition: .5s all; 
+  transition: .1s all; 
 }
 
 #add-child-btn:hover {
