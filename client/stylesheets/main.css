@@ -24,6 +24,8 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
+  transition: .5s all; 
+  opacity: 1;
 }
 
 .btn-success {
@@ -39,12 +41,17 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
+  transition: .5s all; 
+  opacity: 1;
 }
 
 .btn-success:hover, .btn-primary:hover {
   background-color: #fffee0;
   color: #454f54;
   border: 2px solid #454f54;
+  opacity: .8; 
+  -webkit-filter: drop-shadow( 0px 0px 10px #000 );
+  filter: drop-shadow( 0px 0px 10px #000 );
 }
 
  h1 {
