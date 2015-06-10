@@ -71,6 +71,19 @@ Template.shapes.helpers({
   
 });
 
+//-------------------------------- Function to save the answers at end of game
+
+var saveGameResults = function() {
+  var child = Session.get("child");
+     
+  Meteor.call('addShapesScore', child.id, child.age, numCorrect, numIncorrect, answersArray);
+
+  step = 0;
+  numCorrect = 0;
+  numIncorrect = 0;
+  answersArray = [];
+}
+
 Template.shapes.events({
 
 // -------------------------------------------------------- Listen for Click on any Circle
@@ -124,36 +137,38 @@ Template.shapes.events({
 
   },
   
-// -------------------------------------------------------- Listen for Return Home
+// -------------------------------------------------------- Listen for Return to Dashboard
   
-  'click #shapeGameReturnHome': function(event) {
-     
-    var child = Session.get("child");
-     
-    Meteor.call('addShapesScore', child.id, child.age, numCorrect, numIncorrect, answersArray);
-
-    step = 0;
-    numCorrect = 0;
-    numIncorrect = 0;
-      
-    Router.go('/games');
-     
+  'click #backToDash': function(event) {
+    saveGameResults();
+    
+    Router.go('/child');
   },
 
-// -------------------------------------------------------- Listen for Game Restart
+// -------------------------------------------------------- Listen for other games
   
-  'click #shapeGameRestart': function(event) {
+  'click .maths-game': function(event) {
+    saveGameResults();
     
-    var child = Session.get("child");
-    
-    Meteor.call('addShapesScore', child.id, child.age, numCorrect, numIncorrect, answersArray);
+    Router.go('/mathGame');
+  },
 
-    step = 0;
-    numCorrect = 0;
-    numIncorrect = 0;
-    
+  "click .colours-game": function(event, template) {
+    saveGameResults();
+
+    Router.go('/colours');
+  },
+
+  "click .shapes-game": function(event, template) {
+    saveGameResults();
+
     _dep.changed();
-    
+  },
+
+  "click .animals-game": function(event, template) {
+    saveGameResults();
+
+    Router.go('/animals');
   }
 
 });

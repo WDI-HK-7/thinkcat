@@ -179,11 +179,15 @@ var getScoreAvg = function (database, params) {
 
 Template.childProfile.onRendered(function() {
   chartTimer = Meteor.setInterval(function(){
-    if (chartCounter > 6) {
+    if (chartCounter > 10) {
       Meteor.clearInterval(chartTimer);
     }
     chartCounter += 1;
   },1000)
+});
+
+Template.childProfile.onDestroyed(function () {
+  chartCounter = 0;
 });
 
 Template.childProfile.helpers({
@@ -196,7 +200,7 @@ Template.childProfile.helpers({
 
   mathsGameStats: function() {
     _dep.depend();
-    if (chartCounter>6) {
+    if (chartCounter>10) {
       $('#maths-game-chart').trigger('click');
     }
     console.log(chartCounter);
@@ -205,7 +209,7 @@ Template.childProfile.helpers({
 
   coloursGameStats: function() {
     _dep.depend();
-    if (chartCounter>6) {
+    if (chartCounter>10) {
       $('#colours-game-chart').trigger('click');
     }
     console.log(chartCounter);
@@ -214,7 +218,7 @@ Template.childProfile.helpers({
   
   shapesGameStats: function() {
     _dep.depend();
-    if (chartCounter>6) {
+    if (chartCounter>10) {
       $('#shapes-game-chart').trigger('click');
     }
     console.log(chartCounter);
@@ -223,7 +227,7 @@ Template.childProfile.helpers({
 
   animalsGameStats: function() {
     _dep.depend();
-    if (chartCounter>6) {
+    if (chartCounter>10) {
       $('#animals-game-chart').trigger('click');
     }
     console.log(chartCounter);
@@ -253,7 +257,7 @@ var getGameData = function(database, params) {
 Template.childProfile.events({
 
   "click #play-button-dash": function () {
-    Router.go('/' + gameVariable);
+    Router.go('/' + (gameVariable || 'games'));
   },
 
   "click #maths-game-chart": function() {

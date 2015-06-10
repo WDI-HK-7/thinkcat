@@ -72,6 +72,19 @@ Template.animals.helpers({
   }
 });
 
+// Function to save the answers at end of game
+
+var saveGameResults = function() {
+  var child = Session.get("child");
+     
+  Meteor.call('addAnimalsScore', child.id, child.age, numCorrect, numIncorrect, answersArray);
+
+  step = 0;
+  numCorrect = 0;
+  numIncorrect = 0;
+  answersArray = [];
+}
+
 // TEMPLATE EVENTS 
 
 Template.animals.events({
@@ -122,36 +135,38 @@ Template.animals.events({
 
   },
 
-// Listen for Return Home
+// Listen for Return to dashboard
 
-  "click #animalsGameReturnHome": function(event) {
-
-    var child = Session.get("child");
-     
-    Meteor.call('addAnimalsScore', child.id, child.age, numCorrect, numIncorrect, answersArray);
-
-    step = 0;
-    numCorrect = 0;
-    numIncorrect = 0;
-      
-    Router.go('/games');
-
+  'click #backToDash': function(event) {
+    saveGameResults();
+    
+    Router.go('/child');
   },
 
 // Listen for Game Restart
 
-  "click #animalsGameRestart": function(event) {
+  'click .maths-game': function(event) {
+    saveGameResults();
+    
+    Router.go('/mathGame');
+  },
 
-    var child = Session.get("child");
-     
-    Meteor.call('addAnimalsScore', child.id, child.age, numCorrect, numIncorrect, answersArray);
+  "click .colours-game": function(event, template) {
+    saveGameResults();
 
-    step = 0;
-    numCorrect = 0;
-    numIncorrect = 0;
+    Router.go('/colours');
+  },
+
+  "click .shapes-game": function(event, template) {
+    saveGameResults();
+
+    Router.go('/shapes');
+  },
+
+  "click .animals-game": function(event, template) {
+    saveGameResults();
 
     _dep.changed();
-
   }
 
 });

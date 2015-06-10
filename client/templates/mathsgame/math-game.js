@@ -6,6 +6,10 @@ var wrong = 0;
 var answers = [];
 var question = ""
 var _dep = new Deps.Dependency();
+var answersArray = [];
+
+//---------------- function to render the next question
+
 var nextQuestion = function() {
   var num1 = Math.ceil(Math.random()*10);
   var num2 = Math.ceil(Math.random()*10);
@@ -23,18 +27,30 @@ var wrongSound = new Audio('/sounds/Whip_bonk.wav');
 nextQuestion();
 
 Template.mathGame.helpers({
+
+  //------------------------------- Return current child info
+
   child: function () {
     var child = Session.get("child");
     return child;
   },
+
+  //------------------------------- Render the question
+
   question: function () {
     _dep.depend();
     return question;
   },
+
+  //------------------------------- Render the Answers
+
   answers: function () {
     _dep.depend();
     return answers
   },
+
+  //------------------------------- Render questions until 10 questions are answered
+
   counter: function () {
     _dep.depend();
     if (step < 10) {
@@ -43,14 +59,23 @@ Template.mathGame.helpers({
       return false;
     }
   },
+
+  //------------------------------- Render correct answers
+
   correctAns: function () {
     _dep.depend();
     return correct;
   },
+
+  //------------------------------- Render incorrect answers
+
   incorrectAns: function () {
     _dep.depend();
     return wrong;
   },
+
+  //------------------------------- Give a different colour for the answers button
+
 	buttonColour: function() {
 		var colour = colours[counter];
 		if (counter == colours.length - 1) {
@@ -61,6 +86,20 @@ Template.mathGame.helpers({
 		return colour;
 	}
 });
+
+//-------------------------------- Function to save the answers at end of game
+
+var saveGameResults = function() {
+  var child = Session.get("child");
+  step = 0;
+
+  Meteor.call('addMathsScore', child.id, child.age, correct, wrong, answersArray);
+  correct = 0;
+  wrong = 0;
+  answersArray = [];
+}
+
+//-------------------------------- Answer checker when user submits answer
 
 Template.mathGame.events({
   'click .mathGameAns': function(event) {
@@ -91,24 +130,40 @@ Template.mathGame.events({
       nextQuestion();
     }
   },
-  'click #mathGameReturnHome': function(event) {
-    var child = Session.get("child");
-    step = 0;
 
-    Meteor.call('addMathsScore', child.id, child.age, correct, wrong, answersArray);
-    correct = 0;
-    wrong = 0;
+  //----------------------- listen for return to dashboard
+
+  'click #backToDash': function(event) {
+    saveGameResults();
     
-    Router.go('/games');
+    Router.go('/child');
   },
-  'click #mathGameRestart': function(event) {
-    var child = Session.get("child");
-    step = 0;
 
-    Meteor.call('addMathsScore', child.id, child.age, correct, wrong, answersArray);
-    correct = 0;
-    wrong = 0;
+  //----------------------- listen for going to other games
+
+  'click .maths-game': function(event) {
+    saveGameResults();
     
     _dep.changed();
+  },
+
+  "click .colours-game": function(event, template) {
+    saveGameResults();
+
+    Router.go('/colours');
+  },
+
+  "click .shapes-game": function(event, template) {
+    saveGameResults();
+
+    Router.go('/shapes');
+  },
+
+  "click .animals-game": function(event, template) {
+    saveGameResults();
+
+    Router.go('/animals');
   }
+
 });
+
