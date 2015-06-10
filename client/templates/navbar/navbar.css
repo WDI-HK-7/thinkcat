@@ -1,5 +1,6 @@
 #navbar-logo {
-  width: 250px;
+  width: 25vw;
+  max-width: 200px;
   margin-top: 5px;
   cursor: pointer;
 }
