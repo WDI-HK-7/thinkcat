@@ -178,16 +178,15 @@ var getScoreAvg = function (database, params) {
 // }
 
 Template.childProfile.onRendered(function() {
-  chartTimer = Meteor.setInterval(function(){
-    if (chartCounter > 10) {
-      Meteor.clearInterval(chartTimer);
-    }
+  chartTimer = Meteor.setInterval(function() {
     chartCounter += 1;
   },1000)
 });
 
 Template.childProfile.onDestroyed(function () {
   chartCounter = 0;
+  Meteor.clearInterval(chartTimer);
+  console.log('destroyed');
 });
 
 Template.childProfile.helpers({
