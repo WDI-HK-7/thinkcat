@@ -257,7 +257,7 @@ var getGameData = function(database, params) {
 Template.childProfile.events({
 
   "click #play-button-dash": function () {
-    Router.go('/' + gameVariable);
+    Router.go('/' + (gameVariable || 'games'));
   },
 
   "click #maths-game-chart": function() {
