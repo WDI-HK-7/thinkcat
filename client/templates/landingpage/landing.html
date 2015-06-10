@@ -5,7 +5,7 @@
   <!-- ============== Child Block After Sign In ============== -->
   {{#if signedIn }}
 
-  <!-- ============== Logo Block ============== -->
+  <!-- ====================== Logo Block ====================== -->
 
   <div id="content-1-4" class="content-block-nopad content-1-4">
 
@@ -13,7 +13,7 @@
       <img id="smartowl-main" class="img-responsive img-center" src="/images/smart-owl-main-logo.svg" alt="">
     </div>
 
-    <!-- ============== Introduction Block ============== -->  
+    <!-- ================ Introduction Block ================ -->  
 
     <div id="intro" class="container">
     
@@ -33,7 +33,10 @@
           </div>
 
           <div>
-            <button id="add-child-btn" class="btn-primary col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">Add Your Child  > </button>
+            <button id="add-child-btn" class="btn-primary col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3" type="button">Add Your Child    
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            </button>
+
             <div id="add-child" class="col-xs-12">
               <form id="add-child-form" class="new-child" style="display: none">
                 <input class="col-xs-4" type="text" placeholder="Child's Name..." name="childName">
